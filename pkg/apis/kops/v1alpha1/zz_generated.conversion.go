@@ -3589,6 +3589,7 @@ func autoConvert_v1alpha1_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig,
 	out.Domain = in.Domain
 	out.ExternalCoreFile = in.ExternalCoreFile
 	out.Image = in.Image
+	out.NodeLocalDNS = in.NodeLocalDNS
 	out.Replicas = in.Replicas
 	out.Provider = in.Provider
 	out.ServerIP = in.ServerIP
@@ -3612,6 +3613,7 @@ func autoConvert_kops_KubeDNSConfig_To_v1alpha1_KubeDNSConfig(in *kops.KubeDNSCo
 	out.Domain = in.Domain
 	out.ExternalCoreFile = in.ExternalCoreFile
 	out.Image = in.Image
+	out.NodeLocalDNS = in.NodeLocalDNS
 	out.Replicas = in.Replicas
 	out.Provider = in.Provider
 	out.ServerIP = in.ServerIP

@@ -308,6 +308,27 @@ func (b *BootstrapChannelBuilder) buildAddons() *channelsapi.Addons {
 		}
 	}
 
+	if b.cluster.Spec.KubeDNS.NodeLocalDNS {
+		{
+			key := "nodelocaldns.addons.k8s.io"
+			version := "1.17.0-alpha.1"
+
+			{
+				location := key + "/k8s-1.9.yaml"
+				id := "k8s-1.9"
+
+				addons.Spec.Addons = append(addons.Spec.Addons, &channelsapi.AddonSpec{
+					Name:              fi.String(key),
+					Version:           fi.String(version),
+					Selector:          map[string]string{"k8s-addon": key},
+					Manifest:          fi.String(location),
+					KubernetesVersion: ">=1.9.0",
+					Id:                id,
+				})
+			}
+		}
+	}
+
 	// @check if node authorization or bootstrap tokens are enabled an if so we can forgo applying
 	// this manifest. For clusters whom are upgrading from RBAC to Node,RBAC the clusterrolebinding
 	// will remain and have to be deleted manually once all the nodes have been upgraded.

@@ -378,6 +378,8 @@ type KubeDNSConfig struct {
 	ExternalCoreFile string `json:"externalCoreFile,omitempty"`
 	// Image is the name of the docker image to run - @deprecated as this is now in the addon
 	Image string `json:"image,omitempty"`
+	// Enables node local DNS cache
+	NodeLocalDNS bool `json:"nodeLocalDNS,omitempty"`
 	// Replicas is the number of pod replicas - @deprecated as this is now in the addon, and controlled by autoscaler
 	Replicas int `json:"replicas,omitempty"`
 	// Provider indicates whether CoreDNS or kube-dns will be the default service discovery.
