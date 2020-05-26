@@ -34,883 +34,883 @@ func init() {
 // Public to allow building arbitrary schemes.
 func RegisterConversions(s *runtime.Scheme) error {
 	if err := s.AddGeneratedConversionFunc((*AccessSpec)(nil), (*kops.AccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AccessSpec_To_kops_AccessSpec(a.(*AccessSpec), b.(*kops.AccessSpec), scope)
+		return Convert_v1beta1_AccessSpec_To_kops_AccessSpec(a.(*AccessSpec), b.(*kops.AccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AccessSpec)(nil), (*AccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AccessSpec_To_v1alpha2_AccessSpec(a.(*kops.AccessSpec), b.(*AccessSpec), scope)
+		return Convert_kops_AccessSpec_To_v1beta1_AccessSpec(a.(*kops.AccessSpec), b.(*AccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AddonSpec)(nil), (*kops.AddonSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AddonSpec_To_kops_AddonSpec(a.(*AddonSpec), b.(*kops.AddonSpec), scope)
+		return Convert_v1beta1_AddonSpec_To_kops_AddonSpec(a.(*AddonSpec), b.(*kops.AddonSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AddonSpec)(nil), (*AddonSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AddonSpec_To_v1alpha2_AddonSpec(a.(*kops.AddonSpec), b.(*AddonSpec), scope)
+		return Convert_kops_AddonSpec_To_v1beta1_AddonSpec(a.(*kops.AddonSpec), b.(*AddonSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AlwaysAllowAuthorizationSpec)(nil), (*kops.AlwaysAllowAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(a.(*AlwaysAllowAuthorizationSpec), b.(*kops.AlwaysAllowAuthorizationSpec), scope)
+		return Convert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(a.(*AlwaysAllowAuthorizationSpec), b.(*kops.AlwaysAllowAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AlwaysAllowAuthorizationSpec)(nil), (*AlwaysAllowAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec(a.(*kops.AlwaysAllowAuthorizationSpec), b.(*AlwaysAllowAuthorizationSpec), scope)
+		return Convert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec(a.(*kops.AlwaysAllowAuthorizationSpec), b.(*AlwaysAllowAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AmazonVPCNetworkingSpec)(nil), (*kops.AmazonVPCNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(a.(*AmazonVPCNetworkingSpec), b.(*kops.AmazonVPCNetworkingSpec), scope)
+		return Convert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(a.(*AmazonVPCNetworkingSpec), b.(*kops.AmazonVPCNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AmazonVPCNetworkingSpec)(nil), (*AmazonVPCNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec(a.(*kops.AmazonVPCNetworkingSpec), b.(*AmazonVPCNetworkingSpec), scope)
+		return Convert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec(a.(*kops.AmazonVPCNetworkingSpec), b.(*AmazonVPCNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*Assets)(nil), (*kops.Assets)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_Assets_To_kops_Assets(a.(*Assets), b.(*kops.Assets), scope)
+		return Convert_v1beta1_Assets_To_kops_Assets(a.(*Assets), b.(*kops.Assets), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.Assets)(nil), (*Assets)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_Assets_To_v1alpha2_Assets(a.(*kops.Assets), b.(*Assets), scope)
+		return Convert_kops_Assets_To_v1beta1_Assets(a.(*kops.Assets), b.(*Assets), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AuthenticationSpec)(nil), (*kops.AuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(a.(*AuthenticationSpec), b.(*kops.AuthenticationSpec), scope)
+		return Convert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec(a.(*AuthenticationSpec), b.(*kops.AuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AuthenticationSpec)(nil), (*AuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(a.(*kops.AuthenticationSpec), b.(*AuthenticationSpec), scope)
+		return Convert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec(a.(*kops.AuthenticationSpec), b.(*AuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AuthorizationSpec)(nil), (*kops.AuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(a.(*AuthorizationSpec), b.(*kops.AuthorizationSpec), scope)
+		return Convert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec(a.(*AuthorizationSpec), b.(*kops.AuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AuthorizationSpec)(nil), (*AuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(a.(*kops.AuthorizationSpec), b.(*AuthorizationSpec), scope)
+		return Convert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec(a.(*kops.AuthorizationSpec), b.(*AuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*AwsAuthenticationSpec)(nil), (*kops.AwsAuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(a.(*AwsAuthenticationSpec), b.(*kops.AwsAuthenticationSpec), scope)
+		return Convert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(a.(*AwsAuthenticationSpec), b.(*kops.AwsAuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.AwsAuthenticationSpec)(nil), (*AwsAuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(a.(*kops.AwsAuthenticationSpec), b.(*AwsAuthenticationSpec), scope)
+		return Convert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec(a.(*kops.AwsAuthenticationSpec), b.(*AwsAuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*BastionLoadBalancerSpec)(nil), (*kops.BastionLoadBalancerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(a.(*BastionLoadBalancerSpec), b.(*kops.BastionLoadBalancerSpec), scope)
+		return Convert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(a.(*BastionLoadBalancerSpec), b.(*kops.BastionLoadBalancerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.BastionLoadBalancerSpec)(nil), (*BastionLoadBalancerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec(a.(*kops.BastionLoadBalancerSpec), b.(*BastionLoadBalancerSpec), scope)
+		return Convert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec(a.(*kops.BastionLoadBalancerSpec), b.(*BastionLoadBalancerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*BastionSpec)(nil), (*kops.BastionSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_BastionSpec_To_kops_BastionSpec(a.(*BastionSpec), b.(*kops.BastionSpec), scope)
+		return Convert_v1beta1_BastionSpec_To_kops_BastionSpec(a.(*BastionSpec), b.(*kops.BastionSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.BastionSpec)(nil), (*BastionSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_BastionSpec_To_v1alpha2_BastionSpec(a.(*kops.BastionSpec), b.(*BastionSpec), scope)
+		return Convert_kops_BastionSpec_To_v1beta1_BastionSpec(a.(*kops.BastionSpec), b.(*BastionSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CNINetworkingSpec)(nil), (*kops.CNINetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec(a.(*CNINetworkingSpec), b.(*kops.CNINetworkingSpec), scope)
+		return Convert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec(a.(*CNINetworkingSpec), b.(*kops.CNINetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CNINetworkingSpec)(nil), (*CNINetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec(a.(*kops.CNINetworkingSpec), b.(*CNINetworkingSpec), scope)
+		return Convert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec(a.(*kops.CNINetworkingSpec), b.(*CNINetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CalicoNetworkingSpec)(nil), (*kops.CalicoNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(a.(*CalicoNetworkingSpec), b.(*kops.CalicoNetworkingSpec), scope)
+		return Convert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(a.(*CalicoNetworkingSpec), b.(*kops.CalicoNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CalicoNetworkingSpec)(nil), (*CalicoNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(a.(*kops.CalicoNetworkingSpec), b.(*CalicoNetworkingSpec), scope)
+		return Convert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec(a.(*kops.CalicoNetworkingSpec), b.(*CalicoNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CanalNetworkingSpec)(nil), (*kops.CanalNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(a.(*CanalNetworkingSpec), b.(*kops.CanalNetworkingSpec), scope)
+		return Convert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(a.(*CanalNetworkingSpec), b.(*kops.CanalNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CanalNetworkingSpec)(nil), (*CanalNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(a.(*kops.CanalNetworkingSpec), b.(*CanalNetworkingSpec), scope)
+		return Convert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec(a.(*kops.CanalNetworkingSpec), b.(*CanalNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CiliumNetworkingSpec)(nil), (*kops.CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(a.(*CiliumNetworkingSpec), b.(*kops.CiliumNetworkingSpec), scope)
+		return Convert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(a.(*CiliumNetworkingSpec), b.(*kops.CiliumNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CiliumNetworkingSpec)(nil), (*CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(a.(*kops.CiliumNetworkingSpec), b.(*CiliumNetworkingSpec), scope)
+		return Convert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec(a.(*kops.CiliumNetworkingSpec), b.(*CiliumNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ClassicNetworkingSpec)(nil), (*kops.ClassicNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(a.(*ClassicNetworkingSpec), b.(*kops.ClassicNetworkingSpec), scope)
+		return Convert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(a.(*ClassicNetworkingSpec), b.(*kops.ClassicNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ClassicNetworkingSpec)(nil), (*ClassicNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec(a.(*kops.ClassicNetworkingSpec), b.(*ClassicNetworkingSpec), scope)
+		return Convert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec(a.(*kops.ClassicNetworkingSpec), b.(*ClassicNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CloudConfiguration)(nil), (*kops.CloudConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(a.(*CloudConfiguration), b.(*kops.CloudConfiguration), scope)
+		return Convert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration(a.(*CloudConfiguration), b.(*kops.CloudConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CloudConfiguration)(nil), (*CloudConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(a.(*kops.CloudConfiguration), b.(*CloudConfiguration), scope)
+		return Convert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration(a.(*kops.CloudConfiguration), b.(*CloudConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*CloudControllerManagerConfig)(nil), (*kops.CloudControllerManagerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(a.(*CloudControllerManagerConfig), b.(*kops.CloudControllerManagerConfig), scope)
+		return Convert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(a.(*CloudControllerManagerConfig), b.(*kops.CloudControllerManagerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.CloudControllerManagerConfig)(nil), (*CloudControllerManagerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig(a.(*kops.CloudControllerManagerConfig), b.(*CloudControllerManagerConfig), scope)
+		return Convert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig(a.(*kops.CloudControllerManagerConfig), b.(*CloudControllerManagerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*Cluster)(nil), (*kops.Cluster)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_Cluster_To_kops_Cluster(a.(*Cluster), b.(*kops.Cluster), scope)
+		return Convert_v1beta1_Cluster_To_kops_Cluster(a.(*Cluster), b.(*kops.Cluster), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.Cluster)(nil), (*Cluster)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_Cluster_To_v1alpha2_Cluster(a.(*kops.Cluster), b.(*Cluster), scope)
+		return Convert_kops_Cluster_To_v1beta1_Cluster(a.(*kops.Cluster), b.(*Cluster), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ClusterList)(nil), (*kops.ClusterList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ClusterList_To_kops_ClusterList(a.(*ClusterList), b.(*kops.ClusterList), scope)
+		return Convert_v1beta1_ClusterList_To_kops_ClusterList(a.(*ClusterList), b.(*kops.ClusterList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ClusterList)(nil), (*ClusterList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ClusterList_To_v1alpha2_ClusterList(a.(*kops.ClusterList), b.(*ClusterList), scope)
+		return Convert_kops_ClusterList_To_v1beta1_ClusterList(a.(*kops.ClusterList), b.(*ClusterList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ClusterSpec)(nil), (*kops.ClusterSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(a.(*ClusterSpec), b.(*kops.ClusterSpec), scope)
+		return Convert_v1beta1_ClusterSpec_To_kops_ClusterSpec(a.(*ClusterSpec), b.(*kops.ClusterSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ClusterSpec)(nil), (*ClusterSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(a.(*kops.ClusterSpec), b.(*ClusterSpec), scope)
+		return Convert_kops_ClusterSpec_To_v1beta1_ClusterSpec(a.(*kops.ClusterSpec), b.(*ClusterSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ClusterSubnetSpec)(nil), (*kops.ClusterSubnetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(a.(*ClusterSubnetSpec), b.(*kops.ClusterSubnetSpec), scope)
+		return Convert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(a.(*ClusterSubnetSpec), b.(*kops.ClusterSubnetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ClusterSubnetSpec)(nil), (*ClusterSubnetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(a.(*kops.ClusterSubnetSpec), b.(*ClusterSubnetSpec), scope)
+		return Convert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec(a.(*kops.ClusterSubnetSpec), b.(*ClusterSubnetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ContainerdConfig)(nil), (*kops.ContainerdConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(a.(*ContainerdConfig), b.(*kops.ContainerdConfig), scope)
+		return Convert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig(a.(*ContainerdConfig), b.(*kops.ContainerdConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ContainerdConfig)(nil), (*ContainerdConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(a.(*kops.ContainerdConfig), b.(*ContainerdConfig), scope)
+		return Convert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig(a.(*kops.ContainerdConfig), b.(*ContainerdConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*DNSAccessSpec)(nil), (*kops.DNSAccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec(a.(*DNSAccessSpec), b.(*kops.DNSAccessSpec), scope)
+		return Convert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec(a.(*DNSAccessSpec), b.(*kops.DNSAccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.DNSAccessSpec)(nil), (*DNSAccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec(a.(*kops.DNSAccessSpec), b.(*DNSAccessSpec), scope)
+		return Convert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec(a.(*kops.DNSAccessSpec), b.(*DNSAccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*DNSControllerGossipConfig)(nil), (*kops.DNSControllerGossipConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(a.(*DNSControllerGossipConfig), b.(*kops.DNSControllerGossipConfig), scope)
+		return Convert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(a.(*DNSControllerGossipConfig), b.(*kops.DNSControllerGossipConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.DNSControllerGossipConfig)(nil), (*DNSControllerGossipConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(a.(*kops.DNSControllerGossipConfig), b.(*DNSControllerGossipConfig), scope)
+		return Convert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(a.(*kops.DNSControllerGossipConfig), b.(*DNSControllerGossipConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*DNSSpec)(nil), (*kops.DNSSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_DNSSpec_To_kops_DNSSpec(a.(*DNSSpec), b.(*kops.DNSSpec), scope)
+		return Convert_v1beta1_DNSSpec_To_kops_DNSSpec(a.(*DNSSpec), b.(*kops.DNSSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.DNSSpec)(nil), (*DNSSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_DNSSpec_To_v1alpha2_DNSSpec(a.(*kops.DNSSpec), b.(*DNSSpec), scope)
+		return Convert_kops_DNSSpec_To_v1beta1_DNSSpec(a.(*kops.DNSSpec), b.(*DNSSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*DockerConfig)(nil), (*kops.DockerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_DockerConfig_To_kops_DockerConfig(a.(*DockerConfig), b.(*kops.DockerConfig), scope)
+		return Convert_v1beta1_DockerConfig_To_kops_DockerConfig(a.(*DockerConfig), b.(*kops.DockerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.DockerConfig)(nil), (*DockerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_DockerConfig_To_v1alpha2_DockerConfig(a.(*kops.DockerConfig), b.(*DockerConfig), scope)
+		return Convert_kops_DockerConfig_To_v1beta1_DockerConfig(a.(*kops.DockerConfig), b.(*DockerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EgressProxySpec)(nil), (*kops.EgressProxySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec(a.(*EgressProxySpec), b.(*kops.EgressProxySpec), scope)
+		return Convert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec(a.(*EgressProxySpec), b.(*kops.EgressProxySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EgressProxySpec)(nil), (*EgressProxySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec(a.(*kops.EgressProxySpec), b.(*EgressProxySpec), scope)
+		return Convert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec(a.(*kops.EgressProxySpec), b.(*EgressProxySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EnvVar)(nil), (*kops.EnvVar)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EnvVar_To_kops_EnvVar(a.(*EnvVar), b.(*kops.EnvVar), scope)
+		return Convert_v1beta1_EnvVar_To_kops_EnvVar(a.(*EnvVar), b.(*kops.EnvVar), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EnvVar)(nil), (*EnvVar)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EnvVar_To_v1alpha2_EnvVar(a.(*kops.EnvVar), b.(*EnvVar), scope)
+		return Convert_kops_EnvVar_To_v1beta1_EnvVar(a.(*kops.EnvVar), b.(*EnvVar), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EtcdBackupSpec)(nil), (*kops.EtcdBackupSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec(a.(*EtcdBackupSpec), b.(*kops.EtcdBackupSpec), scope)
+		return Convert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec(a.(*EtcdBackupSpec), b.(*kops.EtcdBackupSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EtcdBackupSpec)(nil), (*EtcdBackupSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec(a.(*kops.EtcdBackupSpec), b.(*EtcdBackupSpec), scope)
+		return Convert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec(a.(*kops.EtcdBackupSpec), b.(*EtcdBackupSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EtcdClusterSpec)(nil), (*kops.EtcdClusterSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(a.(*EtcdClusterSpec), b.(*kops.EtcdClusterSpec), scope)
+		return Convert_v1beta1_EtcdClusterSpec_To_kops_EtcdClusterSpec(a.(*EtcdClusterSpec), b.(*kops.EtcdClusterSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EtcdClusterSpec)(nil), (*EtcdClusterSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(a.(*kops.EtcdClusterSpec), b.(*EtcdClusterSpec), scope)
+		return Convert_kops_EtcdClusterSpec_To_v1beta1_EtcdClusterSpec(a.(*kops.EtcdClusterSpec), b.(*EtcdClusterSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EtcdManagerSpec)(nil), (*kops.EtcdManagerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(a.(*EtcdManagerSpec), b.(*kops.EtcdManagerSpec), scope)
+		return Convert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec(a.(*EtcdManagerSpec), b.(*kops.EtcdManagerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EtcdManagerSpec)(nil), (*EtcdManagerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(a.(*kops.EtcdManagerSpec), b.(*EtcdManagerSpec), scope)
+		return Convert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec(a.(*kops.EtcdManagerSpec), b.(*EtcdManagerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*EtcdMemberSpec)(nil), (*kops.EtcdMemberSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec(a.(*EtcdMemberSpec), b.(*kops.EtcdMemberSpec), scope)
+		return Convert_v1beta1_EtcdMemberSpec_To_kops_EtcdMemberSpec(a.(*EtcdMemberSpec), b.(*kops.EtcdMemberSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.EtcdMemberSpec)(nil), (*EtcdMemberSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec(a.(*kops.EtcdMemberSpec), b.(*EtcdMemberSpec), scope)
+		return Convert_kops_EtcdMemberSpec_To_v1beta1_EtcdMemberSpec(a.(*kops.EtcdMemberSpec), b.(*EtcdMemberSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ExecContainerAction)(nil), (*kops.ExecContainerAction)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction(a.(*ExecContainerAction), b.(*kops.ExecContainerAction), scope)
+		return Convert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction(a.(*ExecContainerAction), b.(*kops.ExecContainerAction), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ExecContainerAction)(nil), (*ExecContainerAction)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction(a.(*kops.ExecContainerAction), b.(*ExecContainerAction), scope)
+		return Convert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction(a.(*kops.ExecContainerAction), b.(*ExecContainerAction), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ExternalDNSConfig)(nil), (*kops.ExternalDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig(a.(*ExternalDNSConfig), b.(*kops.ExternalDNSConfig), scope)
+		return Convert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig(a.(*ExternalDNSConfig), b.(*kops.ExternalDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ExternalDNSConfig)(nil), (*ExternalDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig(a.(*kops.ExternalDNSConfig), b.(*ExternalDNSConfig), scope)
+		return Convert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig(a.(*kops.ExternalDNSConfig), b.(*ExternalDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*ExternalNetworkingSpec)(nil), (*kops.ExternalNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(a.(*ExternalNetworkingSpec), b.(*kops.ExternalNetworkingSpec), scope)
+		return Convert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(a.(*ExternalNetworkingSpec), b.(*kops.ExternalNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.ExternalNetworkingSpec)(nil), (*ExternalNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec(a.(*kops.ExternalNetworkingSpec), b.(*ExternalNetworkingSpec), scope)
+		return Convert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec(a.(*kops.ExternalNetworkingSpec), b.(*ExternalNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*FileAssetSpec)(nil), (*kops.FileAssetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(a.(*FileAssetSpec), b.(*kops.FileAssetSpec), scope)
+		return Convert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(a.(*FileAssetSpec), b.(*kops.FileAssetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.FileAssetSpec)(nil), (*FileAssetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(a.(*kops.FileAssetSpec), b.(*FileAssetSpec), scope)
+		return Convert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(a.(*kops.FileAssetSpec), b.(*FileAssetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*FlannelNetworkingSpec)(nil), (*kops.FlannelNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(a.(*FlannelNetworkingSpec), b.(*kops.FlannelNetworkingSpec), scope)
+		return Convert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(a.(*FlannelNetworkingSpec), b.(*kops.FlannelNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.FlannelNetworkingSpec)(nil), (*FlannelNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec(a.(*kops.FlannelNetworkingSpec), b.(*FlannelNetworkingSpec), scope)
+		return Convert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec(a.(*kops.FlannelNetworkingSpec), b.(*FlannelNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*GCENetworkingSpec)(nil), (*kops.GCENetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec(a.(*GCENetworkingSpec), b.(*kops.GCENetworkingSpec), scope)
+		return Convert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec(a.(*GCENetworkingSpec), b.(*kops.GCENetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.GCENetworkingSpec)(nil), (*GCENetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec(a.(*kops.GCENetworkingSpec), b.(*GCENetworkingSpec), scope)
+		return Convert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec(a.(*kops.GCENetworkingSpec), b.(*GCENetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*GossipConfig)(nil), (*kops.GossipConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_GossipConfig_To_kops_GossipConfig(a.(*GossipConfig), b.(*kops.GossipConfig), scope)
+		return Convert_v1beta1_GossipConfig_To_kops_GossipConfig(a.(*GossipConfig), b.(*kops.GossipConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.GossipConfig)(nil), (*GossipConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_GossipConfig_To_v1alpha2_GossipConfig(a.(*kops.GossipConfig), b.(*GossipConfig), scope)
+		return Convert_kops_GossipConfig_To_v1beta1_GossipConfig(a.(*kops.GossipConfig), b.(*GossipConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*HTTPProxy)(nil), (*kops.HTTPProxy)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_HTTPProxy_To_kops_HTTPProxy(a.(*HTTPProxy), b.(*kops.HTTPProxy), scope)
+		return Convert_v1beta1_HTTPProxy_To_kops_HTTPProxy(a.(*HTTPProxy), b.(*kops.HTTPProxy), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.HTTPProxy)(nil), (*HTTPProxy)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_HTTPProxy_To_v1alpha2_HTTPProxy(a.(*kops.HTTPProxy), b.(*HTTPProxy), scope)
+		return Convert_kops_HTTPProxy_To_v1beta1_HTTPProxy(a.(*kops.HTTPProxy), b.(*HTTPProxy), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*HookSpec)(nil), (*kops.HookSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_HookSpec_To_kops_HookSpec(a.(*HookSpec), b.(*kops.HookSpec), scope)
+		return Convert_v1beta1_HookSpec_To_kops_HookSpec(a.(*HookSpec), b.(*kops.HookSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.HookSpec)(nil), (*HookSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_HookSpec_To_v1alpha2_HookSpec(a.(*kops.HookSpec), b.(*HookSpec), scope)
+		return Convert_kops_HookSpec_To_v1beta1_HookSpec(a.(*kops.HookSpec), b.(*HookSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*IAMProfileSpec)(nil), (*kops.IAMProfileSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec(a.(*IAMProfileSpec), b.(*kops.IAMProfileSpec), scope)
+		return Convert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec(a.(*IAMProfileSpec), b.(*kops.IAMProfileSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.IAMProfileSpec)(nil), (*IAMProfileSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec(a.(*kops.IAMProfileSpec), b.(*IAMProfileSpec), scope)
+		return Convert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec(a.(*kops.IAMProfileSpec), b.(*IAMProfileSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*IAMSpec)(nil), (*kops.IAMSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_IAMSpec_To_kops_IAMSpec(a.(*IAMSpec), b.(*kops.IAMSpec), scope)
+		return Convert_v1beta1_IAMSpec_To_kops_IAMSpec(a.(*IAMSpec), b.(*kops.IAMSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.IAMSpec)(nil), (*IAMSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_IAMSpec_To_v1alpha2_IAMSpec(a.(*kops.IAMSpec), b.(*IAMSpec), scope)
+		return Convert_kops_IAMSpec_To_v1beta1_IAMSpec(a.(*kops.IAMSpec), b.(*IAMSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*InstanceGroup)(nil), (*kops.InstanceGroup)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_InstanceGroup_To_kops_InstanceGroup(a.(*InstanceGroup), b.(*kops.InstanceGroup), scope)
+		return Convert_v1beta1_InstanceGroup_To_kops_InstanceGroup(a.(*InstanceGroup), b.(*kops.InstanceGroup), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.InstanceGroup)(nil), (*InstanceGroup)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_InstanceGroup_To_v1alpha2_InstanceGroup(a.(*kops.InstanceGroup), b.(*InstanceGroup), scope)
+		return Convert_kops_InstanceGroup_To_v1beta1_InstanceGroup(a.(*kops.InstanceGroup), b.(*InstanceGroup), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*InstanceGroupList)(nil), (*kops.InstanceGroupList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList(a.(*InstanceGroupList), b.(*kops.InstanceGroupList), scope)
+		return Convert_v1beta1_InstanceGroupList_To_kops_InstanceGroupList(a.(*InstanceGroupList), b.(*kops.InstanceGroupList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.InstanceGroupList)(nil), (*InstanceGroupList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList(a.(*kops.InstanceGroupList), b.(*InstanceGroupList), scope)
+		return Convert_kops_InstanceGroupList_To_v1beta1_InstanceGroupList(a.(*kops.InstanceGroupList), b.(*InstanceGroupList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*InstanceGroupSpec)(nil), (*kops.InstanceGroupSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(a.(*InstanceGroupSpec), b.(*kops.InstanceGroupSpec), scope)
+		return Convert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec(a.(*InstanceGroupSpec), b.(*kops.InstanceGroupSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.InstanceGroupSpec)(nil), (*InstanceGroupSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(a.(*kops.InstanceGroupSpec), b.(*InstanceGroupSpec), scope)
+		return Convert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec(a.(*kops.InstanceGroupSpec), b.(*InstanceGroupSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*Keyset)(nil), (*kops.Keyset)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_Keyset_To_kops_Keyset(a.(*Keyset), b.(*kops.Keyset), scope)
+		return Convert_v1beta1_Keyset_To_kops_Keyset(a.(*Keyset), b.(*kops.Keyset), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.Keyset)(nil), (*Keyset)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_Keyset_To_v1alpha2_Keyset(a.(*kops.Keyset), b.(*Keyset), scope)
+		return Convert_kops_Keyset_To_v1beta1_Keyset(a.(*kops.Keyset), b.(*Keyset), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KeysetItem)(nil), (*kops.KeysetItem)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KeysetItem_To_kops_KeysetItem(a.(*KeysetItem), b.(*kops.KeysetItem), scope)
+		return Convert_v1beta1_KeysetItem_To_kops_KeysetItem(a.(*KeysetItem), b.(*kops.KeysetItem), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KeysetItem)(nil), (*KeysetItem)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KeysetItem_To_v1alpha2_KeysetItem(a.(*kops.KeysetItem), b.(*KeysetItem), scope)
+		return Convert_kops_KeysetItem_To_v1beta1_KeysetItem(a.(*kops.KeysetItem), b.(*KeysetItem), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KeysetList)(nil), (*kops.KeysetList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KeysetList_To_kops_KeysetList(a.(*KeysetList), b.(*kops.KeysetList), scope)
+		return Convert_v1beta1_KeysetList_To_kops_KeysetList(a.(*KeysetList), b.(*kops.KeysetList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KeysetList)(nil), (*KeysetList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KeysetList_To_v1alpha2_KeysetList(a.(*kops.KeysetList), b.(*KeysetList), scope)
+		return Convert_kops_KeysetList_To_v1beta1_KeysetList(a.(*kops.KeysetList), b.(*KeysetList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KeysetSpec)(nil), (*kops.KeysetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(a.(*KeysetSpec), b.(*kops.KeysetSpec), scope)
+		return Convert_v1beta1_KeysetSpec_To_kops_KeysetSpec(a.(*KeysetSpec), b.(*kops.KeysetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KeysetSpec)(nil), (*KeysetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(a.(*kops.KeysetSpec), b.(*KeysetSpec), scope)
+		return Convert_kops_KeysetSpec_To_v1beta1_KeysetSpec(a.(*kops.KeysetSpec), b.(*KeysetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KopeioAuthenticationSpec)(nil), (*kops.KopeioAuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(a.(*KopeioAuthenticationSpec), b.(*kops.KopeioAuthenticationSpec), scope)
+		return Convert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(a.(*KopeioAuthenticationSpec), b.(*kops.KopeioAuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KopeioAuthenticationSpec)(nil), (*KopeioAuthenticationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec(a.(*kops.KopeioAuthenticationSpec), b.(*KopeioAuthenticationSpec), scope)
+		return Convert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec(a.(*kops.KopeioAuthenticationSpec), b.(*KopeioAuthenticationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KopeioNetworkingSpec)(nil), (*kops.KopeioNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(a.(*KopeioNetworkingSpec), b.(*kops.KopeioNetworkingSpec), scope)
+		return Convert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(a.(*KopeioNetworkingSpec), b.(*kops.KopeioNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KopeioNetworkingSpec)(nil), (*KopeioNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec(a.(*kops.KopeioNetworkingSpec), b.(*KopeioNetworkingSpec), scope)
+		return Convert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec(a.(*kops.KopeioNetworkingSpec), b.(*KopeioNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeAPIServerConfig)(nil), (*kops.KubeAPIServerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(a.(*KubeAPIServerConfig), b.(*kops.KubeAPIServerConfig), scope)
+		return Convert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(a.(*KubeAPIServerConfig), b.(*kops.KubeAPIServerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeAPIServerConfig)(nil), (*KubeAPIServerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(a.(*kops.KubeAPIServerConfig), b.(*KubeAPIServerConfig), scope)
+		return Convert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig(a.(*kops.KubeAPIServerConfig), b.(*KubeAPIServerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeControllerManagerConfig)(nil), (*kops.KubeControllerManagerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(a.(*KubeControllerManagerConfig), b.(*kops.KubeControllerManagerConfig), scope)
+		return Convert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(a.(*KubeControllerManagerConfig), b.(*kops.KubeControllerManagerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeControllerManagerConfig)(nil), (*KubeControllerManagerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig(a.(*kops.KubeControllerManagerConfig), b.(*KubeControllerManagerConfig), scope)
+		return Convert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig(a.(*kops.KubeControllerManagerConfig), b.(*KubeControllerManagerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeDNSConfig)(nil), (*kops.KubeDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(a.(*KubeDNSConfig), b.(*kops.KubeDNSConfig), scope)
+		return Convert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig(a.(*KubeDNSConfig), b.(*kops.KubeDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeDNSConfig)(nil), (*KubeDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(a.(*kops.KubeDNSConfig), b.(*KubeDNSConfig), scope)
+		return Convert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig(a.(*kops.KubeDNSConfig), b.(*KubeDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeProxyConfig)(nil), (*kops.KubeProxyConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(a.(*KubeProxyConfig), b.(*kops.KubeProxyConfig), scope)
+		return Convert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig(a.(*KubeProxyConfig), b.(*kops.KubeProxyConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeProxyConfig)(nil), (*KubeProxyConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(a.(*kops.KubeProxyConfig), b.(*KubeProxyConfig), scope)
+		return Convert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig(a.(*kops.KubeProxyConfig), b.(*KubeProxyConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeSchedulerConfig)(nil), (*kops.KubeSchedulerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(a.(*KubeSchedulerConfig), b.(*kops.KubeSchedulerConfig), scope)
+		return Convert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(a.(*KubeSchedulerConfig), b.(*kops.KubeSchedulerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeSchedulerConfig)(nil), (*KubeSchedulerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(a.(*kops.KubeSchedulerConfig), b.(*KubeSchedulerConfig), scope)
+		return Convert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig(a.(*kops.KubeSchedulerConfig), b.(*KubeSchedulerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubeletConfigSpec)(nil), (*kops.KubeletConfigSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(a.(*KubeletConfigSpec), b.(*kops.KubeletConfigSpec), scope)
+		return Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(a.(*KubeletConfigSpec), b.(*kops.KubeletConfigSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubeletConfigSpec)(nil), (*KubeletConfigSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(a.(*kops.KubeletConfigSpec), b.(*KubeletConfigSpec), scope)
+		return Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(a.(*kops.KubeletConfigSpec), b.(*KubeletConfigSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KubenetNetworkingSpec)(nil), (*kops.KubenetNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(a.(*KubenetNetworkingSpec), b.(*kops.KubenetNetworkingSpec), scope)
+		return Convert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(a.(*KubenetNetworkingSpec), b.(*kops.KubenetNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KubenetNetworkingSpec)(nil), (*KubenetNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec(a.(*kops.KubenetNetworkingSpec), b.(*KubenetNetworkingSpec), scope)
+		return Convert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec(a.(*kops.KubenetNetworkingSpec), b.(*KubenetNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*KuberouterNetworkingSpec)(nil), (*kops.KuberouterNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(a.(*KuberouterNetworkingSpec), b.(*kops.KuberouterNetworkingSpec), scope)
+		return Convert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(a.(*KuberouterNetworkingSpec), b.(*kops.KuberouterNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.KuberouterNetworkingSpec)(nil), (*KuberouterNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec(a.(*kops.KuberouterNetworkingSpec), b.(*KuberouterNetworkingSpec), scope)
+		return Convert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec(a.(*kops.KuberouterNetworkingSpec), b.(*KuberouterNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*LeaderElectionConfiguration)(nil), (*kops.LeaderElectionConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(a.(*LeaderElectionConfiguration), b.(*kops.LeaderElectionConfiguration), scope)
+		return Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(a.(*LeaderElectionConfiguration), b.(*kops.LeaderElectionConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.LeaderElectionConfiguration)(nil), (*LeaderElectionConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(a.(*kops.LeaderElectionConfiguration), b.(*LeaderElectionConfiguration), scope)
+		return Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(a.(*kops.LeaderElectionConfiguration), b.(*LeaderElectionConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*LoadBalancer)(nil), (*kops.LoadBalancer)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_LoadBalancer_To_kops_LoadBalancer(a.(*LoadBalancer), b.(*kops.LoadBalancer), scope)
+		return Convert_v1beta1_LoadBalancer_To_kops_LoadBalancer(a.(*LoadBalancer), b.(*kops.LoadBalancer), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.LoadBalancer)(nil), (*LoadBalancer)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_LoadBalancer_To_v1alpha2_LoadBalancer(a.(*kops.LoadBalancer), b.(*LoadBalancer), scope)
+		return Convert_kops_LoadBalancer_To_v1beta1_LoadBalancer(a.(*kops.LoadBalancer), b.(*LoadBalancer), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*LoadBalancerAccessSpec)(nil), (*kops.LoadBalancerAccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(a.(*LoadBalancerAccessSpec), b.(*kops.LoadBalancerAccessSpec), scope)
+		return Convert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(a.(*LoadBalancerAccessSpec), b.(*kops.LoadBalancerAccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.LoadBalancerAccessSpec)(nil), (*LoadBalancerAccessSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(a.(*kops.LoadBalancerAccessSpec), b.(*LoadBalancerAccessSpec), scope)
+		return Convert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec(a.(*kops.LoadBalancerAccessSpec), b.(*LoadBalancerAccessSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*LyftVPCNetworkingSpec)(nil), (*kops.LyftVPCNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(a.(*LyftVPCNetworkingSpec), b.(*kops.LyftVPCNetworkingSpec), scope)
+		return Convert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(a.(*LyftVPCNetworkingSpec), b.(*kops.LyftVPCNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.LyftVPCNetworkingSpec)(nil), (*LyftVPCNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec(a.(*kops.LyftVPCNetworkingSpec), b.(*LyftVPCNetworkingSpec), scope)
+		return Convert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec(a.(*kops.LyftVPCNetworkingSpec), b.(*LyftVPCNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*MixedInstancesPolicySpec)(nil), (*kops.MixedInstancesPolicySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(a.(*MixedInstancesPolicySpec), b.(*kops.MixedInstancesPolicySpec), scope)
+		return Convert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(a.(*MixedInstancesPolicySpec), b.(*kops.MixedInstancesPolicySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.MixedInstancesPolicySpec)(nil), (*MixedInstancesPolicySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec(a.(*kops.MixedInstancesPolicySpec), b.(*MixedInstancesPolicySpec), scope)
+		return Convert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec(a.(*kops.MixedInstancesPolicySpec), b.(*MixedInstancesPolicySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*NetworkingSpec)(nil), (*kops.NetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(a.(*NetworkingSpec), b.(*kops.NetworkingSpec), scope)
+		return Convert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec(a.(*NetworkingSpec), b.(*kops.NetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.NetworkingSpec)(nil), (*NetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(a.(*kops.NetworkingSpec), b.(*NetworkingSpec), scope)
+		return Convert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec(a.(*kops.NetworkingSpec), b.(*NetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*NodeAuthorizationSpec)(nil), (*kops.NodeAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(a.(*NodeAuthorizationSpec), b.(*kops.NodeAuthorizationSpec), scope)
+		return Convert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(a.(*NodeAuthorizationSpec), b.(*kops.NodeAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.NodeAuthorizationSpec)(nil), (*NodeAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(a.(*kops.NodeAuthorizationSpec), b.(*NodeAuthorizationSpec), scope)
+		return Convert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec(a.(*kops.NodeAuthorizationSpec), b.(*NodeAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*NodeAuthorizerSpec)(nil), (*kops.NodeAuthorizerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(a.(*NodeAuthorizerSpec), b.(*kops.NodeAuthorizerSpec), scope)
+		return Convert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(a.(*NodeAuthorizerSpec), b.(*kops.NodeAuthorizerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.NodeAuthorizerSpec)(nil), (*NodeAuthorizerSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(a.(*kops.NodeAuthorizerSpec), b.(*NodeAuthorizerSpec), scope)
+		return Convert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec(a.(*kops.NodeAuthorizerSpec), b.(*NodeAuthorizerSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*NodeLocalDNSConfig)(nil), (*kops.NodeLocalDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(a.(*NodeLocalDNSConfig), b.(*kops.NodeLocalDNSConfig), scope)
+		return Convert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(a.(*NodeLocalDNSConfig), b.(*kops.NodeLocalDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.NodeLocalDNSConfig)(nil), (*NodeLocalDNSConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig(a.(*kops.NodeLocalDNSConfig), b.(*NodeLocalDNSConfig), scope)
+		return Convert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig(a.(*kops.NodeLocalDNSConfig), b.(*NodeLocalDNSConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*OpenstackBlockStorageConfig)(nil), (*kops.OpenstackBlockStorageConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(a.(*OpenstackBlockStorageConfig), b.(*kops.OpenstackBlockStorageConfig), scope)
+		return Convert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(a.(*OpenstackBlockStorageConfig), b.(*kops.OpenstackBlockStorageConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.OpenstackBlockStorageConfig)(nil), (*OpenstackBlockStorageConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig(a.(*kops.OpenstackBlockStorageConfig), b.(*OpenstackBlockStorageConfig), scope)
+		return Convert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig(a.(*kops.OpenstackBlockStorageConfig), b.(*OpenstackBlockStorageConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*OpenstackConfiguration)(nil), (*kops.OpenstackConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(a.(*OpenstackConfiguration), b.(*kops.OpenstackConfiguration), scope)
+		return Convert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration(a.(*OpenstackConfiguration), b.(*kops.OpenstackConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.OpenstackConfiguration)(nil), (*OpenstackConfiguration)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(a.(*kops.OpenstackConfiguration), b.(*OpenstackConfiguration), scope)
+		return Convert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration(a.(*kops.OpenstackConfiguration), b.(*OpenstackConfiguration), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*OpenstackLoadbalancerConfig)(nil), (*kops.OpenstackLoadbalancerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(a.(*OpenstackLoadbalancerConfig), b.(*kops.OpenstackLoadbalancerConfig), scope)
+		return Convert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(a.(*OpenstackLoadbalancerConfig), b.(*kops.OpenstackLoadbalancerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.OpenstackLoadbalancerConfig)(nil), (*OpenstackLoadbalancerConfig)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig(a.(*kops.OpenstackLoadbalancerConfig), b.(*OpenstackLoadbalancerConfig), scope)
+		return Convert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig(a.(*kops.OpenstackLoadbalancerConfig), b.(*OpenstackLoadbalancerConfig), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*OpenstackMonitor)(nil), (*kops.OpenstackMonitor)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor(a.(*OpenstackMonitor), b.(*kops.OpenstackMonitor), scope)
+		return Convert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor(a.(*OpenstackMonitor), b.(*kops.OpenstackMonitor), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.OpenstackMonitor)(nil), (*OpenstackMonitor)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor(a.(*kops.OpenstackMonitor), b.(*OpenstackMonitor), scope)
+		return Convert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor(a.(*kops.OpenstackMonitor), b.(*OpenstackMonitor), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*OpenstackRouter)(nil), (*kops.OpenstackRouter)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter(a.(*OpenstackRouter), b.(*kops.OpenstackRouter), scope)
+		return Convert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter(a.(*OpenstackRouter), b.(*kops.OpenstackRouter), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.OpenstackRouter)(nil), (*OpenstackRouter)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter(a.(*kops.OpenstackRouter), b.(*OpenstackRouter), scope)
+		return Convert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter(a.(*kops.OpenstackRouter), b.(*OpenstackRouter), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*RBACAuthorizationSpec)(nil), (*kops.RBACAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(a.(*RBACAuthorizationSpec), b.(*kops.RBACAuthorizationSpec), scope)
+		return Convert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(a.(*RBACAuthorizationSpec), b.(*kops.RBACAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.RBACAuthorizationSpec)(nil), (*RBACAuthorizationSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec(a.(*kops.RBACAuthorizationSpec), b.(*RBACAuthorizationSpec), scope)
+		return Convert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec(a.(*kops.RBACAuthorizationSpec), b.(*RBACAuthorizationSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*RollingUpdate)(nil), (*kops.RollingUpdate)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(a.(*RollingUpdate), b.(*kops.RollingUpdate), scope)
+		return Convert_v1beta1_RollingUpdate_To_kops_RollingUpdate(a.(*RollingUpdate), b.(*kops.RollingUpdate), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.RollingUpdate)(nil), (*RollingUpdate)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(a.(*kops.RollingUpdate), b.(*RollingUpdate), scope)
+		return Convert_kops_RollingUpdate_To_v1beta1_RollingUpdate(a.(*kops.RollingUpdate), b.(*RollingUpdate), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*RomanaNetworkingSpec)(nil), (*kops.RomanaNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(a.(*RomanaNetworkingSpec), b.(*kops.RomanaNetworkingSpec), scope)
+		return Convert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(a.(*RomanaNetworkingSpec), b.(*kops.RomanaNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.RomanaNetworkingSpec)(nil), (*RomanaNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec(a.(*kops.RomanaNetworkingSpec), b.(*RomanaNetworkingSpec), scope)
+		return Convert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec(a.(*kops.RomanaNetworkingSpec), b.(*RomanaNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*SSHCredential)(nil), (*kops.SSHCredential)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_SSHCredential_To_kops_SSHCredential(a.(*SSHCredential), b.(*kops.SSHCredential), scope)
+		return Convert_v1beta1_SSHCredential_To_kops_SSHCredential(a.(*SSHCredential), b.(*kops.SSHCredential), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.SSHCredential)(nil), (*SSHCredential)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_SSHCredential_To_v1alpha2_SSHCredential(a.(*kops.SSHCredential), b.(*SSHCredential), scope)
+		return Convert_kops_SSHCredential_To_v1beta1_SSHCredential(a.(*kops.SSHCredential), b.(*SSHCredential), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*SSHCredentialList)(nil), (*kops.SSHCredentialList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList(a.(*SSHCredentialList), b.(*kops.SSHCredentialList), scope)
+		return Convert_v1beta1_SSHCredentialList_To_kops_SSHCredentialList(a.(*SSHCredentialList), b.(*kops.SSHCredentialList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.SSHCredentialList)(nil), (*SSHCredentialList)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList(a.(*kops.SSHCredentialList), b.(*SSHCredentialList), scope)
+		return Convert_kops_SSHCredentialList_To_v1beta1_SSHCredentialList(a.(*kops.SSHCredentialList), b.(*SSHCredentialList), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*SSHCredentialSpec)(nil), (*kops.SSHCredentialSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec(a.(*SSHCredentialSpec), b.(*kops.SSHCredentialSpec), scope)
+		return Convert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec(a.(*SSHCredentialSpec), b.(*kops.SSHCredentialSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.SSHCredentialSpec)(nil), (*SSHCredentialSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec(a.(*kops.SSHCredentialSpec), b.(*SSHCredentialSpec), scope)
+		return Convert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec(a.(*kops.SSHCredentialSpec), b.(*SSHCredentialSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*TargetSpec)(nil), (*kops.TargetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_TargetSpec_To_kops_TargetSpec(a.(*TargetSpec), b.(*kops.TargetSpec), scope)
+		return Convert_v1beta1_TargetSpec_To_kops_TargetSpec(a.(*TargetSpec), b.(*kops.TargetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.TargetSpec)(nil), (*TargetSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_TargetSpec_To_v1alpha2_TargetSpec(a.(*kops.TargetSpec), b.(*TargetSpec), scope)
+		return Convert_kops_TargetSpec_To_v1beta1_TargetSpec(a.(*kops.TargetSpec), b.(*TargetSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*TerraformSpec)(nil), (*kops.TerraformSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_TerraformSpec_To_kops_TerraformSpec(a.(*TerraformSpec), b.(*kops.TerraformSpec), scope)
+		return Convert_v1beta1_TerraformSpec_To_kops_TerraformSpec(a.(*TerraformSpec), b.(*kops.TerraformSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.TerraformSpec)(nil), (*TerraformSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_TerraformSpec_To_v1alpha2_TerraformSpec(a.(*kops.TerraformSpec), b.(*TerraformSpec), scope)
+		return Convert_kops_TerraformSpec_To_v1beta1_TerraformSpec(a.(*kops.TerraformSpec), b.(*TerraformSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*TopologySpec)(nil), (*kops.TopologySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_TopologySpec_To_kops_TopologySpec(a.(*TopologySpec), b.(*kops.TopologySpec), scope)
+		return Convert_v1beta1_TopologySpec_To_kops_TopologySpec(a.(*TopologySpec), b.(*kops.TopologySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.TopologySpec)(nil), (*TopologySpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_TopologySpec_To_v1alpha2_TopologySpec(a.(*kops.TopologySpec), b.(*TopologySpec), scope)
+		return Convert_kops_TopologySpec_To_v1beta1_TopologySpec(a.(*kops.TopologySpec), b.(*TopologySpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*UserData)(nil), (*kops.UserData)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_UserData_To_kops_UserData(a.(*UserData), b.(*kops.UserData), scope)
+		return Convert_v1beta1_UserData_To_kops_UserData(a.(*UserData), b.(*kops.UserData), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.UserData)(nil), (*UserData)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_UserData_To_v1alpha2_UserData(a.(*kops.UserData), b.(*UserData), scope)
+		return Convert_kops_UserData_To_v1beta1_UserData(a.(*kops.UserData), b.(*UserData), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*VolumeMountSpec)(nil), (*kops.VolumeMountSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec(a.(*VolumeMountSpec), b.(*kops.VolumeMountSpec), scope)
+		return Convert_v1beta1_VolumeMountSpec_To_kops_VolumeMountSpec(a.(*VolumeMountSpec), b.(*kops.VolumeMountSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.VolumeMountSpec)(nil), (*VolumeMountSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec(a.(*kops.VolumeMountSpec), b.(*VolumeMountSpec), scope)
+		return Convert_kops_VolumeMountSpec_To_v1beta1_VolumeMountSpec(a.(*kops.VolumeMountSpec), b.(*VolumeMountSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*VolumeSpec)(nil), (*kops.VolumeSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_VolumeSpec_To_kops_VolumeSpec(a.(*VolumeSpec), b.(*kops.VolumeSpec), scope)
+		return Convert_v1beta1_VolumeSpec_To_kops_VolumeSpec(a.(*VolumeSpec), b.(*kops.VolumeSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.VolumeSpec)(nil), (*VolumeSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_VolumeSpec_To_v1alpha2_VolumeSpec(a.(*kops.VolumeSpec), b.(*VolumeSpec), scope)
+		return Convert_kops_VolumeSpec_To_v1beta1_VolumeSpec(a.(*kops.VolumeSpec), b.(*VolumeSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*WeaveNetworkingSpec)(nil), (*kops.WeaveNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(a.(*WeaveNetworkingSpec), b.(*kops.WeaveNetworkingSpec), scope)
+		return Convert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(a.(*WeaveNetworkingSpec), b.(*kops.WeaveNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	if err := s.AddGeneratedConversionFunc((*kops.WeaveNetworkingSpec)(nil), (*WeaveNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(a.(*kops.WeaveNetworkingSpec), b.(*WeaveNetworkingSpec), scope)
+		return Convert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec(a.(*kops.WeaveNetworkingSpec), b.(*WeaveNetworkingSpec), scope)
 	}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func autoConvert_v1alpha2_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kops.AccessSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kops.AccessSpec, s conversion.Scope) error {
 	if in.DNS != nil {
 		in, out := &in.DNS, &out.DNS
 		*out = new(kops.DNSAccessSpec)
-		if err := Convert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -919,7 +919,7 @@ func autoConvert_v1alpha2_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kop
 	if in.LoadBalancer != nil {
 		in, out := &in.LoadBalancer, &out.LoadBalancer
 		*out = new(kops.LoadBalancerAccessSpec)
-		if err := Convert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -928,16 +928,16 @@ func autoConvert_v1alpha2_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_AccessSpec_To_kops_AccessSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kops.AccessSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AccessSpec_To_kops_AccessSpec(in, out, s)
+// Convert_v1beta1_AccessSpec_To_kops_AccessSpec is an autogenerated conversion function.
+func Convert_v1beta1_AccessSpec_To_kops_AccessSpec(in *AccessSpec, out *kops.AccessSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AccessSpec_To_kops_AccessSpec(in, out, s)
 }
 
-func autoConvert_kops_AccessSpec_To_v1alpha2_AccessSpec(in *kops.AccessSpec, out *AccessSpec, s conversion.Scope) error {
+func autoConvert_kops_AccessSpec_To_v1beta1_AccessSpec(in *kops.AccessSpec, out *AccessSpec, s conversion.Scope) error {
 	if in.DNS != nil {
 		in, out := &in.DNS, &out.DNS
 		*out = new(DNSAccessSpec)
-		if err := Convert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -946,7 +946,7 @@ func autoConvert_kops_AccessSpec_To_v1alpha2_AccessSpec(in *kops.AccessSpec, out
 	if in.LoadBalancer != nil {
 		in, out := &in.LoadBalancer, &out.LoadBalancer
 		*out = new(LoadBalancerAccessSpec)
-		if err := Convert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -955,56 +955,56 @@ func autoConvert_kops_AccessSpec_To_v1alpha2_AccessSpec(in *kops.AccessSpec, out
 	return nil
 }
 
-// Convert_kops_AccessSpec_To_v1alpha2_AccessSpec is an autogenerated conversion function.
-func Convert_kops_AccessSpec_To_v1alpha2_AccessSpec(in *kops.AccessSpec, out *AccessSpec, s conversion.Scope) error {
-	return autoConvert_kops_AccessSpec_To_v1alpha2_AccessSpec(in, out, s)
+// Convert_kops_AccessSpec_To_v1beta1_AccessSpec is an autogenerated conversion function.
+func Convert_kops_AccessSpec_To_v1beta1_AccessSpec(in *kops.AccessSpec, out *AccessSpec, s conversion.Scope) error {
+	return autoConvert_kops_AccessSpec_To_v1beta1_AccessSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_AddonSpec_To_kops_AddonSpec(in *AddonSpec, out *kops.AddonSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AddonSpec_To_kops_AddonSpec(in *AddonSpec, out *kops.AddonSpec, s conversion.Scope) error {
 	out.Manifest = in.Manifest
 	return nil
 }
 
-// Convert_v1alpha2_AddonSpec_To_kops_AddonSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AddonSpec_To_kops_AddonSpec(in *AddonSpec, out *kops.AddonSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AddonSpec_To_kops_AddonSpec(in, out, s)
+// Convert_v1beta1_AddonSpec_To_kops_AddonSpec is an autogenerated conversion function.
+func Convert_v1beta1_AddonSpec_To_kops_AddonSpec(in *AddonSpec, out *kops.AddonSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AddonSpec_To_kops_AddonSpec(in, out, s)
 }
 
-func autoConvert_kops_AddonSpec_To_v1alpha2_AddonSpec(in *kops.AddonSpec, out *AddonSpec, s conversion.Scope) error {
+func autoConvert_kops_AddonSpec_To_v1beta1_AddonSpec(in *kops.AddonSpec, out *AddonSpec, s conversion.Scope) error {
 	out.Manifest = in.Manifest
 	return nil
 }
 
-// Convert_kops_AddonSpec_To_v1alpha2_AddonSpec is an autogenerated conversion function.
-func Convert_kops_AddonSpec_To_v1alpha2_AddonSpec(in *kops.AddonSpec, out *AddonSpec, s conversion.Scope) error {
-	return autoConvert_kops_AddonSpec_To_v1alpha2_AddonSpec(in, out, s)
+// Convert_kops_AddonSpec_To_v1beta1_AddonSpec is an autogenerated conversion function.
+func Convert_kops_AddonSpec_To_v1beta1_AddonSpec(in *kops.AddonSpec, out *AddonSpec, s conversion.Scope) error {
+	return autoConvert_kops_AddonSpec_To_v1beta1_AddonSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in *AlwaysAllowAuthorizationSpec, out *kops.AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in *AlwaysAllowAuthorizationSpec, out *kops.AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in *AlwaysAllowAuthorizationSpec, out *kops.AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in, out, s)
+// Convert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec is an autogenerated conversion function.
+func Convert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in *AlwaysAllowAuthorizationSpec, out *kops.AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec(in *kops.AlwaysAllowAuthorizationSpec, out *AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec(in *kops.AlwaysAllowAuthorizationSpec, out *AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec is an autogenerated conversion function.
-func Convert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec(in *kops.AlwaysAllowAuthorizationSpec, out *AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec(in, out, s)
+// Convert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec is an autogenerated conversion function.
+func Convert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec(in *kops.AlwaysAllowAuthorizationSpec, out *AlwaysAllowAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in *AmazonVPCNetworkingSpec, out *kops.AmazonVPCNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in *AmazonVPCNetworkingSpec, out *kops.AmazonVPCNetworkingSpec, s conversion.Scope) error {
 	out.ImageName = in.ImageName
 	if in.Env != nil {
 		in, out := &in.Env, &out.Env
 		*out = make([]kops.EnvVar, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_EnvVar_To_kops_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_EnvVar_To_kops_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1014,18 +1014,18 @@ func autoConvert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpe
 	return nil
 }
 
-// Convert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in *AmazonVPCNetworkingSpec, out *kops.AmazonVPCNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in, out, s)
+// Convert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in *AmazonVPCNetworkingSpec, out *kops.AmazonVPCNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec(in *kops.AmazonVPCNetworkingSpec, out *AmazonVPCNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec(in *kops.AmazonVPCNetworkingSpec, out *AmazonVPCNetworkingSpec, s conversion.Scope) error {
 	out.ImageName = in.ImageName
 	if in.Env != nil {
 		in, out := &in.Env, &out.Env
 		*out = make([]EnvVar, len(*in))
 		for i := range *in {
-			if err := Convert_kops_EnvVar_To_v1alpha2_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_EnvVar_To_v1beta1_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1035,40 +1035,40 @@ func autoConvert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpe
 	return nil
 }
 
-// Convert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec(in *kops.AmazonVPCNetworkingSpec, out *AmazonVPCNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec(in, out, s)
+// Convert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec(in *kops.AmazonVPCNetworkingSpec, out *AmazonVPCNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_Assets_To_kops_Assets(in *Assets, out *kops.Assets, s conversion.Scope) error {
+func autoConvert_v1beta1_Assets_To_kops_Assets(in *Assets, out *kops.Assets, s conversion.Scope) error {
 	out.ContainerRegistry = in.ContainerRegistry
 	out.FileRepository = in.FileRepository
 	out.ContainerProxy = in.ContainerProxy
 	return nil
 }
 
-// Convert_v1alpha2_Assets_To_kops_Assets is an autogenerated conversion function.
-func Convert_v1alpha2_Assets_To_kops_Assets(in *Assets, out *kops.Assets, s conversion.Scope) error {
-	return autoConvert_v1alpha2_Assets_To_kops_Assets(in, out, s)
+// Convert_v1beta1_Assets_To_kops_Assets is an autogenerated conversion function.
+func Convert_v1beta1_Assets_To_kops_Assets(in *Assets, out *kops.Assets, s conversion.Scope) error {
+	return autoConvert_v1beta1_Assets_To_kops_Assets(in, out, s)
 }
 
-func autoConvert_kops_Assets_To_v1alpha2_Assets(in *kops.Assets, out *Assets, s conversion.Scope) error {
+func autoConvert_kops_Assets_To_v1beta1_Assets(in *kops.Assets, out *Assets, s conversion.Scope) error {
 	out.ContainerRegistry = in.ContainerRegistry
 	out.FileRepository = in.FileRepository
 	out.ContainerProxy = in.ContainerProxy
 	return nil
 }
 
-// Convert_kops_Assets_To_v1alpha2_Assets is an autogenerated conversion function.
-func Convert_kops_Assets_To_v1alpha2_Assets(in *kops.Assets, out *Assets, s conversion.Scope) error {
-	return autoConvert_kops_Assets_To_v1alpha2_Assets(in, out, s)
+// Convert_kops_Assets_To_v1beta1_Assets is an autogenerated conversion function.
+func Convert_kops_Assets_To_v1beta1_Assets(in *kops.Assets, out *Assets, s conversion.Scope) error {
+	return autoConvert_kops_Assets_To_v1beta1_Assets(in, out, s)
 }
 
-func autoConvert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(in *AuthenticationSpec, out *kops.AuthenticationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec(in *AuthenticationSpec, out *kops.AuthenticationSpec, s conversion.Scope) error {
 	if in.Kopeio != nil {
 		in, out := &in.Kopeio, &out.Kopeio
 		*out = new(kops.KopeioAuthenticationSpec)
-		if err := Convert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1077,7 +1077,7 @@ func autoConvert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(in *Auth
 	if in.Aws != nil {
 		in, out := &in.Aws, &out.Aws
 		*out = new(kops.AwsAuthenticationSpec)
-		if err := Convert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1086,16 +1086,16 @@ func autoConvert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(in *Auth
 	return nil
 }
 
-// Convert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(in *AuthenticationSpec, out *kops.AuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(in, out, s)
+// Convert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec is an autogenerated conversion function.
+func Convert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec(in *AuthenticationSpec, out *kops.AuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec(in, out, s)
 }
 
-func autoConvert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(in *kops.AuthenticationSpec, out *AuthenticationSpec, s conversion.Scope) error {
+func autoConvert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec(in *kops.AuthenticationSpec, out *AuthenticationSpec, s conversion.Scope) error {
 	if in.Kopeio != nil {
 		in, out := &in.Kopeio, &out.Kopeio
 		*out = new(KopeioAuthenticationSpec)
-		if err := Convert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1104,7 +1104,7 @@ func autoConvert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(in *kops
 	if in.Aws != nil {
 		in, out := &in.Aws, &out.Aws
 		*out = new(AwsAuthenticationSpec)
-		if err := Convert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1113,16 +1113,16 @@ func autoConvert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(in *kops
 	return nil
 }
 
-// Convert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec is an autogenerated conversion function.
-func Convert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(in *kops.AuthenticationSpec, out *AuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(in, out, s)
+// Convert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec is an autogenerated conversion function.
+func Convert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec(in *kops.AuthenticationSpec, out *AuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(in *AuthorizationSpec, out *kops.AuthorizationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec(in *AuthorizationSpec, out *kops.AuthorizationSpec, s conversion.Scope) error {
 	if in.AlwaysAllow != nil {
 		in, out := &in.AlwaysAllow, &out.AlwaysAllow
 		*out = new(kops.AlwaysAllowAuthorizationSpec)
-		if err := Convert_v1alpha2_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AlwaysAllowAuthorizationSpec_To_kops_AlwaysAllowAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1131,7 +1131,7 @@ func autoConvert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(in *Author
 	if in.RBAC != nil {
 		in, out := &in.RBAC, &out.RBAC
 		*out = new(kops.RBACAuthorizationSpec)
-		if err := Convert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1140,16 +1140,16 @@ func autoConvert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(in *Author
 	return nil
 }
 
-// Convert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(in *AuthorizationSpec, out *kops.AuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(in, out, s)
+// Convert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec is an autogenerated conversion function.
+func Convert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec(in *AuthorizationSpec, out *kops.AuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec(in, out, s)
 }
 
-func autoConvert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(in *kops.AuthorizationSpec, out *AuthorizationSpec, s conversion.Scope) error {
+func autoConvert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec(in *kops.AuthorizationSpec, out *AuthorizationSpec, s conversion.Scope) error {
 	if in.AlwaysAllow != nil {
 		in, out := &in.AlwaysAllow, &out.AlwaysAllow
 		*out = new(AlwaysAllowAuthorizationSpec)
-		if err := Convert_kops_AlwaysAllowAuthorizationSpec_To_v1alpha2_AlwaysAllowAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AlwaysAllowAuthorizationSpec_To_v1beta1_AlwaysAllowAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1158,7 +1158,7 @@ func autoConvert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(in *kops.A
 	if in.RBAC != nil {
 		in, out := &in.RBAC, &out.RBAC
 		*out = new(RBACAuthorizationSpec)
-		if err := Convert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1167,12 +1167,12 @@ func autoConvert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(in *kops.A
 	return nil
 }
 
-// Convert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec is an autogenerated conversion function.
-func Convert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(in *kops.AuthorizationSpec, out *AuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(in, out, s)
+// Convert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec is an autogenerated conversion function.
+func Convert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec(in *kops.AuthorizationSpec, out *AuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in *AwsAuthenticationSpec, out *kops.AwsAuthenticationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in *AwsAuthenticationSpec, out *kops.AwsAuthenticationSpec, s conversion.Scope) error {
 	out.Image = in.Image
 	out.MemoryRequest = in.MemoryRequest
 	out.CPURequest = in.CPURequest
@@ -1181,12 +1181,12 @@ func autoConvert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in
 	return nil
 }
 
-// Convert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in *AwsAuthenticationSpec, out *kops.AwsAuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in, out, s)
+// Convert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec is an autogenerated conversion function.
+func Convert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in *AwsAuthenticationSpec, out *kops.AwsAuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_AwsAuthenticationSpec_To_kops_AwsAuthenticationSpec(in, out, s)
 }
 
-func autoConvert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(in *kops.AwsAuthenticationSpec, out *AwsAuthenticationSpec, s conversion.Scope) error {
+func autoConvert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec(in *kops.AwsAuthenticationSpec, out *AwsAuthenticationSpec, s conversion.Scope) error {
 	out.Image = in.Image
 	out.MemoryRequest = in.MemoryRequest
 	out.CPURequest = in.CPURequest
@@ -1195,38 +1195,38 @@ func autoConvert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(in
 	return nil
 }
 
-// Convert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec is an autogenerated conversion function.
-func Convert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(in *kops.AwsAuthenticationSpec, out *AwsAuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_kops_AwsAuthenticationSpec_To_v1alpha2_AwsAuthenticationSpec(in, out, s)
+// Convert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec is an autogenerated conversion function.
+func Convert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec(in *kops.AwsAuthenticationSpec, out *AwsAuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_kops_AwsAuthenticationSpec_To_v1beta1_AwsAuthenticationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in *BastionLoadBalancerSpec, out *kops.BastionLoadBalancerSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in *BastionLoadBalancerSpec, out *kops.BastionLoadBalancerSpec, s conversion.Scope) error {
 	out.AdditionalSecurityGroups = in.AdditionalSecurityGroups
 	return nil
 }
 
-// Convert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec is an autogenerated conversion function.
-func Convert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in *BastionLoadBalancerSpec, out *kops.BastionLoadBalancerSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in, out, s)
+// Convert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec is an autogenerated conversion function.
+func Convert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in *BastionLoadBalancerSpec, out *kops.BastionLoadBalancerSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(in, out, s)
 }
 
-func autoConvert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec(in *kops.BastionLoadBalancerSpec, out *BastionLoadBalancerSpec, s conversion.Scope) error {
+func autoConvert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec(in *kops.BastionLoadBalancerSpec, out *BastionLoadBalancerSpec, s conversion.Scope) error {
 	out.AdditionalSecurityGroups = in.AdditionalSecurityGroups
 	return nil
 }
 
-// Convert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec is an autogenerated conversion function.
-func Convert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec(in *kops.BastionLoadBalancerSpec, out *BastionLoadBalancerSpec, s conversion.Scope) error {
-	return autoConvert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec(in, out, s)
+// Convert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec is an autogenerated conversion function.
+func Convert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec(in *kops.BastionLoadBalancerSpec, out *BastionLoadBalancerSpec, s conversion.Scope) error {
+	return autoConvert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_BastionSpec_To_kops_BastionSpec(in *BastionSpec, out *kops.BastionSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_BastionSpec_To_kops_BastionSpec(in *BastionSpec, out *kops.BastionSpec, s conversion.Scope) error {
 	out.BastionPublicName = in.BastionPublicName
 	out.IdleTimeoutSeconds = in.IdleTimeoutSeconds
 	if in.LoadBalancer != nil {
 		in, out := &in.LoadBalancer, &out.LoadBalancer
 		*out = new(kops.BastionLoadBalancerSpec)
-		if err := Convert_v1alpha2_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_BastionLoadBalancerSpec_To_kops_BastionLoadBalancerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1235,18 +1235,18 @@ func autoConvert_v1alpha2_BastionSpec_To_kops_BastionSpec(in *BastionSpec, out *
 	return nil
 }
 
-// Convert_v1alpha2_BastionSpec_To_kops_BastionSpec is an autogenerated conversion function.
-func Convert_v1alpha2_BastionSpec_To_kops_BastionSpec(in *BastionSpec, out *kops.BastionSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_BastionSpec_To_kops_BastionSpec(in, out, s)
+// Convert_v1beta1_BastionSpec_To_kops_BastionSpec is an autogenerated conversion function.
+func Convert_v1beta1_BastionSpec_To_kops_BastionSpec(in *BastionSpec, out *kops.BastionSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_BastionSpec_To_kops_BastionSpec(in, out, s)
 }
 
-func autoConvert_kops_BastionSpec_To_v1alpha2_BastionSpec(in *kops.BastionSpec, out *BastionSpec, s conversion.Scope) error {
+func autoConvert_kops_BastionSpec_To_v1beta1_BastionSpec(in *kops.BastionSpec, out *BastionSpec, s conversion.Scope) error {
 	out.BastionPublicName = in.BastionPublicName
 	out.IdleTimeoutSeconds = in.IdleTimeoutSeconds
 	if in.LoadBalancer != nil {
 		in, out := &in.LoadBalancer, &out.LoadBalancer
 		*out = new(BastionLoadBalancerSpec)
-		if err := Convert_kops_BastionLoadBalancerSpec_To_v1alpha2_BastionLoadBalancerSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_BastionLoadBalancerSpec_To_v1beta1_BastionLoadBalancerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1255,32 +1255,32 @@ func autoConvert_kops_BastionSpec_To_v1alpha2_BastionSpec(in *kops.BastionSpec, 
 	return nil
 }
 
-// Convert_kops_BastionSpec_To_v1alpha2_BastionSpec is an autogenerated conversion function.
-func Convert_kops_BastionSpec_To_v1alpha2_BastionSpec(in *kops.BastionSpec, out *BastionSpec, s conversion.Scope) error {
-	return autoConvert_kops_BastionSpec_To_v1alpha2_BastionSpec(in, out, s)
+// Convert_kops_BastionSpec_To_v1beta1_BastionSpec is an autogenerated conversion function.
+func Convert_kops_BastionSpec_To_v1beta1_BastionSpec(in *kops.BastionSpec, out *BastionSpec, s conversion.Scope) error {
+	return autoConvert_kops_BastionSpec_To_v1beta1_BastionSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec(in *CNINetworkingSpec, out *kops.CNINetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec(in *CNINetworkingSpec, out *kops.CNINetworkingSpec, s conversion.Scope) error {
 	out.UsesSecondaryIP = in.UsesSecondaryIP
 	return nil
 }
 
-// Convert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec(in *CNINetworkingSpec, out *kops.CNINetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec(in, out, s)
+// Convert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec(in *CNINetworkingSpec, out *kops.CNINetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec(in *kops.CNINetworkingSpec, out *CNINetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec(in *kops.CNINetworkingSpec, out *CNINetworkingSpec, s conversion.Scope) error {
 	out.UsesSecondaryIP = in.UsesSecondaryIP
 	return nil
 }
 
-// Convert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec is an autogenerated conversion function.
-func Convert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec(in *kops.CNINetworkingSpec, out *CNINetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec(in, out, s)
+// Convert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec is an autogenerated conversion function.
+func Convert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec(in *kops.CNINetworkingSpec, out *CNINetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in *CalicoNetworkingSpec, out *kops.CalicoNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in *CalicoNetworkingSpec, out *kops.CalicoNetworkingSpec, s conversion.Scope) error {
 	out.CPURequest = in.CPURequest
 	out.CrossSubnet = in.CrossSubnet
 	out.LogSeverityScreen = in.LogSeverityScreen
@@ -1298,12 +1298,12 @@ func autoConvert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in *
 	return nil
 }
 
-// Convert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in *CalicoNetworkingSpec, out *kops.CalicoNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in, out, s)
+// Convert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in *CalicoNetworkingSpec, out *kops.CalicoNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(in *kops.CalicoNetworkingSpec, out *CalicoNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec(in *kops.CalicoNetworkingSpec, out *CalicoNetworkingSpec, s conversion.Scope) error {
 	out.CPURequest = in.CPURequest
 	out.CrossSubnet = in.CrossSubnet
 	out.LogSeverityScreen = in.LogSeverityScreen
@@ -1321,12 +1321,12 @@ func autoConvert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(in *
 	return nil
 }
 
-// Convert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(in *kops.CalicoNetworkingSpec, out *CalicoNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(in, out, s)
+// Convert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec(in *kops.CalicoNetworkingSpec, out *CalicoNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in *CanalNetworkingSpec, out *kops.CanalNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in *CanalNetworkingSpec, out *kops.CanalNetworkingSpec, s conversion.Scope) error {
 	out.ChainInsertMode = in.ChainInsertMode
 	out.CPURequest = in.CPURequest
 	out.DefaultEndpointToHostAction = in.DefaultEndpointToHostAction
@@ -1344,12 +1344,12 @@ func autoConvert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in *Ca
 	return nil
 }
 
-// Convert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in *CanalNetworkingSpec, out *kops.CanalNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in, out, s)
+// Convert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in *CanalNetworkingSpec, out *kops.CanalNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(in *kops.CanalNetworkingSpec, out *CanalNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec(in *kops.CanalNetworkingSpec, out *CanalNetworkingSpec, s conversion.Scope) error {
 	out.ChainInsertMode = in.ChainInsertMode
 	out.CPURequest = in.CPURequest
 	out.DefaultEndpointToHostAction = in.DefaultEndpointToHostAction
@@ -1367,12 +1367,12 @@ func autoConvert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(in *ko
 	return nil
 }
 
-// Convert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(in *kops.CanalNetworkingSpec, out *CanalNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(in, out, s)
+// Convert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec(in *kops.CanalNetworkingSpec, out *CanalNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
 	out.Version = in.Version
 	out.AccessLog = in.AccessLog
 	out.AgentLabels = in.AgentLabels
@@ -1449,12 +1449,12 @@ func autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *
 	return nil
 }
 
-// Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in, out, s)
+// Convert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
 	out.Version = in.Version
 	out.AccessLog = in.AccessLog
 	out.AgentLabels = in.AgentLabels
@@ -1531,30 +1531,30 @@ func autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *
 	return nil
 }
 
-// Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in, out, s)
+// Convert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in *ClassicNetworkingSpec, out *kops.ClassicNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in *ClassicNetworkingSpec, out *kops.ClassicNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in *ClassicNetworkingSpec, out *kops.ClassicNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in, out, s)
+// Convert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in *ClassicNetworkingSpec, out *kops.ClassicNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec(in *kops.ClassicNetworkingSpec, out *ClassicNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec(in *kops.ClassicNetworkingSpec, out *ClassicNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec(in *kops.ClassicNetworkingSpec, out *ClassicNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec(in, out, s)
+// Convert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec(in *kops.ClassicNetworkingSpec, out *ClassicNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(in *CloudConfiguration, out *kops.CloudConfiguration, s conversion.Scope) error {
+func autoConvert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration(in *CloudConfiguration, out *kops.CloudConfiguration, s conversion.Scope) error {
 	out.Multizone = in.Multizone
 	out.NodeTags = in.NodeTags
 	out.NodeInstancePrefix = in.NodeInstancePrefix
@@ -1573,7 +1573,7 @@ func autoConvert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(in *Clou
 	if in.Openstack != nil {
 		in, out := &in.Openstack, &out.Openstack
 		*out = new(kops.OpenstackConfiguration)
-		if err := Convert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1582,12 +1582,12 @@ func autoConvert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(in *Clou
 	return nil
 }
 
-// Convert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration is an autogenerated conversion function.
-func Convert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(in *CloudConfiguration, out *kops.CloudConfiguration, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(in, out, s)
+// Convert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration is an autogenerated conversion function.
+func Convert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration(in *CloudConfiguration, out *kops.CloudConfiguration, s conversion.Scope) error {
+	return autoConvert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration(in, out, s)
 }
 
-func autoConvert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(in *kops.CloudConfiguration, out *CloudConfiguration, s conversion.Scope) error {
+func autoConvert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration(in *kops.CloudConfiguration, out *CloudConfiguration, s conversion.Scope) error {
 	out.Multizone = in.Multizone
 	out.NodeTags = in.NodeTags
 	out.NodeInstancePrefix = in.NodeInstancePrefix
@@ -1606,7 +1606,7 @@ func autoConvert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(in *kops
 	if in.Openstack != nil {
 		in, out := &in.Openstack, &out.Openstack
 		*out = new(OpenstackConfiguration)
-		if err := Convert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(*in, *out, s); err != nil {
+		if err := Convert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1615,12 +1615,12 @@ func autoConvert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(in *kops
 	return nil
 }
 
-// Convert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration is an autogenerated conversion function.
-func Convert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(in *kops.CloudConfiguration, out *CloudConfiguration, s conversion.Scope) error {
-	return autoConvert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(in, out, s)
+// Convert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration is an autogenerated conversion function.
+func Convert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration(in *kops.CloudConfiguration, out *CloudConfiguration, s conversion.Scope) error {
+	return autoConvert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration(in, out, s)
 }
 
-func autoConvert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in *CloudControllerManagerConfig, out *kops.CloudControllerManagerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in *CloudControllerManagerConfig, out *kops.CloudControllerManagerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.Image = in.Image
@@ -1633,7 +1633,7 @@ func autoConvert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerMa
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(kops.LeaderElectionConfiguration)
-		if err := Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1643,12 +1643,12 @@ func autoConvert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerMa
 	return nil
 }
 
-// Convert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in *CloudControllerManagerConfig, out *kops.CloudControllerManagerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in, out, s)
+// Convert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig is an autogenerated conversion function.
+func Convert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in *CloudControllerManagerConfig, out *kops.CloudControllerManagerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(in, out, s)
 }
 
-func autoConvert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig(in *kops.CloudControllerManagerConfig, out *CloudControllerManagerConfig, s conversion.Scope) error {
+func autoConvert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig(in *kops.CloudControllerManagerConfig, out *CloudControllerManagerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.Image = in.Image
@@ -1661,7 +1661,7 @@ func autoConvert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerMa
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(LeaderElectionConfiguration)
-		if err := Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1671,44 +1671,44 @@ func autoConvert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerMa
 	return nil
 }
 
-// Convert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig is an autogenerated conversion function.
-func Convert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig(in *kops.CloudControllerManagerConfig, out *CloudControllerManagerConfig, s conversion.Scope) error {
-	return autoConvert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig(in, out, s)
+// Convert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig is an autogenerated conversion function.
+func Convert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig(in *kops.CloudControllerManagerConfig, out *CloudControllerManagerConfig, s conversion.Scope) error {
+	return autoConvert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_Cluster_To_kops_Cluster(in *Cluster, out *kops.Cluster, s conversion.Scope) error {
+func autoConvert_v1beta1_Cluster_To_kops_Cluster(in *Cluster, out *kops.Cluster, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_v1beta1_ClusterSpec_To_kops_ClusterSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_v1alpha2_Cluster_To_kops_Cluster is an autogenerated conversion function.
-func Convert_v1alpha2_Cluster_To_kops_Cluster(in *Cluster, out *kops.Cluster, s conversion.Scope) error {
-	return autoConvert_v1alpha2_Cluster_To_kops_Cluster(in, out, s)
+// Convert_v1beta1_Cluster_To_kops_Cluster is an autogenerated conversion function.
+func Convert_v1beta1_Cluster_To_kops_Cluster(in *Cluster, out *kops.Cluster, s conversion.Scope) error {
+	return autoConvert_v1beta1_Cluster_To_kops_Cluster(in, out, s)
 }
 
-func autoConvert_kops_Cluster_To_v1alpha2_Cluster(in *kops.Cluster, out *Cluster, s conversion.Scope) error {
+func autoConvert_kops_Cluster_To_v1beta1_Cluster(in *kops.Cluster, out *Cluster, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_kops_ClusterSpec_To_v1beta1_ClusterSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_kops_Cluster_To_v1alpha2_Cluster is an autogenerated conversion function.
-func Convert_kops_Cluster_To_v1alpha2_Cluster(in *kops.Cluster, out *Cluster, s conversion.Scope) error {
-	return autoConvert_kops_Cluster_To_v1alpha2_Cluster(in, out, s)
+// Convert_kops_Cluster_To_v1beta1_Cluster is an autogenerated conversion function.
+func Convert_kops_Cluster_To_v1beta1_Cluster(in *kops.Cluster, out *Cluster, s conversion.Scope) error {
+	return autoConvert_kops_Cluster_To_v1beta1_Cluster(in, out, s)
 }
 
-func autoConvert_v1alpha2_ClusterList_To_kops_ClusterList(in *ClusterList, out *kops.ClusterList, s conversion.Scope) error {
+func autoConvert_v1beta1_ClusterList_To_kops_ClusterList(in *ClusterList, out *kops.ClusterList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]kops.Cluster, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_Cluster_To_kops_Cluster(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_Cluster_To_kops_Cluster(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1718,18 +1718,18 @@ func autoConvert_v1alpha2_ClusterList_To_kops_ClusterList(in *ClusterList, out *
 	return nil
 }
 
-// Convert_v1alpha2_ClusterList_To_kops_ClusterList is an autogenerated conversion function.
-func Convert_v1alpha2_ClusterList_To_kops_ClusterList(in *ClusterList, out *kops.ClusterList, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ClusterList_To_kops_ClusterList(in, out, s)
+// Convert_v1beta1_ClusterList_To_kops_ClusterList is an autogenerated conversion function.
+func Convert_v1beta1_ClusterList_To_kops_ClusterList(in *ClusterList, out *kops.ClusterList, s conversion.Scope) error {
+	return autoConvert_v1beta1_ClusterList_To_kops_ClusterList(in, out, s)
 }
 
-func autoConvert_kops_ClusterList_To_v1alpha2_ClusterList(in *kops.ClusterList, out *ClusterList, s conversion.Scope) error {
+func autoConvert_kops_ClusterList_To_v1beta1_ClusterList(in *kops.ClusterList, out *ClusterList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]Cluster, len(*in))
 		for i := range *in {
-			if err := Convert_kops_Cluster_To_v1alpha2_Cluster(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_Cluster_To_v1beta1_Cluster(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1739,18 +1739,18 @@ func autoConvert_kops_ClusterList_To_v1alpha2_ClusterList(in *kops.ClusterList, 
 	return nil
 }
 
-// Convert_kops_ClusterList_To_v1alpha2_ClusterList is an autogenerated conversion function.
-func Convert_kops_ClusterList_To_v1alpha2_ClusterList(in *kops.ClusterList, out *ClusterList, s conversion.Scope) error {
-	return autoConvert_kops_ClusterList_To_v1alpha2_ClusterList(in, out, s)
+// Convert_kops_ClusterList_To_v1beta1_ClusterList is an autogenerated conversion function.
+func Convert_kops_ClusterList_To_v1beta1_ClusterList(in *kops.ClusterList, out *ClusterList, s conversion.Scope) error {
+	return autoConvert_kops_ClusterList_To_v1beta1_ClusterList(in, out, s)
 }
 
-func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *kops.ClusterSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *kops.ClusterSpec, s conversion.Scope) error {
 	out.Channel = in.Channel
 	if in.Addons != nil {
 		in, out := &in.Addons, &out.Addons
 		*out = make([]kops.AddonSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_AddonSpec_To_kops_AddonSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_AddonSpec_To_kops_AddonSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1762,7 +1762,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.GossipConfig != nil {
 		in, out := &in.GossipConfig, &out.GossipConfig
 		*out = new(kops.GossipConfig)
-		if err := Convert_v1alpha2_GossipConfig_To_kops_GossipConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_GossipConfig_To_kops_GossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1774,7 +1774,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 		in, out := &in.Subnets, &out.Subnets
 		*out = make([]kops.ClusterSubnetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1790,7 +1790,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Topology != nil {
 		in, out := &in.Topology, &out.Topology
 		*out = new(kops.TopologySpec)
-		if err := Convert_v1alpha2_TopologySpec_To_kops_TopologySpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_TopologySpec_To_kops_TopologySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1803,7 +1803,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.DNSControllerGossipConfig != nil {
 		in, out := &in.DNSControllerGossipConfig, &out.DNSControllerGossipConfig
 		*out = new(kops.DNSControllerGossipConfig)
-		if err := Convert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1819,7 +1819,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.EgressProxy != nil {
 		in, out := &in.EgressProxy, &out.EgressProxy
 		*out = new(kops.EgressProxySpec)
-		if err := Convert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1835,7 +1835,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 		in, out := &in.FileAssets, &out.FileAssets
 		*out = make([]kops.FileAssetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -1857,7 +1857,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Containerd != nil {
 		in, out := &in.Containerd, &out.Containerd
 		*out = new(kops.ContainerdConfig)
-		if err := Convert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1866,7 +1866,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Docker != nil {
 		in, out := &in.Docker, &out.Docker
 		*out = new(kops.DockerConfig)
-		if err := Convert_v1alpha2_DockerConfig_To_kops_DockerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_DockerConfig_To_kops_DockerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1875,7 +1875,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.KubeDNS != nil {
 		in, out := &in.KubeDNS, &out.KubeDNS
 		*out = new(kops.KubeDNSConfig)
-		if err := Convert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1884,7 +1884,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.KubeAPIServer != nil {
 		in, out := &in.KubeAPIServer, &out.KubeAPIServer
 		*out = new(kops.KubeAPIServerConfig)
-		if err := Convert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1893,7 +1893,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.KubeControllerManager != nil {
 		in, out := &in.KubeControllerManager, &out.KubeControllerManager
 		*out = new(kops.KubeControllerManagerConfig)
-		if err := Convert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1902,7 +1902,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.ExternalCloudControllerManager != nil {
 		in, out := &in.ExternalCloudControllerManager, &out.ExternalCloudControllerManager
 		*out = new(kops.CloudControllerManagerConfig)
-		if err := Convert_v1alpha2_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CloudControllerManagerConfig_To_kops_CloudControllerManagerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1911,7 +1911,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.KubeScheduler != nil {
 		in, out := &in.KubeScheduler, &out.KubeScheduler
 		*out = new(kops.KubeSchedulerConfig)
-		if err := Convert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1920,7 +1920,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.KubeProxy != nil {
 		in, out := &in.KubeProxy, &out.KubeProxy
 		*out = new(kops.KubeProxyConfig)
-		if err := Convert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1929,7 +1929,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Kubelet != nil {
 		in, out := &in.Kubelet, &out.Kubelet
 		*out = new(kops.KubeletConfigSpec)
-		if err := Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1938,7 +1938,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.MasterKubelet != nil {
 		in, out := &in.MasterKubelet, &out.MasterKubelet
 		*out = new(kops.KubeletConfigSpec)
-		if err := Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1947,7 +1947,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.CloudConfig != nil {
 		in, out := &in.CloudConfig, &out.CloudConfig
 		*out = new(kops.CloudConfiguration)
-		if err := Convert_v1alpha2_CloudConfiguration_To_kops_CloudConfiguration(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CloudConfiguration_To_kops_CloudConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1956,7 +1956,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.ExternalDNS != nil {
 		in, out := &in.ExternalDNS, &out.ExternalDNS
 		*out = new(kops.ExternalDNSConfig)
-		if err := Convert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1965,7 +1965,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Networking != nil {
 		in, out := &in.Networking, &out.Networking
 		*out = new(kops.NetworkingSpec)
-		if err := Convert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1974,7 +1974,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.API != nil {
 		in, out := &in.API, &out.API
 		*out = new(kops.AccessSpec)
-		if err := Convert_v1alpha2_AccessSpec_To_kops_AccessSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AccessSpec_To_kops_AccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1983,7 +1983,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Authentication != nil {
 		in, out := &in.Authentication, &out.Authentication
 		*out = new(kops.AuthenticationSpec)
-		if err := Convert_v1alpha2_AuthenticationSpec_To_kops_AuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AuthenticationSpec_To_kops_AuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -1992,7 +1992,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Authorization != nil {
 		in, out := &in.Authorization, &out.Authorization
 		*out = new(kops.AuthorizationSpec)
-		if err := Convert_v1alpha2_AuthorizationSpec_To_kops_AuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AuthorizationSpec_To_kops_AuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2001,7 +2001,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.NodeAuthorization != nil {
 		in, out := &in.NodeAuthorization, &out.NodeAuthorization
 		*out = new(kops.NodeAuthorizationSpec)
-		if err := Convert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2012,7 +2012,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 		in, out := &in.Hooks, &out.Hooks
 		*out = make([]kops.HookSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_HookSpec_To_kops_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_HookSpec_To_kops_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2022,7 +2022,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Assets != nil {
 		in, out := &in.Assets, &out.Assets
 		*out = new(kops.Assets)
-		if err := Convert_v1alpha2_Assets_To_kops_Assets(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_Assets_To_kops_Assets(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2031,7 +2031,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.IAM != nil {
 		in, out := &in.IAM, &out.IAM
 		*out = new(kops.IAMSpec)
-		if err := Convert_v1alpha2_IAMSpec_To_kops_IAMSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_IAMSpec_To_kops_IAMSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2042,7 +2042,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.Target != nil {
 		in, out := &in.Target, &out.Target
 		*out = new(kops.TargetSpec)
-		if err := Convert_v1alpha2_TargetSpec_To_kops_TargetSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_TargetSpec_To_kops_TargetSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2053,7 +2053,7 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	if in.RollingUpdate != nil {
 		in, out := &in.RollingUpdate, &out.RollingUpdate
 		*out = new(kops.RollingUpdate)
-		if err := Convert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_RollingUpdate_To_kops_RollingUpdate(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2062,18 +2062,18 @@ func autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *
 	return nil
 }
 
-// Convert_v1alpha2_ClusterSpec_To_kops_ClusterSpec is an autogenerated conversion function.
-func Convert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *kops.ClusterSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ClusterSpec_To_kops_ClusterSpec(in, out, s)
+// Convert_v1beta1_ClusterSpec_To_kops_ClusterSpec is an autogenerated conversion function.
+func Convert_v1beta1_ClusterSpec_To_kops_ClusterSpec(in *ClusterSpec, out *kops.ClusterSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_ClusterSpec_To_kops_ClusterSpec(in, out, s)
 }
 
-func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, out *ClusterSpec, s conversion.Scope) error {
+func autoConvert_kops_ClusterSpec_To_v1beta1_ClusterSpec(in *kops.ClusterSpec, out *ClusterSpec, s conversion.Scope) error {
 	out.Channel = in.Channel
 	if in.Addons != nil {
 		in, out := &in.Addons, &out.Addons
 		*out = make([]AddonSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_AddonSpec_To_v1alpha2_AddonSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_AddonSpec_To_v1beta1_AddonSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2085,7 +2085,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.GossipConfig != nil {
 		in, out := &in.GossipConfig, &out.GossipConfig
 		*out = new(GossipConfig)
-		if err := Convert_kops_GossipConfig_To_v1alpha2_GossipConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_GossipConfig_To_v1beta1_GossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2097,7 +2097,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 		in, out := &in.Subnets, &out.Subnets
 		*out = make([]ClusterSubnetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2113,7 +2113,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Topology != nil {
 		in, out := &in.Topology, &out.Topology
 		*out = new(TopologySpec)
-		if err := Convert_kops_TopologySpec_To_v1alpha2_TopologySpec(*in, *out, s); err != nil {
+		if err := Convert_kops_TopologySpec_To_v1beta1_TopologySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2126,7 +2126,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.DNSControllerGossipConfig != nil {
 		in, out := &in.DNSControllerGossipConfig, &out.DNSControllerGossipConfig
 		*out = new(DNSControllerGossipConfig)
-		if err := Convert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2142,7 +2142,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.EgressProxy != nil {
 		in, out := &in.EgressProxy, &out.EgressProxy
 		*out = new(EgressProxySpec)
-		if err := Convert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec(*in, *out, s); err != nil {
+		if err := Convert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2158,7 +2158,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 		in, out := &in.FileAssets, &out.FileAssets
 		*out = make([]FileAssetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2180,7 +2180,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Containerd != nil {
 		in, out := &in.Containerd, &out.Containerd
 		*out = new(ContainerdConfig)
-		if err := Convert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2189,7 +2189,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Docker != nil {
 		in, out := &in.Docker, &out.Docker
 		*out = new(DockerConfig)
-		if err := Convert_kops_DockerConfig_To_v1alpha2_DockerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_DockerConfig_To_v1beta1_DockerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2198,7 +2198,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.KubeDNS != nil {
 		in, out := &in.KubeDNS, &out.KubeDNS
 		*out = new(KubeDNSConfig)
-		if err := Convert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2207,7 +2207,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.KubeAPIServer != nil {
 		in, out := &in.KubeAPIServer, &out.KubeAPIServer
 		*out = new(KubeAPIServerConfig)
-		if err := Convert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2216,7 +2216,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.KubeControllerManager != nil {
 		in, out := &in.KubeControllerManager, &out.KubeControllerManager
 		*out = new(KubeControllerManagerConfig)
-		if err := Convert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2225,7 +2225,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.ExternalCloudControllerManager != nil {
 		in, out := &in.ExternalCloudControllerManager, &out.ExternalCloudControllerManager
 		*out = new(CloudControllerManagerConfig)
-		if err := Convert_kops_CloudControllerManagerConfig_To_v1alpha2_CloudControllerManagerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_CloudControllerManagerConfig_To_v1beta1_CloudControllerManagerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2234,7 +2234,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.KubeScheduler != nil {
 		in, out := &in.KubeScheduler, &out.KubeScheduler
 		*out = new(KubeSchedulerConfig)
-		if err := Convert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2243,7 +2243,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.KubeProxy != nil {
 		in, out := &in.KubeProxy, &out.KubeProxy
 		*out = new(KubeProxyConfig)
-		if err := Convert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2252,7 +2252,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Kubelet != nil {
 		in, out := &in.Kubelet, &out.Kubelet
 		*out = new(KubeletConfigSpec)
-		if err := Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2261,7 +2261,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.MasterKubelet != nil {
 		in, out := &in.MasterKubelet, &out.MasterKubelet
 		*out = new(KubeletConfigSpec)
-		if err := Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2270,7 +2270,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.CloudConfig != nil {
 		in, out := &in.CloudConfig, &out.CloudConfig
 		*out = new(CloudConfiguration)
-		if err := Convert_kops_CloudConfiguration_To_v1alpha2_CloudConfiguration(*in, *out, s); err != nil {
+		if err := Convert_kops_CloudConfiguration_To_v1beta1_CloudConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2279,7 +2279,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.ExternalDNS != nil {
 		in, out := &in.ExternalDNS, &out.ExternalDNS
 		*out = new(ExternalDNSConfig)
-		if err := Convert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2288,7 +2288,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Networking != nil {
 		in, out := &in.Networking, &out.Networking
 		*out = new(NetworkingSpec)
-		if err := Convert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2297,7 +2297,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.API != nil {
 		in, out := &in.API, &out.API
 		*out = new(AccessSpec)
-		if err := Convert_kops_AccessSpec_To_v1alpha2_AccessSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AccessSpec_To_v1beta1_AccessSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2306,7 +2306,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Authentication != nil {
 		in, out := &in.Authentication, &out.Authentication
 		*out = new(AuthenticationSpec)
-		if err := Convert_kops_AuthenticationSpec_To_v1alpha2_AuthenticationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AuthenticationSpec_To_v1beta1_AuthenticationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2315,7 +2315,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Authorization != nil {
 		in, out := &in.Authorization, &out.Authorization
 		*out = new(AuthorizationSpec)
-		if err := Convert_kops_AuthorizationSpec_To_v1alpha2_AuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AuthorizationSpec_To_v1beta1_AuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2324,7 +2324,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.NodeAuthorization != nil {
 		in, out := &in.NodeAuthorization, &out.NodeAuthorization
 		*out = new(NodeAuthorizationSpec)
-		if err := Convert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2335,7 +2335,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 		in, out := &in.Hooks, &out.Hooks
 		*out = make([]HookSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_HookSpec_To_v1alpha2_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_HookSpec_To_v1beta1_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2345,7 +2345,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Assets != nil {
 		in, out := &in.Assets, &out.Assets
 		*out = new(Assets)
-		if err := Convert_kops_Assets_To_v1alpha2_Assets(*in, *out, s); err != nil {
+		if err := Convert_kops_Assets_To_v1beta1_Assets(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2354,7 +2354,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.IAM != nil {
 		in, out := &in.IAM, &out.IAM
 		*out = new(IAMSpec)
-		if err := Convert_kops_IAMSpec_To_v1alpha2_IAMSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_IAMSpec_To_v1beta1_IAMSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2365,7 +2365,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.Target != nil {
 		in, out := &in.Target, &out.Target
 		*out = new(TargetSpec)
-		if err := Convert_kops_TargetSpec_To_v1alpha2_TargetSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_TargetSpec_To_v1beta1_TargetSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2376,7 +2376,7 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	if in.RollingUpdate != nil {
 		in, out := &in.RollingUpdate, &out.RollingUpdate
 		*out = new(RollingUpdate)
-		if err := Convert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(*in, *out, s); err != nil {
+		if err := Convert_kops_RollingUpdate_To_v1beta1_RollingUpdate(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2385,12 +2385,12 @@ func autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, 
 	return nil
 }
 
-// Convert_kops_ClusterSpec_To_v1alpha2_ClusterSpec is an autogenerated conversion function.
-func Convert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in *kops.ClusterSpec, out *ClusterSpec, s conversion.Scope) error {
-	return autoConvert_kops_ClusterSpec_To_v1alpha2_ClusterSpec(in, out, s)
+// Convert_kops_ClusterSpec_To_v1beta1_ClusterSpec is an autogenerated conversion function.
+func Convert_kops_ClusterSpec_To_v1beta1_ClusterSpec(in *kops.ClusterSpec, out *ClusterSpec, s conversion.Scope) error {
+	return autoConvert_kops_ClusterSpec_To_v1beta1_ClusterSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *ClusterSubnetSpec, out *kops.ClusterSubnetSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *ClusterSubnetSpec, out *kops.ClusterSubnetSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Zone = in.Zone
 	out.Region = in.Region
@@ -2402,12 +2402,12 @@ func autoConvert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *Cluste
 	return nil
 }
 
-// Convert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec is an autogenerated conversion function.
-func Convert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *ClusterSubnetSpec, out *kops.ClusterSubnetSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in, out, s)
+// Convert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec is an autogenerated conversion function.
+func Convert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *ClusterSubnetSpec, out *kops.ClusterSubnetSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in, out, s)
 }
 
-func autoConvert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(in *kops.ClusterSubnetSpec, out *ClusterSubnetSpec, s conversion.Scope) error {
+func autoConvert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec(in *kops.ClusterSubnetSpec, out *ClusterSubnetSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.CIDR = in.CIDR
 	out.Zone = in.Zone
@@ -2419,12 +2419,12 @@ func autoConvert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(in *kops.C
 	return nil
 }
 
-// Convert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec is an autogenerated conversion function.
-func Convert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(in *kops.ClusterSubnetSpec, out *ClusterSubnetSpec, s conversion.Scope) error {
-	return autoConvert_kops_ClusterSubnetSpec_To_v1alpha2_ClusterSubnetSpec(in, out, s)
+// Convert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec is an autogenerated conversion function.
+func Convert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec(in *kops.ClusterSubnetSpec, out *ClusterSubnetSpec, s conversion.Scope) error {
+	return autoConvert_kops_ClusterSubnetSpec_To_v1beta1_ClusterSubnetSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(in *ContainerdConfig, out *kops.ContainerdConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig(in *ContainerdConfig, out *kops.ContainerdConfig, s conversion.Scope) error {
 	out.Address = in.Address
 	out.ConfigOverride = in.ConfigOverride
 	out.LogLevel = in.LogLevel
@@ -2435,12 +2435,12 @@ func autoConvert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(in *Containe
 	return nil
 }
 
-// Convert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig is an autogenerated conversion function.
-func Convert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(in *ContainerdConfig, out *kops.ContainerdConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ContainerdConfig_To_kops_ContainerdConfig(in, out, s)
+// Convert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig is an autogenerated conversion function.
+func Convert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig(in *ContainerdConfig, out *kops.ContainerdConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_ContainerdConfig_To_kops_ContainerdConfig(in, out, s)
 }
 
-func autoConvert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(in *kops.ContainerdConfig, out *ContainerdConfig, s conversion.Scope) error {
+func autoConvert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig(in *kops.ContainerdConfig, out *ContainerdConfig, s conversion.Scope) error {
 	out.Address = in.Address
 	out.ConfigOverride = in.ConfigOverride
 	out.LogLevel = in.LogLevel
@@ -2451,37 +2451,37 @@ func autoConvert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(in *kops.Con
 	return nil
 }
 
-// Convert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig is an autogenerated conversion function.
-func Convert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(in *kops.ContainerdConfig, out *ContainerdConfig, s conversion.Scope) error {
-	return autoConvert_kops_ContainerdConfig_To_v1alpha2_ContainerdConfig(in, out, s)
+// Convert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig is an autogenerated conversion function.
+func Convert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig(in *kops.ContainerdConfig, out *ContainerdConfig, s conversion.Scope) error {
+	return autoConvert_kops_ContainerdConfig_To_v1beta1_ContainerdConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec(in *DNSAccessSpec, out *kops.DNSAccessSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec(in *DNSAccessSpec, out *kops.DNSAccessSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec is an autogenerated conversion function.
-func Convert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec(in *DNSAccessSpec, out *kops.DNSAccessSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_DNSAccessSpec_To_kops_DNSAccessSpec(in, out, s)
+// Convert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec is an autogenerated conversion function.
+func Convert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec(in *DNSAccessSpec, out *kops.DNSAccessSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_DNSAccessSpec_To_kops_DNSAccessSpec(in, out, s)
 }
 
-func autoConvert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec(in *kops.DNSAccessSpec, out *DNSAccessSpec, s conversion.Scope) error {
+func autoConvert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec(in *kops.DNSAccessSpec, out *DNSAccessSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec is an autogenerated conversion function.
-func Convert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec(in *kops.DNSAccessSpec, out *DNSAccessSpec, s conversion.Scope) error {
-	return autoConvert_kops_DNSAccessSpec_To_v1alpha2_DNSAccessSpec(in, out, s)
+// Convert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec is an autogenerated conversion function.
+func Convert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec(in *kops.DNSAccessSpec, out *DNSAccessSpec, s conversion.Scope) error {
+	return autoConvert_kops_DNSAccessSpec_To_v1beta1_DNSAccessSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in *DNSControllerGossipConfig, out *kops.DNSControllerGossipConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in *DNSControllerGossipConfig, out *kops.DNSControllerGossipConfig, s conversion.Scope) error {
 	out.Protocol = in.Protocol
 	out.Listen = in.Listen
 	out.Secret = in.Secret
 	if in.Secondary != nil {
 		in, out := &in.Secondary, &out.Secondary
 		*out = new(kops.DNSControllerGossipConfig)
-		if err := Convert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2491,19 +2491,19 @@ func autoConvert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipC
 	return nil
 }
 
-// Convert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig is an autogenerated conversion function.
-func Convert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in *DNSControllerGossipConfig, out *kops.DNSControllerGossipConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in, out, s)
+// Convert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig is an autogenerated conversion function.
+func Convert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in *DNSControllerGossipConfig, out *kops.DNSControllerGossipConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_DNSControllerGossipConfig_To_kops_DNSControllerGossipConfig(in, out, s)
 }
 
-func autoConvert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(in *kops.DNSControllerGossipConfig, out *DNSControllerGossipConfig, s conversion.Scope) error {
+func autoConvert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(in *kops.DNSControllerGossipConfig, out *DNSControllerGossipConfig, s conversion.Scope) error {
 	out.Protocol = in.Protocol
 	out.Listen = in.Listen
 	out.Secret = in.Secret
 	if in.Secondary != nil {
 		in, out := &in.Secondary, &out.Secondary
 		*out = new(DNSControllerGossipConfig)
-		if err := Convert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2513,32 +2513,32 @@ func autoConvert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipC
 	return nil
 }
 
-// Convert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig is an autogenerated conversion function.
-func Convert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(in *kops.DNSControllerGossipConfig, out *DNSControllerGossipConfig, s conversion.Scope) error {
-	return autoConvert_kops_DNSControllerGossipConfig_To_v1alpha2_DNSControllerGossipConfig(in, out, s)
+// Convert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig is an autogenerated conversion function.
+func Convert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(in *kops.DNSControllerGossipConfig, out *DNSControllerGossipConfig, s conversion.Scope) error {
+	return autoConvert_kops_DNSControllerGossipConfig_To_v1beta1_DNSControllerGossipConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_DNSSpec_To_kops_DNSSpec(in *DNSSpec, out *kops.DNSSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_DNSSpec_To_kops_DNSSpec(in *DNSSpec, out *kops.DNSSpec, s conversion.Scope) error {
 	out.Type = kops.DNSType(in.Type)
 	return nil
 }
 
-// Convert_v1alpha2_DNSSpec_To_kops_DNSSpec is an autogenerated conversion function.
-func Convert_v1alpha2_DNSSpec_To_kops_DNSSpec(in *DNSSpec, out *kops.DNSSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_DNSSpec_To_kops_DNSSpec(in, out, s)
+// Convert_v1beta1_DNSSpec_To_kops_DNSSpec is an autogenerated conversion function.
+func Convert_v1beta1_DNSSpec_To_kops_DNSSpec(in *DNSSpec, out *kops.DNSSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_DNSSpec_To_kops_DNSSpec(in, out, s)
 }
 
-func autoConvert_kops_DNSSpec_To_v1alpha2_DNSSpec(in *kops.DNSSpec, out *DNSSpec, s conversion.Scope) error {
+func autoConvert_kops_DNSSpec_To_v1beta1_DNSSpec(in *kops.DNSSpec, out *DNSSpec, s conversion.Scope) error {
 	out.Type = DNSType(in.Type)
 	return nil
 }
 
-// Convert_kops_DNSSpec_To_v1alpha2_DNSSpec is an autogenerated conversion function.
-func Convert_kops_DNSSpec_To_v1alpha2_DNSSpec(in *kops.DNSSpec, out *DNSSpec, s conversion.Scope) error {
-	return autoConvert_kops_DNSSpec_To_v1alpha2_DNSSpec(in, out, s)
+// Convert_kops_DNSSpec_To_v1beta1_DNSSpec is an autogenerated conversion function.
+func Convert_kops_DNSSpec_To_v1beta1_DNSSpec(in *kops.DNSSpec, out *DNSSpec, s conversion.Scope) error {
+	return autoConvert_kops_DNSSpec_To_v1beta1_DNSSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_DockerConfig_To_kops_DockerConfig(in *DockerConfig, out *kops.DockerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_DockerConfig_To_kops_DockerConfig(in *DockerConfig, out *kops.DockerConfig, s conversion.Scope) error {
 	out.AuthorizationPlugins = in.AuthorizationPlugins
 	out.Bridge = in.Bridge
 	out.BridgeIP = in.BridgeIP
@@ -2568,12 +2568,12 @@ func autoConvert_v1alpha2_DockerConfig_To_kops_DockerConfig(in *DockerConfig, ou
 	return nil
 }
 
-// Convert_v1alpha2_DockerConfig_To_kops_DockerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_DockerConfig_To_kops_DockerConfig(in *DockerConfig, out *kops.DockerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_DockerConfig_To_kops_DockerConfig(in, out, s)
+// Convert_v1beta1_DockerConfig_To_kops_DockerConfig is an autogenerated conversion function.
+func Convert_v1beta1_DockerConfig_To_kops_DockerConfig(in *DockerConfig, out *kops.DockerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_DockerConfig_To_kops_DockerConfig(in, out, s)
 }
 
-func autoConvert_kops_DockerConfig_To_v1alpha2_DockerConfig(in *kops.DockerConfig, out *DockerConfig, s conversion.Scope) error {
+func autoConvert_kops_DockerConfig_To_v1beta1_DockerConfig(in *kops.DockerConfig, out *DockerConfig, s conversion.Scope) error {
 	out.AuthorizationPlugins = in.AuthorizationPlugins
 	out.Bridge = in.Bridge
 	out.BridgeIP = in.BridgeIP
@@ -2603,82 +2603,82 @@ func autoConvert_kops_DockerConfig_To_v1alpha2_DockerConfig(in *kops.DockerConfi
 	return nil
 }
 
-// Convert_kops_DockerConfig_To_v1alpha2_DockerConfig is an autogenerated conversion function.
-func Convert_kops_DockerConfig_To_v1alpha2_DockerConfig(in *kops.DockerConfig, out *DockerConfig, s conversion.Scope) error {
-	return autoConvert_kops_DockerConfig_To_v1alpha2_DockerConfig(in, out, s)
+// Convert_kops_DockerConfig_To_v1beta1_DockerConfig is an autogenerated conversion function.
+func Convert_kops_DockerConfig_To_v1beta1_DockerConfig(in *kops.DockerConfig, out *DockerConfig, s conversion.Scope) error {
+	return autoConvert_kops_DockerConfig_To_v1beta1_DockerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec(in *EgressProxySpec, out *kops.EgressProxySpec, s conversion.Scope) error {
-	if err := Convert_v1alpha2_HTTPProxy_To_kops_HTTPProxy(&in.HTTPProxy, &out.HTTPProxy, s); err != nil {
+func autoConvert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec(in *EgressProxySpec, out *kops.EgressProxySpec, s conversion.Scope) error {
+	if err := Convert_v1beta1_HTTPProxy_To_kops_HTTPProxy(&in.HTTPProxy, &out.HTTPProxy, s); err != nil {
 		return err
 	}
 	out.ProxyExcludes = in.ProxyExcludes
 	return nil
 }
 
-// Convert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec is an autogenerated conversion function.
-func Convert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec(in *EgressProxySpec, out *kops.EgressProxySpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EgressProxySpec_To_kops_EgressProxySpec(in, out, s)
+// Convert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec is an autogenerated conversion function.
+func Convert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec(in *EgressProxySpec, out *kops.EgressProxySpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_EgressProxySpec_To_kops_EgressProxySpec(in, out, s)
 }
 
-func autoConvert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec(in *kops.EgressProxySpec, out *EgressProxySpec, s conversion.Scope) error {
-	if err := Convert_kops_HTTPProxy_To_v1alpha2_HTTPProxy(&in.HTTPProxy, &out.HTTPProxy, s); err != nil {
+func autoConvert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec(in *kops.EgressProxySpec, out *EgressProxySpec, s conversion.Scope) error {
+	if err := Convert_kops_HTTPProxy_To_v1beta1_HTTPProxy(&in.HTTPProxy, &out.HTTPProxy, s); err != nil {
 		return err
 	}
 	out.ProxyExcludes = in.ProxyExcludes
 	return nil
 }
 
-// Convert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec is an autogenerated conversion function.
-func Convert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec(in *kops.EgressProxySpec, out *EgressProxySpec, s conversion.Scope) error {
-	return autoConvert_kops_EgressProxySpec_To_v1alpha2_EgressProxySpec(in, out, s)
+// Convert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec is an autogenerated conversion function.
+func Convert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec(in *kops.EgressProxySpec, out *EgressProxySpec, s conversion.Scope) error {
+	return autoConvert_kops_EgressProxySpec_To_v1beta1_EgressProxySpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_EnvVar_To_kops_EnvVar(in *EnvVar, out *kops.EnvVar, s conversion.Scope) error {
+func autoConvert_v1beta1_EnvVar_To_kops_EnvVar(in *EnvVar, out *kops.EnvVar, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Value = in.Value
 	return nil
 }
 
-// Convert_v1alpha2_EnvVar_To_kops_EnvVar is an autogenerated conversion function.
-func Convert_v1alpha2_EnvVar_To_kops_EnvVar(in *EnvVar, out *kops.EnvVar, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EnvVar_To_kops_EnvVar(in, out, s)
+// Convert_v1beta1_EnvVar_To_kops_EnvVar is an autogenerated conversion function.
+func Convert_v1beta1_EnvVar_To_kops_EnvVar(in *EnvVar, out *kops.EnvVar, s conversion.Scope) error {
+	return autoConvert_v1beta1_EnvVar_To_kops_EnvVar(in, out, s)
 }
 
-func autoConvert_kops_EnvVar_To_v1alpha2_EnvVar(in *kops.EnvVar, out *EnvVar, s conversion.Scope) error {
+func autoConvert_kops_EnvVar_To_v1beta1_EnvVar(in *kops.EnvVar, out *EnvVar, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Value = in.Value
 	return nil
 }
 
-// Convert_kops_EnvVar_To_v1alpha2_EnvVar is an autogenerated conversion function.
-func Convert_kops_EnvVar_To_v1alpha2_EnvVar(in *kops.EnvVar, out *EnvVar, s conversion.Scope) error {
-	return autoConvert_kops_EnvVar_To_v1alpha2_EnvVar(in, out, s)
+// Convert_kops_EnvVar_To_v1beta1_EnvVar is an autogenerated conversion function.
+func Convert_kops_EnvVar_To_v1beta1_EnvVar(in *kops.EnvVar, out *EnvVar, s conversion.Scope) error {
+	return autoConvert_kops_EnvVar_To_v1beta1_EnvVar(in, out, s)
 }
 
-func autoConvert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec(in *EtcdBackupSpec, out *kops.EtcdBackupSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec(in *EtcdBackupSpec, out *kops.EtcdBackupSpec, s conversion.Scope) error {
 	out.BackupStore = in.BackupStore
 	out.Image = in.Image
 	return nil
 }
 
-// Convert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec is an autogenerated conversion function.
-func Convert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec(in *EtcdBackupSpec, out *kops.EtcdBackupSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec(in, out, s)
+// Convert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec is an autogenerated conversion function.
+func Convert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec(in *EtcdBackupSpec, out *kops.EtcdBackupSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec(in, out, s)
 }
 
-func autoConvert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec(in *kops.EtcdBackupSpec, out *EtcdBackupSpec, s conversion.Scope) error {
+func autoConvert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec(in *kops.EtcdBackupSpec, out *EtcdBackupSpec, s conversion.Scope) error {
 	out.BackupStore = in.BackupStore
 	out.Image = in.Image
 	return nil
 }
 
-// Convert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec is an autogenerated conversion function.
-func Convert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec(in *kops.EtcdBackupSpec, out *EtcdBackupSpec, s conversion.Scope) error {
-	return autoConvert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec(in, out, s)
+// Convert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec is an autogenerated conversion function.
+func Convert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec(in *kops.EtcdBackupSpec, out *EtcdBackupSpec, s conversion.Scope) error {
+	return autoConvert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdClusterSpec, out *kops.EtcdClusterSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdClusterSpec, out *kops.EtcdClusterSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Provider = kops.EtcdProviderType(in.Provider)
 	if in.Members != nil {
@@ -2702,7 +2702,7 @@ func autoConvert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdCluste
 	if in.Backups != nil {
 		in, out := &in.Backups, &out.Backups
 		*out = new(kops.EtcdBackupSpec)
-		if err := Convert_v1alpha2_EtcdBackupSpec_To_kops_EtcdBackupSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_EtcdBackupSpec_To_kops_EtcdBackupSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2711,7 +2711,7 @@ func autoConvert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdCluste
 	if in.Manager != nil {
 		in, out := &in.Manager, &out.Manager
 		*out = new(kops.EtcdManagerSpec)
-		if err := Convert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2722,12 +2722,12 @@ func autoConvert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdCluste
 	return nil
 }
 
-// Convert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec is an autogenerated conversion function.
-func Convert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdClusterSpec, out *kops.EtcdClusterSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EtcdClusterSpec_To_kops_EtcdClusterSpec(in, out, s)
+// Convert_v1beta1_EtcdClusterSpec_To_kops_EtcdClusterSpec is an autogenerated conversion function.
+func Convert_v1beta1_EtcdClusterSpec_To_kops_EtcdClusterSpec(in *EtcdClusterSpec, out *kops.EtcdClusterSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_EtcdClusterSpec_To_kops_EtcdClusterSpec(in, out, s)
 }
 
-func autoConvert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in *kops.EtcdClusterSpec, out *EtcdClusterSpec, s conversion.Scope) error {
+func autoConvert_kops_EtcdClusterSpec_To_v1beta1_EtcdClusterSpec(in *kops.EtcdClusterSpec, out *EtcdClusterSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Provider = EtcdProviderType(in.Provider)
 	if in.Members != nil {
@@ -2751,7 +2751,7 @@ func autoConvert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in *kops.EtcdC
 	if in.Backups != nil {
 		in, out := &in.Backups, &out.Backups
 		*out = new(EtcdBackupSpec)
-		if err := Convert_kops_EtcdBackupSpec_To_v1alpha2_EtcdBackupSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_EtcdBackupSpec_To_v1beta1_EtcdBackupSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2760,7 +2760,7 @@ func autoConvert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in *kops.EtcdC
 	if in.Manager != nil {
 		in, out := &in.Manager, &out.Manager
 		*out = new(EtcdManagerSpec)
-		if err := Convert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -2771,18 +2771,18 @@ func autoConvert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in *kops.EtcdC
 	return nil
 }
 
-// Convert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec is an autogenerated conversion function.
-func Convert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in *kops.EtcdClusterSpec, out *EtcdClusterSpec, s conversion.Scope) error {
-	return autoConvert_kops_EtcdClusterSpec_To_v1alpha2_EtcdClusterSpec(in, out, s)
+// Convert_kops_EtcdClusterSpec_To_v1beta1_EtcdClusterSpec is an autogenerated conversion function.
+func Convert_kops_EtcdClusterSpec_To_v1beta1_EtcdClusterSpec(in *kops.EtcdClusterSpec, out *EtcdClusterSpec, s conversion.Scope) error {
+	return autoConvert_kops_EtcdClusterSpec_To_v1beta1_EtcdClusterSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(in *EtcdManagerSpec, out *kops.EtcdManagerSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec(in *EtcdManagerSpec, out *kops.EtcdManagerSpec, s conversion.Scope) error {
 	out.Image = in.Image
 	if in.Env != nil {
 		in, out := &in.Env, &out.Env
 		*out = make([]kops.EnvVar, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_EnvVar_To_kops_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_EnvVar_To_kops_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2792,18 +2792,18 @@ func autoConvert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(in *EtcdManage
 	return nil
 }
 
-// Convert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec is an autogenerated conversion function.
-func Convert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(in *EtcdManagerSpec, out *kops.EtcdManagerSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EtcdManagerSpec_To_kops_EtcdManagerSpec(in, out, s)
+// Convert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec is an autogenerated conversion function.
+func Convert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec(in *EtcdManagerSpec, out *kops.EtcdManagerSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_EtcdManagerSpec_To_kops_EtcdManagerSpec(in, out, s)
 }
 
-func autoConvert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(in *kops.EtcdManagerSpec, out *EtcdManagerSpec, s conversion.Scope) error {
+func autoConvert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec(in *kops.EtcdManagerSpec, out *EtcdManagerSpec, s conversion.Scope) error {
 	out.Image = in.Image
 	if in.Env != nil {
 		in, out := &in.Env, &out.Env
 		*out = make([]EnvVar, len(*in))
 		for i := range *in {
-			if err := Convert_kops_EnvVar_To_v1alpha2_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_EnvVar_To_v1beta1_EnvVar(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -2813,12 +2813,12 @@ func autoConvert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(in *kops.EtcdM
 	return nil
 }
 
-// Convert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec is an autogenerated conversion function.
-func Convert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(in *kops.EtcdManagerSpec, out *EtcdManagerSpec, s conversion.Scope) error {
-	return autoConvert_kops_EtcdManagerSpec_To_v1alpha2_EtcdManagerSpec(in, out, s)
+// Convert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec is an autogenerated conversion function.
+func Convert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec(in *kops.EtcdManagerSpec, out *EtcdManagerSpec, s conversion.Scope) error {
+	return autoConvert_kops_EtcdManagerSpec_To_v1beta1_EtcdManagerSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec(in *EtcdMemberSpec, out *kops.EtcdMemberSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_EtcdMemberSpec_To_kops_EtcdMemberSpec(in *EtcdMemberSpec, out *kops.EtcdMemberSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.InstanceGroup = in.InstanceGroup
 	out.VolumeType = in.VolumeType
@@ -2829,12 +2829,12 @@ func autoConvert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec(in *EtcdMemberSp
 	return nil
 }
 
-// Convert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec is an autogenerated conversion function.
-func Convert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec(in *EtcdMemberSpec, out *kops.EtcdMemberSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_EtcdMemberSpec_To_kops_EtcdMemberSpec(in, out, s)
+// Convert_v1beta1_EtcdMemberSpec_To_kops_EtcdMemberSpec is an autogenerated conversion function.
+func Convert_v1beta1_EtcdMemberSpec_To_kops_EtcdMemberSpec(in *EtcdMemberSpec, out *kops.EtcdMemberSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_EtcdMemberSpec_To_kops_EtcdMemberSpec(in, out, s)
 }
 
-func autoConvert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec(in *kops.EtcdMemberSpec, out *EtcdMemberSpec, s conversion.Scope) error {
+func autoConvert_kops_EtcdMemberSpec_To_v1beta1_EtcdMemberSpec(in *kops.EtcdMemberSpec, out *EtcdMemberSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.InstanceGroup = in.InstanceGroup
 	out.VolumeType = in.VolumeType
@@ -2845,78 +2845,78 @@ func autoConvert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec(in *kops.EtcdMem
 	return nil
 }
 
-// Convert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec is an autogenerated conversion function.
-func Convert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec(in *kops.EtcdMemberSpec, out *EtcdMemberSpec, s conversion.Scope) error {
-	return autoConvert_kops_EtcdMemberSpec_To_v1alpha2_EtcdMemberSpec(in, out, s)
+// Convert_kops_EtcdMemberSpec_To_v1beta1_EtcdMemberSpec is an autogenerated conversion function.
+func Convert_kops_EtcdMemberSpec_To_v1beta1_EtcdMemberSpec(in *kops.EtcdMemberSpec, out *EtcdMemberSpec, s conversion.Scope) error {
+	return autoConvert_kops_EtcdMemberSpec_To_v1beta1_EtcdMemberSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction(in *ExecContainerAction, out *kops.ExecContainerAction, s conversion.Scope) error {
+func autoConvert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction(in *ExecContainerAction, out *kops.ExecContainerAction, s conversion.Scope) error {
 	out.Image = in.Image
 	out.Command = in.Command
 	out.Environment = in.Environment
 	return nil
 }
 
-// Convert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction is an autogenerated conversion function.
-func Convert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction(in *ExecContainerAction, out *kops.ExecContainerAction, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction(in, out, s)
+// Convert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction is an autogenerated conversion function.
+func Convert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction(in *ExecContainerAction, out *kops.ExecContainerAction, s conversion.Scope) error {
+	return autoConvert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction(in, out, s)
 }
 
-func autoConvert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction(in *kops.ExecContainerAction, out *ExecContainerAction, s conversion.Scope) error {
+func autoConvert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction(in *kops.ExecContainerAction, out *ExecContainerAction, s conversion.Scope) error {
 	out.Image = in.Image
 	out.Command = in.Command
 	out.Environment = in.Environment
 	return nil
 }
 
-// Convert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction is an autogenerated conversion function.
-func Convert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction(in *kops.ExecContainerAction, out *ExecContainerAction, s conversion.Scope) error {
-	return autoConvert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction(in, out, s)
+// Convert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction is an autogenerated conversion function.
+func Convert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction(in *kops.ExecContainerAction, out *ExecContainerAction, s conversion.Scope) error {
+	return autoConvert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction(in, out, s)
 }
 
-func autoConvert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig(in *ExternalDNSConfig, out *kops.ExternalDNSConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig(in *ExternalDNSConfig, out *kops.ExternalDNSConfig, s conversion.Scope) error {
 	out.Disable = in.Disable
 	out.WatchIngress = in.WatchIngress
 	out.WatchNamespace = in.WatchNamespace
 	return nil
 }
 
-// Convert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig is an autogenerated conversion function.
-func Convert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig(in *ExternalDNSConfig, out *kops.ExternalDNSConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ExternalDNSConfig_To_kops_ExternalDNSConfig(in, out, s)
+// Convert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig is an autogenerated conversion function.
+func Convert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig(in *ExternalDNSConfig, out *kops.ExternalDNSConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_ExternalDNSConfig_To_kops_ExternalDNSConfig(in, out, s)
 }
 
-func autoConvert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig(in *kops.ExternalDNSConfig, out *ExternalDNSConfig, s conversion.Scope) error {
+func autoConvert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig(in *kops.ExternalDNSConfig, out *ExternalDNSConfig, s conversion.Scope) error {
 	out.Disable = in.Disable
 	out.WatchIngress = in.WatchIngress
 	out.WatchNamespace = in.WatchNamespace
 	return nil
 }
 
-// Convert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig is an autogenerated conversion function.
-func Convert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig(in *kops.ExternalDNSConfig, out *ExternalDNSConfig, s conversion.Scope) error {
-	return autoConvert_kops_ExternalDNSConfig_To_v1alpha2_ExternalDNSConfig(in, out, s)
+// Convert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig is an autogenerated conversion function.
+func Convert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig(in *kops.ExternalDNSConfig, out *ExternalDNSConfig, s conversion.Scope) error {
+	return autoConvert_kops_ExternalDNSConfig_To_v1beta1_ExternalDNSConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in *ExternalNetworkingSpec, out *kops.ExternalNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in *ExternalNetworkingSpec, out *kops.ExternalNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in *ExternalNetworkingSpec, out *kops.ExternalNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in, out, s)
+// Convert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in *ExternalNetworkingSpec, out *kops.ExternalNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec(in *kops.ExternalNetworkingSpec, out *ExternalNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec(in *kops.ExternalNetworkingSpec, out *ExternalNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec(in *kops.ExternalNetworkingSpec, out *ExternalNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec(in, out, s)
+// Convert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec(in *kops.ExternalNetworkingSpec, out *ExternalNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(in *FileAssetSpec, out *kops.FileAssetSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(in *FileAssetSpec, out *kops.FileAssetSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Path = in.Path
 	if in.Roles != nil {
@@ -2933,12 +2933,12 @@ func autoConvert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(in *FileAssetSpec,
 	return nil
 }
 
-// Convert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec is an autogenerated conversion function.
-func Convert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(in *FileAssetSpec, out *kops.FileAssetSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(in, out, s)
+// Convert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec is an autogenerated conversion function.
+func Convert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(in *FileAssetSpec, out *kops.FileAssetSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(in, out, s)
 }
 
-func autoConvert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(in *kops.FileAssetSpec, out *FileAssetSpec, s conversion.Scope) error {
+func autoConvert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(in *kops.FileAssetSpec, out *FileAssetSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Path = in.Path
 	if in.Roles != nil {
@@ -2955,59 +2955,59 @@ func autoConvert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(in *kops.FileAsset
 	return nil
 }
 
-// Convert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec is an autogenerated conversion function.
-func Convert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(in *kops.FileAssetSpec, out *FileAssetSpec, s conversion.Scope) error {
-	return autoConvert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(in, out, s)
+// Convert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec is an autogenerated conversion function.
+func Convert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(in *kops.FileAssetSpec, out *FileAssetSpec, s conversion.Scope) error {
+	return autoConvert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in *FlannelNetworkingSpec, out *kops.FlannelNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in *FlannelNetworkingSpec, out *kops.FlannelNetworkingSpec, s conversion.Scope) error {
 	out.Backend = in.Backend
 	out.IptablesResyncSeconds = in.IptablesResyncSeconds
 	return nil
 }
 
-// Convert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in *FlannelNetworkingSpec, out *kops.FlannelNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in, out, s)
+// Convert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in *FlannelNetworkingSpec, out *kops.FlannelNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec(in *kops.FlannelNetworkingSpec, out *FlannelNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec(in *kops.FlannelNetworkingSpec, out *FlannelNetworkingSpec, s conversion.Scope) error {
 	out.Backend = in.Backend
 	out.IptablesResyncSeconds = in.IptablesResyncSeconds
 	return nil
 }
 
-// Convert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec(in *kops.FlannelNetworkingSpec, out *FlannelNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec(in, out, s)
+// Convert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec(in *kops.FlannelNetworkingSpec, out *FlannelNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec(in *GCENetworkingSpec, out *kops.GCENetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec(in *GCENetworkingSpec, out *kops.GCENetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec(in *GCENetworkingSpec, out *kops.GCENetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec(in, out, s)
+// Convert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec(in *GCENetworkingSpec, out *kops.GCENetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec(in *kops.GCENetworkingSpec, out *GCENetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec(in *kops.GCENetworkingSpec, out *GCENetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec is an autogenerated conversion function.
-func Convert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec(in *kops.GCENetworkingSpec, out *GCENetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec(in, out, s)
+// Convert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec is an autogenerated conversion function.
+func Convert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec(in *kops.GCENetworkingSpec, out *GCENetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_GossipConfig_To_kops_GossipConfig(in *GossipConfig, out *kops.GossipConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_GossipConfig_To_kops_GossipConfig(in *GossipConfig, out *kops.GossipConfig, s conversion.Scope) error {
 	out.Protocol = in.Protocol
 	out.Listen = in.Listen
 	out.Secret = in.Secret
 	if in.Secondary != nil {
 		in, out := &in.Secondary, &out.Secondary
 		*out = new(kops.GossipConfig)
-		if err := Convert_v1alpha2_GossipConfig_To_kops_GossipConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_GossipConfig_To_kops_GossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3016,19 +3016,19 @@ func autoConvert_v1alpha2_GossipConfig_To_kops_GossipConfig(in *GossipConfig, ou
 	return nil
 }
 
-// Convert_v1alpha2_GossipConfig_To_kops_GossipConfig is an autogenerated conversion function.
-func Convert_v1alpha2_GossipConfig_To_kops_GossipConfig(in *GossipConfig, out *kops.GossipConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_GossipConfig_To_kops_GossipConfig(in, out, s)
+// Convert_v1beta1_GossipConfig_To_kops_GossipConfig is an autogenerated conversion function.
+func Convert_v1beta1_GossipConfig_To_kops_GossipConfig(in *GossipConfig, out *kops.GossipConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_GossipConfig_To_kops_GossipConfig(in, out, s)
 }
 
-func autoConvert_kops_GossipConfig_To_v1alpha2_GossipConfig(in *kops.GossipConfig, out *GossipConfig, s conversion.Scope) error {
+func autoConvert_kops_GossipConfig_To_v1beta1_GossipConfig(in *kops.GossipConfig, out *GossipConfig, s conversion.Scope) error {
 	out.Protocol = in.Protocol
 	out.Listen = in.Listen
 	out.Secret = in.Secret
 	if in.Secondary != nil {
 		in, out := &in.Secondary, &out.Secondary
 		*out = new(GossipConfig)
-		if err := Convert_kops_GossipConfig_To_v1alpha2_GossipConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_GossipConfig_To_v1beta1_GossipConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3037,34 +3037,34 @@ func autoConvert_kops_GossipConfig_To_v1alpha2_GossipConfig(in *kops.GossipConfi
 	return nil
 }
 
-// Convert_kops_GossipConfig_To_v1alpha2_GossipConfig is an autogenerated conversion function.
-func Convert_kops_GossipConfig_To_v1alpha2_GossipConfig(in *kops.GossipConfig, out *GossipConfig, s conversion.Scope) error {
-	return autoConvert_kops_GossipConfig_To_v1alpha2_GossipConfig(in, out, s)
+// Convert_kops_GossipConfig_To_v1beta1_GossipConfig is an autogenerated conversion function.
+func Convert_kops_GossipConfig_To_v1beta1_GossipConfig(in *kops.GossipConfig, out *GossipConfig, s conversion.Scope) error {
+	return autoConvert_kops_GossipConfig_To_v1beta1_GossipConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_HTTPProxy_To_kops_HTTPProxy(in *HTTPProxy, out *kops.HTTPProxy, s conversion.Scope) error {
+func autoConvert_v1beta1_HTTPProxy_To_kops_HTTPProxy(in *HTTPProxy, out *kops.HTTPProxy, s conversion.Scope) error {
 	out.Host = in.Host
 	out.Port = in.Port
 	return nil
 }
 
-// Convert_v1alpha2_HTTPProxy_To_kops_HTTPProxy is an autogenerated conversion function.
-func Convert_v1alpha2_HTTPProxy_To_kops_HTTPProxy(in *HTTPProxy, out *kops.HTTPProxy, s conversion.Scope) error {
-	return autoConvert_v1alpha2_HTTPProxy_To_kops_HTTPProxy(in, out, s)
+// Convert_v1beta1_HTTPProxy_To_kops_HTTPProxy is an autogenerated conversion function.
+func Convert_v1beta1_HTTPProxy_To_kops_HTTPProxy(in *HTTPProxy, out *kops.HTTPProxy, s conversion.Scope) error {
+	return autoConvert_v1beta1_HTTPProxy_To_kops_HTTPProxy(in, out, s)
 }
 
-func autoConvert_kops_HTTPProxy_To_v1alpha2_HTTPProxy(in *kops.HTTPProxy, out *HTTPProxy, s conversion.Scope) error {
+func autoConvert_kops_HTTPProxy_To_v1beta1_HTTPProxy(in *kops.HTTPProxy, out *HTTPProxy, s conversion.Scope) error {
 	out.Host = in.Host
 	out.Port = in.Port
 	return nil
 }
 
-// Convert_kops_HTTPProxy_To_v1alpha2_HTTPProxy is an autogenerated conversion function.
-func Convert_kops_HTTPProxy_To_v1alpha2_HTTPProxy(in *kops.HTTPProxy, out *HTTPProxy, s conversion.Scope) error {
-	return autoConvert_kops_HTTPProxy_To_v1alpha2_HTTPProxy(in, out, s)
+// Convert_kops_HTTPProxy_To_v1beta1_HTTPProxy is an autogenerated conversion function.
+func Convert_kops_HTTPProxy_To_v1beta1_HTTPProxy(in *kops.HTTPProxy, out *HTTPProxy, s conversion.Scope) error {
+	return autoConvert_kops_HTTPProxy_To_v1beta1_HTTPProxy(in, out, s)
 }
 
-func autoConvert_v1alpha2_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.HookSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.HookSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Disabled = in.Disabled
 	if in.Roles != nil {
@@ -3081,7 +3081,7 @@ func autoConvert_v1alpha2_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.Hook
 	if in.ExecContainer != nil {
 		in, out := &in.ExecContainer, &out.ExecContainer
 		*out = new(kops.ExecContainerAction)
-		if err := Convert_v1alpha2_ExecContainerAction_To_kops_ExecContainerAction(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_ExecContainerAction_To_kops_ExecContainerAction(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3092,12 +3092,12 @@ func autoConvert_v1alpha2_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.Hook
 	return nil
 }
 
-// Convert_v1alpha2_HookSpec_To_kops_HookSpec is an autogenerated conversion function.
-func Convert_v1alpha2_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.HookSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_HookSpec_To_kops_HookSpec(in, out, s)
+// Convert_v1beta1_HookSpec_To_kops_HookSpec is an autogenerated conversion function.
+func Convert_v1beta1_HookSpec_To_kops_HookSpec(in *HookSpec, out *kops.HookSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_HookSpec_To_kops_HookSpec(in, out, s)
 }
 
-func autoConvert_kops_HookSpec_To_v1alpha2_HookSpec(in *kops.HookSpec, out *HookSpec, s conversion.Scope) error {
+func autoConvert_kops_HookSpec_To_v1beta1_HookSpec(in *kops.HookSpec, out *HookSpec, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Disabled = in.Disabled
 	if in.Roles != nil {
@@ -3114,7 +3114,7 @@ func autoConvert_kops_HookSpec_To_v1alpha2_HookSpec(in *kops.HookSpec, out *Hook
 	if in.ExecContainer != nil {
 		in, out := &in.ExecContainer, &out.ExecContainer
 		*out = new(ExecContainerAction)
-		if err := Convert_kops_ExecContainerAction_To_v1alpha2_ExecContainerAction(*in, *out, s); err != nil {
+		if err := Convert_kops_ExecContainerAction_To_v1beta1_ExecContainerAction(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3125,86 +3125,86 @@ func autoConvert_kops_HookSpec_To_v1alpha2_HookSpec(in *kops.HookSpec, out *Hook
 	return nil
 }
 
-// Convert_kops_HookSpec_To_v1alpha2_HookSpec is an autogenerated conversion function.
-func Convert_kops_HookSpec_To_v1alpha2_HookSpec(in *kops.HookSpec, out *HookSpec, s conversion.Scope) error {
-	return autoConvert_kops_HookSpec_To_v1alpha2_HookSpec(in, out, s)
+// Convert_kops_HookSpec_To_v1beta1_HookSpec is an autogenerated conversion function.
+func Convert_kops_HookSpec_To_v1beta1_HookSpec(in *kops.HookSpec, out *HookSpec, s conversion.Scope) error {
+	return autoConvert_kops_HookSpec_To_v1beta1_HookSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec(in *IAMProfileSpec, out *kops.IAMProfileSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec(in *IAMProfileSpec, out *kops.IAMProfileSpec, s conversion.Scope) error {
 	out.Profile = in.Profile
 	return nil
 }
 
-// Convert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec is an autogenerated conversion function.
-func Convert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec(in *IAMProfileSpec, out *kops.IAMProfileSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec(in, out, s)
+// Convert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec is an autogenerated conversion function.
+func Convert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec(in *IAMProfileSpec, out *kops.IAMProfileSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec(in, out, s)
 }
 
-func autoConvert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec(in *kops.IAMProfileSpec, out *IAMProfileSpec, s conversion.Scope) error {
+func autoConvert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec(in *kops.IAMProfileSpec, out *IAMProfileSpec, s conversion.Scope) error {
 	out.Profile = in.Profile
 	return nil
 }
 
-// Convert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec is an autogenerated conversion function.
-func Convert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec(in *kops.IAMProfileSpec, out *IAMProfileSpec, s conversion.Scope) error {
-	return autoConvert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec(in, out, s)
+// Convert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec is an autogenerated conversion function.
+func Convert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec(in *kops.IAMProfileSpec, out *IAMProfileSpec, s conversion.Scope) error {
+	return autoConvert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_IAMSpec_To_kops_IAMSpec(in *IAMSpec, out *kops.IAMSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_IAMSpec_To_kops_IAMSpec(in *IAMSpec, out *kops.IAMSpec, s conversion.Scope) error {
 	out.Legacy = in.Legacy
 	out.AllowContainerRegistry = in.AllowContainerRegistry
 	return nil
 }
 
-// Convert_v1alpha2_IAMSpec_To_kops_IAMSpec is an autogenerated conversion function.
-func Convert_v1alpha2_IAMSpec_To_kops_IAMSpec(in *IAMSpec, out *kops.IAMSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_IAMSpec_To_kops_IAMSpec(in, out, s)
+// Convert_v1beta1_IAMSpec_To_kops_IAMSpec is an autogenerated conversion function.
+func Convert_v1beta1_IAMSpec_To_kops_IAMSpec(in *IAMSpec, out *kops.IAMSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_IAMSpec_To_kops_IAMSpec(in, out, s)
 }
 
-func autoConvert_kops_IAMSpec_To_v1alpha2_IAMSpec(in *kops.IAMSpec, out *IAMSpec, s conversion.Scope) error {
+func autoConvert_kops_IAMSpec_To_v1beta1_IAMSpec(in *kops.IAMSpec, out *IAMSpec, s conversion.Scope) error {
 	out.Legacy = in.Legacy
 	out.AllowContainerRegistry = in.AllowContainerRegistry
 	return nil
 }
 
-// Convert_kops_IAMSpec_To_v1alpha2_IAMSpec is an autogenerated conversion function.
-func Convert_kops_IAMSpec_To_v1alpha2_IAMSpec(in *kops.IAMSpec, out *IAMSpec, s conversion.Scope) error {
-	return autoConvert_kops_IAMSpec_To_v1alpha2_IAMSpec(in, out, s)
+// Convert_kops_IAMSpec_To_v1beta1_IAMSpec is an autogenerated conversion function.
+func Convert_kops_IAMSpec_To_v1beta1_IAMSpec(in *kops.IAMSpec, out *IAMSpec, s conversion.Scope) error {
+	return autoConvert_kops_IAMSpec_To_v1beta1_IAMSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_InstanceGroup_To_kops_InstanceGroup(in *InstanceGroup, out *kops.InstanceGroup, s conversion.Scope) error {
+func autoConvert_v1beta1_InstanceGroup_To_kops_InstanceGroup(in *InstanceGroup, out *kops.InstanceGroup, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_v1alpha2_InstanceGroup_To_kops_InstanceGroup is an autogenerated conversion function.
-func Convert_v1alpha2_InstanceGroup_To_kops_InstanceGroup(in *InstanceGroup, out *kops.InstanceGroup, s conversion.Scope) error {
-	return autoConvert_v1alpha2_InstanceGroup_To_kops_InstanceGroup(in, out, s)
+// Convert_v1beta1_InstanceGroup_To_kops_InstanceGroup is an autogenerated conversion function.
+func Convert_v1beta1_InstanceGroup_To_kops_InstanceGroup(in *InstanceGroup, out *kops.InstanceGroup, s conversion.Scope) error {
+	return autoConvert_v1beta1_InstanceGroup_To_kops_InstanceGroup(in, out, s)
 }
 
-func autoConvert_kops_InstanceGroup_To_v1alpha2_InstanceGroup(in *kops.InstanceGroup, out *InstanceGroup, s conversion.Scope) error {
+func autoConvert_kops_InstanceGroup_To_v1beta1_InstanceGroup(in *kops.InstanceGroup, out *InstanceGroup, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_kops_InstanceGroup_To_v1alpha2_InstanceGroup is an autogenerated conversion function.
-func Convert_kops_InstanceGroup_To_v1alpha2_InstanceGroup(in *kops.InstanceGroup, out *InstanceGroup, s conversion.Scope) error {
-	return autoConvert_kops_InstanceGroup_To_v1alpha2_InstanceGroup(in, out, s)
+// Convert_kops_InstanceGroup_To_v1beta1_InstanceGroup is an autogenerated conversion function.
+func Convert_kops_InstanceGroup_To_v1beta1_InstanceGroup(in *kops.InstanceGroup, out *InstanceGroup, s conversion.Scope) error {
+	return autoConvert_kops_InstanceGroup_To_v1beta1_InstanceGroup(in, out, s)
 }
 
-func autoConvert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList(in *InstanceGroupList, out *kops.InstanceGroupList, s conversion.Scope) error {
+func autoConvert_v1beta1_InstanceGroupList_To_kops_InstanceGroupList(in *InstanceGroupList, out *kops.InstanceGroupList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]kops.InstanceGroup, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_InstanceGroup_To_kops_InstanceGroup(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_InstanceGroup_To_kops_InstanceGroup(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3214,18 +3214,18 @@ func autoConvert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList(in *Instan
 	return nil
 }
 
-// Convert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList is an autogenerated conversion function.
-func Convert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList(in *InstanceGroupList, out *kops.InstanceGroupList, s conversion.Scope) error {
-	return autoConvert_v1alpha2_InstanceGroupList_To_kops_InstanceGroupList(in, out, s)
+// Convert_v1beta1_InstanceGroupList_To_kops_InstanceGroupList is an autogenerated conversion function.
+func Convert_v1beta1_InstanceGroupList_To_kops_InstanceGroupList(in *InstanceGroupList, out *kops.InstanceGroupList, s conversion.Scope) error {
+	return autoConvert_v1beta1_InstanceGroupList_To_kops_InstanceGroupList(in, out, s)
 }
 
-func autoConvert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList(in *kops.InstanceGroupList, out *InstanceGroupList, s conversion.Scope) error {
+func autoConvert_kops_InstanceGroupList_To_v1beta1_InstanceGroupList(in *kops.InstanceGroupList, out *InstanceGroupList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]InstanceGroup, len(*in))
 		for i := range *in {
-			if err := Convert_kops_InstanceGroup_To_v1alpha2_InstanceGroup(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_InstanceGroup_To_v1beta1_InstanceGroup(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3235,12 +3235,12 @@ func autoConvert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList(in *kops.I
 	return nil
 }
 
-// Convert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList is an autogenerated conversion function.
-func Convert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList(in *kops.InstanceGroupList, out *InstanceGroupList, s conversion.Scope) error {
-	return autoConvert_kops_InstanceGroupList_To_v1alpha2_InstanceGroupList(in, out, s)
+// Convert_kops_InstanceGroupList_To_v1beta1_InstanceGroupList is an autogenerated conversion function.
+func Convert_kops_InstanceGroupList_To_v1beta1_InstanceGroupList(in *kops.InstanceGroupList, out *InstanceGroupList, s conversion.Scope) error {
+	return autoConvert_kops_InstanceGroupList_To_v1beta1_InstanceGroupList(in, out, s)
 }
 
-func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *InstanceGroupSpec, out *kops.InstanceGroupSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *InstanceGroupSpec, out *kops.InstanceGroupSpec, s conversion.Scope) error {
 	out.Role = kops.InstanceGroupRole(in.Role)
 	out.Image = in.Image
 	out.MinSize = in.MinSize
@@ -3281,7 +3281,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 		in, out := &in.Hooks, &out.Hooks
 		*out = make([]kops.HookSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_HookSpec_To_kops_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_HookSpec_To_kops_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3298,7 +3298,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 		in, out := &in.FileAssets, &out.FileAssets
 		*out = make([]kops.FileAssetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_FileAssetSpec_To_kops_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_FileAssetSpec_To_kops_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3309,7 +3309,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 	if in.Kubelet != nil {
 		in, out := &in.Kubelet, &out.Kubelet
 		*out = new(kops.KubeletConfigSpec)
-		if err := Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3319,7 +3319,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 	if in.MixedInstancesPolicy != nil {
 		in, out := &in.MixedInstancesPolicy, &out.MixedInstancesPolicy
 		*out = new(kops.MixedInstancesPolicySpec)
-		if err := Convert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3329,7 +3329,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 		in, out := &in.AdditionalUserData, &out.AdditionalUserData
 		*out = make([]kops.UserData, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_UserData_To_kops_UserData(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_UserData_To_kops_UserData(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3341,7 +3341,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 		in, out := &in.ExternalLoadBalancers, &out.ExternalLoadBalancers
 		*out = make([]kops.LoadBalancer, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_LoadBalancer_To_kops_LoadBalancer(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_LoadBalancer_To_kops_LoadBalancer(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3352,7 +3352,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 	if in.IAM != nil {
 		in, out := &in.IAM, &out.IAM
 		*out = new(kops.IAMProfileSpec)
-		if err := Convert_v1alpha2_IAMProfileSpec_To_kops_IAMProfileSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_IAMProfileSpec_To_kops_IAMProfileSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3364,7 +3364,7 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 	if in.RollingUpdate != nil {
 		in, out := &in.RollingUpdate, &out.RollingUpdate
 		*out = new(kops.RollingUpdate)
-		if err := Convert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_RollingUpdate_To_kops_RollingUpdate(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3374,12 +3374,12 @@ func autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *Instan
 	return nil
 }
 
-// Convert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec is an autogenerated conversion function.
-func Convert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *InstanceGroupSpec, out *kops.InstanceGroupSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_InstanceGroupSpec_To_kops_InstanceGroupSpec(in, out, s)
+// Convert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec is an autogenerated conversion function.
+func Convert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec(in *InstanceGroupSpec, out *kops.InstanceGroupSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_InstanceGroupSpec_To_kops_InstanceGroupSpec(in, out, s)
 }
 
-func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.InstanceGroupSpec, out *InstanceGroupSpec, s conversion.Scope) error {
+func autoConvert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec(in *kops.InstanceGroupSpec, out *InstanceGroupSpec, s conversion.Scope) error {
 	out.Role = InstanceGroupRole(in.Role)
 	out.Image = in.Image
 	out.MinSize = in.MinSize
@@ -3420,7 +3420,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 		in, out := &in.Hooks, &out.Hooks
 		*out = make([]HookSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_HookSpec_To_v1alpha2_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_HookSpec_To_v1beta1_HookSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3437,7 +3437,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 		in, out := &in.FileAssets, &out.FileAssets
 		*out = make([]FileAssetSpec, len(*in))
 		for i := range *in {
-			if err := Convert_kops_FileAssetSpec_To_v1alpha2_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_FileAssetSpec_To_v1beta1_FileAssetSpec(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3448,7 +3448,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 	if in.Kubelet != nil {
 		in, out := &in.Kubelet, &out.Kubelet
 		*out = new(KubeletConfigSpec)
-		if err := Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3458,7 +3458,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 	if in.MixedInstancesPolicy != nil {
 		in, out := &in.MixedInstancesPolicy, &out.MixedInstancesPolicy
 		*out = new(MixedInstancesPolicySpec)
-		if err := Convert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec(*in, *out, s); err != nil {
+		if err := Convert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3468,7 +3468,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 		in, out := &in.AdditionalUserData, &out.AdditionalUserData
 		*out = make([]UserData, len(*in))
 		for i := range *in {
-			if err := Convert_kops_UserData_To_v1alpha2_UserData(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_UserData_To_v1beta1_UserData(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3480,7 +3480,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 		in, out := &in.ExternalLoadBalancers, &out.ExternalLoadBalancers
 		*out = make([]LoadBalancer, len(*in))
 		for i := range *in {
-			if err := Convert_kops_LoadBalancer_To_v1alpha2_LoadBalancer(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_LoadBalancer_To_v1beta1_LoadBalancer(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3491,7 +3491,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 	if in.IAM != nil {
 		in, out := &in.IAM, &out.IAM
 		*out = new(IAMProfileSpec)
-		if err := Convert_kops_IAMProfileSpec_To_v1alpha2_IAMProfileSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_IAMProfileSpec_To_v1beta1_IAMProfileSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3503,7 +3503,7 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 	if in.RollingUpdate != nil {
 		in, out := &in.RollingUpdate, &out.RollingUpdate
 		*out = new(RollingUpdate)
-		if err := Convert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(*in, *out, s); err != nil {
+		if err := Convert_kops_RollingUpdate_To_v1beta1_RollingUpdate(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3513,38 +3513,38 @@ func autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.I
 	return nil
 }
 
-// Convert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec is an autogenerated conversion function.
-func Convert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in *kops.InstanceGroupSpec, out *InstanceGroupSpec, s conversion.Scope) error {
-	return autoConvert_kops_InstanceGroupSpec_To_v1alpha2_InstanceGroupSpec(in, out, s)
+// Convert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec is an autogenerated conversion function.
+func Convert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec(in *kops.InstanceGroupSpec, out *InstanceGroupSpec, s conversion.Scope) error {
+	return autoConvert_kops_InstanceGroupSpec_To_v1beta1_InstanceGroupSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_Keyset_To_kops_Keyset(in *Keyset, out *kops.Keyset, s conversion.Scope) error {
+func autoConvert_v1beta1_Keyset_To_kops_Keyset(in *Keyset, out *kops.Keyset, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_v1beta1_KeysetSpec_To_kops_KeysetSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_v1alpha2_Keyset_To_kops_Keyset is an autogenerated conversion function.
-func Convert_v1alpha2_Keyset_To_kops_Keyset(in *Keyset, out *kops.Keyset, s conversion.Scope) error {
-	return autoConvert_v1alpha2_Keyset_To_kops_Keyset(in, out, s)
+// Convert_v1beta1_Keyset_To_kops_Keyset is an autogenerated conversion function.
+func Convert_v1beta1_Keyset_To_kops_Keyset(in *Keyset, out *kops.Keyset, s conversion.Scope) error {
+	return autoConvert_v1beta1_Keyset_To_kops_Keyset(in, out, s)
 }
 
-func autoConvert_kops_Keyset_To_v1alpha2_Keyset(in *kops.Keyset, out *Keyset, s conversion.Scope) error {
+func autoConvert_kops_Keyset_To_v1beta1_Keyset(in *kops.Keyset, out *Keyset, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_kops_KeysetSpec_To_v1beta1_KeysetSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_kops_Keyset_To_v1alpha2_Keyset is an autogenerated conversion function.
-func Convert_kops_Keyset_To_v1alpha2_Keyset(in *kops.Keyset, out *Keyset, s conversion.Scope) error {
-	return autoConvert_kops_Keyset_To_v1alpha2_Keyset(in, out, s)
+// Convert_kops_Keyset_To_v1beta1_Keyset is an autogenerated conversion function.
+func Convert_kops_Keyset_To_v1beta1_Keyset(in *kops.Keyset, out *Keyset, s conversion.Scope) error {
+	return autoConvert_kops_Keyset_To_v1beta1_Keyset(in, out, s)
 }
 
-func autoConvert_v1alpha2_KeysetItem_To_kops_KeysetItem(in *KeysetItem, out *kops.KeysetItem, s conversion.Scope) error {
+func autoConvert_v1beta1_KeysetItem_To_kops_KeysetItem(in *KeysetItem, out *kops.KeysetItem, s conversion.Scope) error {
 	out.Id = in.Id
 	if err := conversion.Convert_Slice_byte_To_Slice_byte(&in.PublicMaterial, &out.PublicMaterial, s); err != nil {
 		return err
@@ -3555,12 +3555,12 @@ func autoConvert_v1alpha2_KeysetItem_To_kops_KeysetItem(in *KeysetItem, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_KeysetItem_To_kops_KeysetItem is an autogenerated conversion function.
-func Convert_v1alpha2_KeysetItem_To_kops_KeysetItem(in *KeysetItem, out *kops.KeysetItem, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KeysetItem_To_kops_KeysetItem(in, out, s)
+// Convert_v1beta1_KeysetItem_To_kops_KeysetItem is an autogenerated conversion function.
+func Convert_v1beta1_KeysetItem_To_kops_KeysetItem(in *KeysetItem, out *kops.KeysetItem, s conversion.Scope) error {
+	return autoConvert_v1beta1_KeysetItem_To_kops_KeysetItem(in, out, s)
 }
 
-func autoConvert_kops_KeysetItem_To_v1alpha2_KeysetItem(in *kops.KeysetItem, out *KeysetItem, s conversion.Scope) error {
+func autoConvert_kops_KeysetItem_To_v1beta1_KeysetItem(in *kops.KeysetItem, out *KeysetItem, s conversion.Scope) error {
 	out.Id = in.Id
 	if err := conversion.Convert_Slice_byte_To_Slice_byte(&in.PublicMaterial, &out.PublicMaterial, s); err != nil {
 		return err
@@ -3571,18 +3571,18 @@ func autoConvert_kops_KeysetItem_To_v1alpha2_KeysetItem(in *kops.KeysetItem, out
 	return nil
 }
 
-// Convert_kops_KeysetItem_To_v1alpha2_KeysetItem is an autogenerated conversion function.
-func Convert_kops_KeysetItem_To_v1alpha2_KeysetItem(in *kops.KeysetItem, out *KeysetItem, s conversion.Scope) error {
-	return autoConvert_kops_KeysetItem_To_v1alpha2_KeysetItem(in, out, s)
+// Convert_kops_KeysetItem_To_v1beta1_KeysetItem is an autogenerated conversion function.
+func Convert_kops_KeysetItem_To_v1beta1_KeysetItem(in *kops.KeysetItem, out *KeysetItem, s conversion.Scope) error {
+	return autoConvert_kops_KeysetItem_To_v1beta1_KeysetItem(in, out, s)
 }
 
-func autoConvert_v1alpha2_KeysetList_To_kops_KeysetList(in *KeysetList, out *kops.KeysetList, s conversion.Scope) error {
+func autoConvert_v1beta1_KeysetList_To_kops_KeysetList(in *KeysetList, out *kops.KeysetList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]kops.Keyset, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_Keyset_To_kops_Keyset(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_Keyset_To_kops_Keyset(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3592,18 +3592,18 @@ func autoConvert_v1alpha2_KeysetList_To_kops_KeysetList(in *KeysetList, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_KeysetList_To_kops_KeysetList is an autogenerated conversion function.
-func Convert_v1alpha2_KeysetList_To_kops_KeysetList(in *KeysetList, out *kops.KeysetList, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KeysetList_To_kops_KeysetList(in, out, s)
+// Convert_v1beta1_KeysetList_To_kops_KeysetList is an autogenerated conversion function.
+func Convert_v1beta1_KeysetList_To_kops_KeysetList(in *KeysetList, out *kops.KeysetList, s conversion.Scope) error {
+	return autoConvert_v1beta1_KeysetList_To_kops_KeysetList(in, out, s)
 }
 
-func autoConvert_kops_KeysetList_To_v1alpha2_KeysetList(in *kops.KeysetList, out *KeysetList, s conversion.Scope) error {
+func autoConvert_kops_KeysetList_To_v1beta1_KeysetList(in *kops.KeysetList, out *KeysetList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]Keyset, len(*in))
 		for i := range *in {
-			if err := Convert_kops_Keyset_To_v1alpha2_Keyset(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_Keyset_To_v1beta1_Keyset(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3613,18 +3613,18 @@ func autoConvert_kops_KeysetList_To_v1alpha2_KeysetList(in *kops.KeysetList, out
 	return nil
 }
 
-// Convert_kops_KeysetList_To_v1alpha2_KeysetList is an autogenerated conversion function.
-func Convert_kops_KeysetList_To_v1alpha2_KeysetList(in *kops.KeysetList, out *KeysetList, s conversion.Scope) error {
-	return autoConvert_kops_KeysetList_To_v1alpha2_KeysetList(in, out, s)
+// Convert_kops_KeysetList_To_v1beta1_KeysetList is an autogenerated conversion function.
+func Convert_kops_KeysetList_To_v1beta1_KeysetList(in *kops.KeysetList, out *KeysetList, s conversion.Scope) error {
+	return autoConvert_kops_KeysetList_To_v1beta1_KeysetList(in, out, s)
 }
 
-func autoConvert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(in *KeysetSpec, out *kops.KeysetSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KeysetSpec_To_kops_KeysetSpec(in *KeysetSpec, out *kops.KeysetSpec, s conversion.Scope) error {
 	out.Type = kops.KeysetType(in.Type)
 	if in.Keys != nil {
 		in, out := &in.Keys, &out.Keys
 		*out = make([]kops.KeysetItem, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_KeysetItem_To_kops_KeysetItem(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_KeysetItem_To_kops_KeysetItem(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3634,18 +3634,18 @@ func autoConvert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(in *KeysetSpec, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_KeysetSpec_To_kops_KeysetSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(in *KeysetSpec, out *kops.KeysetSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KeysetSpec_To_kops_KeysetSpec(in, out, s)
+// Convert_v1beta1_KeysetSpec_To_kops_KeysetSpec is an autogenerated conversion function.
+func Convert_v1beta1_KeysetSpec_To_kops_KeysetSpec(in *KeysetSpec, out *kops.KeysetSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KeysetSpec_To_kops_KeysetSpec(in, out, s)
 }
 
-func autoConvert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(in *kops.KeysetSpec, out *KeysetSpec, s conversion.Scope) error {
+func autoConvert_kops_KeysetSpec_To_v1beta1_KeysetSpec(in *kops.KeysetSpec, out *KeysetSpec, s conversion.Scope) error {
 	out.Type = KeysetType(in.Type)
 	if in.Keys != nil {
 		in, out := &in.Keys, &out.Keys
 		*out = make([]KeysetItem, len(*in))
 		for i := range *in {
-			if err := Convert_kops_KeysetItem_To_v1alpha2_KeysetItem(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_KeysetItem_To_v1beta1_KeysetItem(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -3655,48 +3655,48 @@ func autoConvert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(in *kops.KeysetSpec, out
 	return nil
 }
 
-// Convert_kops_KeysetSpec_To_v1alpha2_KeysetSpec is an autogenerated conversion function.
-func Convert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(in *kops.KeysetSpec, out *KeysetSpec, s conversion.Scope) error {
-	return autoConvert_kops_KeysetSpec_To_v1alpha2_KeysetSpec(in, out, s)
+// Convert_kops_KeysetSpec_To_v1beta1_KeysetSpec is an autogenerated conversion function.
+func Convert_kops_KeysetSpec_To_v1beta1_KeysetSpec(in *kops.KeysetSpec, out *KeysetSpec, s conversion.Scope) error {
+	return autoConvert_kops_KeysetSpec_To_v1beta1_KeysetSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in *KopeioAuthenticationSpec, out *kops.KopeioAuthenticationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in *KopeioAuthenticationSpec, out *kops.KopeioAuthenticationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in *KopeioAuthenticationSpec, out *kops.KopeioAuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in, out, s)
+// Convert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec is an autogenerated conversion function.
+func Convert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in *KopeioAuthenticationSpec, out *kops.KopeioAuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KopeioAuthenticationSpec_To_kops_KopeioAuthenticationSpec(in, out, s)
 }
 
-func autoConvert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec(in *kops.KopeioAuthenticationSpec, out *KopeioAuthenticationSpec, s conversion.Scope) error {
+func autoConvert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec(in *kops.KopeioAuthenticationSpec, out *KopeioAuthenticationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec is an autogenerated conversion function.
-func Convert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec(in *kops.KopeioAuthenticationSpec, out *KopeioAuthenticationSpec, s conversion.Scope) error {
-	return autoConvert_kops_KopeioAuthenticationSpec_To_v1alpha2_KopeioAuthenticationSpec(in, out, s)
+// Convert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec is an autogenerated conversion function.
+func Convert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec(in *kops.KopeioAuthenticationSpec, out *KopeioAuthenticationSpec, s conversion.Scope) error {
+	return autoConvert_kops_KopeioAuthenticationSpec_To_v1beta1_KopeioAuthenticationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in *KopeioNetworkingSpec, out *kops.KopeioNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in *KopeioNetworkingSpec, out *kops.KopeioNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in *KopeioNetworkingSpec, out *kops.KopeioNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in, out, s)
+// Convert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in *KopeioNetworkingSpec, out *kops.KopeioNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec(in *kops.KopeioNetworkingSpec, out *KopeioNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec(in *kops.KopeioNetworkingSpec, out *KopeioNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec(in *kops.KopeioNetworkingSpec, out *KopeioNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec(in, out, s)
+// Convert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec(in *kops.KopeioNetworkingSpec, out *KopeioNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *KubeAPIServerConfig, out *kops.KubeAPIServerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *KubeAPIServerConfig, out *kops.KubeAPIServerConfig, s conversion.Scope) error {
 	out.Image = in.Image
 	out.DisableBasicAuth = in.DisableBasicAuth
 	out.LogLevel = in.LogLevel
@@ -3794,12 +3794,12 @@ func autoConvert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *Ku
 	return nil
 }
 
-// Convert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *KubeAPIServerConfig, out *kops.KubeAPIServerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in, out, s)
+// Convert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig is an autogenerated conversion function.
+func Convert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in *KubeAPIServerConfig, out *kops.KubeAPIServerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeAPIServerConfig_To_kops_KubeAPIServerConfig(in, out, s)
 }
 
-func autoConvert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(in *kops.KubeAPIServerConfig, out *KubeAPIServerConfig, s conversion.Scope) error {
+func autoConvert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig(in *kops.KubeAPIServerConfig, out *KubeAPIServerConfig, s conversion.Scope) error {
 	out.Image = in.Image
 	out.DisableBasicAuth = in.DisableBasicAuth
 	out.LogLevel = in.LogLevel
@@ -3897,12 +3897,12 @@ func autoConvert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(in *ko
 	return nil
 }
 
-// Convert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig is an autogenerated conversion function.
-func Convert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(in *kops.KubeAPIServerConfig, out *KubeAPIServerConfig, s conversion.Scope) error {
-	return autoConvert_kops_KubeAPIServerConfig_To_v1alpha2_KubeAPIServerConfig(in, out, s)
+// Convert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig is an autogenerated conversion function.
+func Convert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig(in *kops.KubeAPIServerConfig, out *KubeAPIServerConfig, s conversion.Scope) error {
+	return autoConvert_kops_KubeAPIServerConfig_To_v1beta1_KubeAPIServerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in *KubeControllerManagerConfig, out *kops.KubeControllerManagerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in *KubeControllerManagerConfig, out *kops.KubeControllerManagerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.ServiceAccountPrivateKeyFile = in.ServiceAccountPrivateKeyFile
@@ -3919,7 +3919,7 @@ func autoConvert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerMana
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(kops.LeaderElectionConfiguration)
-		if err := Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -3957,12 +3957,12 @@ func autoConvert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerMana
 	return nil
 }
 
-// Convert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in *KubeControllerManagerConfig, out *kops.KubeControllerManagerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in, out, s)
+// Convert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig is an autogenerated conversion function.
+func Convert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in *KubeControllerManagerConfig, out *kops.KubeControllerManagerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeControllerManagerConfig_To_kops_KubeControllerManagerConfig(in, out, s)
 }
 
-func autoConvert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig(in *kops.KubeControllerManagerConfig, out *KubeControllerManagerConfig, s conversion.Scope) error {
+func autoConvert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig(in *kops.KubeControllerManagerConfig, out *KubeControllerManagerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.ServiceAccountPrivateKeyFile = in.ServiceAccountPrivateKeyFile
@@ -3979,7 +3979,7 @@ func autoConvert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerMana
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(LeaderElectionConfiguration)
-		if err := Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4017,12 +4017,12 @@ func autoConvert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerMana
 	return nil
 }
 
-// Convert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig is an autogenerated conversion function.
-func Convert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig(in *kops.KubeControllerManagerConfig, out *KubeControllerManagerConfig, s conversion.Scope) error {
-	return autoConvert_kops_KubeControllerManagerConfig_To_v1alpha2_KubeControllerManagerConfig(in, out, s)
+// Convert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig is an autogenerated conversion function.
+func Convert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig(in *kops.KubeControllerManagerConfig, out *KubeControllerManagerConfig, s conversion.Scope) error {
+	return autoConvert_kops_KubeControllerManagerConfig_To_v1beta1_KubeControllerManagerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig, out *kops.KubeDNSConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig, out *kops.KubeDNSConfig, s conversion.Scope) error {
 	out.CacheMaxSize = in.CacheMaxSize
 	out.CacheMaxConcurrent = in.CacheMaxConcurrent
 	out.CoreDNSImage = in.CoreDNSImage
@@ -4040,7 +4040,7 @@ func autoConvert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig,
 	if in.NodeLocalDNS != nil {
 		in, out := &in.NodeLocalDNS, &out.NodeLocalDNS
 		*out = new(kops.NodeLocalDNSConfig)
-		if err := Convert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4049,12 +4049,12 @@ func autoConvert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig,
 	return nil
 }
 
-// Convert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig is an autogenerated conversion function.
-func Convert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig, out *kops.KubeDNSConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeDNSConfig_To_kops_KubeDNSConfig(in, out, s)
+// Convert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig is an autogenerated conversion function.
+func Convert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig(in *KubeDNSConfig, out *kops.KubeDNSConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeDNSConfig_To_kops_KubeDNSConfig(in, out, s)
 }
 
-func autoConvert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(in *kops.KubeDNSConfig, out *KubeDNSConfig, s conversion.Scope) error {
+func autoConvert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig(in *kops.KubeDNSConfig, out *KubeDNSConfig, s conversion.Scope) error {
 	out.CacheMaxSize = in.CacheMaxSize
 	out.CacheMaxConcurrent = in.CacheMaxConcurrent
 	out.CoreDNSImage = in.CoreDNSImage
@@ -4072,7 +4072,7 @@ func autoConvert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(in *kops.KubeDNSCo
 	if in.NodeLocalDNS != nil {
 		in, out := &in.NodeLocalDNS, &out.NodeLocalDNS
 		*out = new(NodeLocalDNSConfig)
-		if err := Convert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4081,12 +4081,12 @@ func autoConvert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(in *kops.KubeDNSCo
 	return nil
 }
 
-// Convert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig is an autogenerated conversion function.
-func Convert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(in *kops.KubeDNSConfig, out *KubeDNSConfig, s conversion.Scope) error {
-	return autoConvert_kops_KubeDNSConfig_To_v1alpha2_KubeDNSConfig(in, out, s)
+// Convert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig is an autogenerated conversion function.
+func Convert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig(in *kops.KubeDNSConfig, out *KubeDNSConfig, s conversion.Scope) error {
+	return autoConvert_kops_KubeDNSConfig_To_v1beta1_KubeDNSConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(in *KubeProxyConfig, out *kops.KubeProxyConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig(in *KubeProxyConfig, out *kops.KubeProxyConfig, s conversion.Scope) error {
 	out.Image = in.Image
 	out.CPURequest = in.CPURequest
 	out.CPULimit = in.CPULimit
@@ -4110,12 +4110,12 @@ func autoConvert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(in *KubeProxyC
 	return nil
 }
 
-// Convert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig is an autogenerated conversion function.
-func Convert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(in *KubeProxyConfig, out *kops.KubeProxyConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeProxyConfig_To_kops_KubeProxyConfig(in, out, s)
+// Convert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig is an autogenerated conversion function.
+func Convert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig(in *KubeProxyConfig, out *kops.KubeProxyConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeProxyConfig_To_kops_KubeProxyConfig(in, out, s)
 }
 
-func autoConvert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(in *kops.KubeProxyConfig, out *KubeProxyConfig, s conversion.Scope) error {
+func autoConvert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig(in *kops.KubeProxyConfig, out *KubeProxyConfig, s conversion.Scope) error {
 	out.Image = in.Image
 	out.CPURequest = in.CPURequest
 	out.CPULimit = in.CPULimit
@@ -4139,19 +4139,19 @@ func autoConvert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(in *kops.KubeP
 	return nil
 }
 
-// Convert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig is an autogenerated conversion function.
-func Convert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(in *kops.KubeProxyConfig, out *KubeProxyConfig, s conversion.Scope) error {
-	return autoConvert_kops_KubeProxyConfig_To_v1alpha2_KubeProxyConfig(in, out, s)
+// Convert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig is an autogenerated conversion function.
+func Convert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig(in *kops.KubeProxyConfig, out *KubeProxyConfig, s conversion.Scope) error {
+	return autoConvert_kops_KubeProxyConfig_To_v1beta1_KubeProxyConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in *KubeSchedulerConfig, out *kops.KubeSchedulerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in *KubeSchedulerConfig, out *kops.KubeSchedulerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.Image = in.Image
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(kops.LeaderElectionConfiguration)
-		if err := Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4166,19 +4166,19 @@ func autoConvert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in *Ku
 	return nil
 }
 
-// Convert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in *KubeSchedulerConfig, out *kops.KubeSchedulerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in, out, s)
+// Convert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig is an autogenerated conversion function.
+func Convert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in *KubeSchedulerConfig, out *kops.KubeSchedulerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeSchedulerConfig_To_kops_KubeSchedulerConfig(in, out, s)
 }
 
-func autoConvert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(in *kops.KubeSchedulerConfig, out *KubeSchedulerConfig, s conversion.Scope) error {
+func autoConvert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig(in *kops.KubeSchedulerConfig, out *KubeSchedulerConfig, s conversion.Scope) error {
 	out.Master = in.Master
 	out.LogLevel = in.LogLevel
 	out.Image = in.Image
 	if in.LeaderElection != nil {
 		in, out := &in.LeaderElection, &out.LeaderElection
 		*out = new(LeaderElectionConfiguration)
-		if err := Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(*in, *out, s); err != nil {
+		if err := Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4193,12 +4193,12 @@ func autoConvert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(in *ko
 	return nil
 }
 
-// Convert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig is an autogenerated conversion function.
-func Convert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(in *kops.KubeSchedulerConfig, out *KubeSchedulerConfig, s conversion.Scope) error {
-	return autoConvert_kops_KubeSchedulerConfig_To_v1alpha2_KubeSchedulerConfig(in, out, s)
+// Convert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig is an autogenerated conversion function.
+func Convert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig(in *kops.KubeSchedulerConfig, out *KubeSchedulerConfig, s conversion.Scope) error {
+	return autoConvert_kops_KubeSchedulerConfig_To_v1beta1_KubeSchedulerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(in *KubeletConfigSpec, out *kops.KubeletConfigSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(in *KubeletConfigSpec, out *kops.KubeletConfigSpec, s conversion.Scope) error {
 	out.APIServers = in.APIServers
 	out.AnonymousAuth = in.AnonymousAuth
 	out.AuthorizationMode = in.AuthorizationMode
@@ -4280,12 +4280,12 @@ func autoConvert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(in *Kubele
 	return nil
 }
 
-// Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(in *KubeletConfigSpec, out *kops.KubeletConfigSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubeletConfigSpec_To_kops_KubeletConfigSpec(in, out, s)
+// Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec is an autogenerated conversion function.
+func Convert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(in *KubeletConfigSpec, out *kops.KubeletConfigSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubeletConfigSpec_To_kops_KubeletConfigSpec(in, out, s)
 }
 
-func autoConvert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(in *kops.KubeletConfigSpec, out *KubeletConfigSpec, s conversion.Scope) error {
+func autoConvert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(in *kops.KubeletConfigSpec, out *KubeletConfigSpec, s conversion.Scope) error {
 	out.APIServers = in.APIServers
 	out.AnonymousAuth = in.AnonymousAuth
 	out.AuthorizationMode = in.AuthorizationMode
@@ -4367,48 +4367,48 @@ func autoConvert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(in *kops.K
 	return nil
 }
 
-// Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec is an autogenerated conversion function.
-func Convert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(in *kops.KubeletConfigSpec, out *KubeletConfigSpec, s conversion.Scope) error {
-	return autoConvert_kops_KubeletConfigSpec_To_v1alpha2_KubeletConfigSpec(in, out, s)
+// Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec is an autogenerated conversion function.
+func Convert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(in *kops.KubeletConfigSpec, out *KubeletConfigSpec, s conversion.Scope) error {
+	return autoConvert_kops_KubeletConfigSpec_To_v1beta1_KubeletConfigSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in *KubenetNetworkingSpec, out *kops.KubenetNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in *KubenetNetworkingSpec, out *kops.KubenetNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in *KubenetNetworkingSpec, out *kops.KubenetNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in, out, s)
+// Convert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in *KubenetNetworkingSpec, out *kops.KubenetNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec(in *kops.KubenetNetworkingSpec, out *KubenetNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec(in *kops.KubenetNetworkingSpec, out *KubenetNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec(in *kops.KubenetNetworkingSpec, out *KubenetNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec(in, out, s)
+// Convert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec(in *kops.KubenetNetworkingSpec, out *KubenetNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in *KuberouterNetworkingSpec, out *kops.KuberouterNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in *KuberouterNetworkingSpec, out *kops.KuberouterNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in *KuberouterNetworkingSpec, out *kops.KuberouterNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in, out, s)
+// Convert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in *KuberouterNetworkingSpec, out *kops.KuberouterNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec(in *kops.KuberouterNetworkingSpec, out *KuberouterNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec(in *kops.KuberouterNetworkingSpec, out *KuberouterNetworkingSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec(in *kops.KuberouterNetworkingSpec, out *KuberouterNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec(in, out, s)
+// Convert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec(in *kops.KuberouterNetworkingSpec, out *KuberouterNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in *LeaderElectionConfiguration, out *kops.LeaderElectionConfiguration, s conversion.Scope) error {
+func autoConvert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in *LeaderElectionConfiguration, out *kops.LeaderElectionConfiguration, s conversion.Scope) error {
 	out.LeaderElect = in.LeaderElect
 	out.LeaderElectLeaseDuration = in.LeaderElectLeaseDuration
 	out.LeaderElectRenewDeadlineDuration = in.LeaderElectRenewDeadlineDuration
@@ -4419,12 +4419,12 @@ func autoConvert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConf
 	return nil
 }
 
-// Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration is an autogenerated conversion function.
-func Convert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in *LeaderElectionConfiguration, out *kops.LeaderElectionConfiguration, s conversion.Scope) error {
-	return autoConvert_v1alpha2_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in, out, s)
+// Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration is an autogenerated conversion function.
+func Convert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in *LeaderElectionConfiguration, out *kops.LeaderElectionConfiguration, s conversion.Scope) error {
+	return autoConvert_v1beta1_LeaderElectionConfiguration_To_kops_LeaderElectionConfiguration(in, out, s)
 }
 
-func autoConvert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(in *kops.LeaderElectionConfiguration, out *LeaderElectionConfiguration, s conversion.Scope) error {
+func autoConvert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(in *kops.LeaderElectionConfiguration, out *LeaderElectionConfiguration, s conversion.Scope) error {
 	out.LeaderElect = in.LeaderElect
 	out.LeaderElectLeaseDuration = in.LeaderElectLeaseDuration
 	out.LeaderElectRenewDeadlineDuration = in.LeaderElectRenewDeadlineDuration
@@ -4435,34 +4435,34 @@ func autoConvert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConf
 	return nil
 }
 
-// Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration is an autogenerated conversion function.
-func Convert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(in *kops.LeaderElectionConfiguration, out *LeaderElectionConfiguration, s conversion.Scope) error {
-	return autoConvert_kops_LeaderElectionConfiguration_To_v1alpha2_LeaderElectionConfiguration(in, out, s)
+// Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration is an autogenerated conversion function.
+func Convert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(in *kops.LeaderElectionConfiguration, out *LeaderElectionConfiguration, s conversion.Scope) error {
+	return autoConvert_kops_LeaderElectionConfiguration_To_v1beta1_LeaderElectionConfiguration(in, out, s)
 }
 
-func autoConvert_v1alpha2_LoadBalancer_To_kops_LoadBalancer(in *LoadBalancer, out *kops.LoadBalancer, s conversion.Scope) error {
+func autoConvert_v1beta1_LoadBalancer_To_kops_LoadBalancer(in *LoadBalancer, out *kops.LoadBalancer, s conversion.Scope) error {
 	out.LoadBalancerName = in.LoadBalancerName
 	out.TargetGroupARN = in.TargetGroupARN
 	return nil
 }
 
-// Convert_v1alpha2_LoadBalancer_To_kops_LoadBalancer is an autogenerated conversion function.
-func Convert_v1alpha2_LoadBalancer_To_kops_LoadBalancer(in *LoadBalancer, out *kops.LoadBalancer, s conversion.Scope) error {
-	return autoConvert_v1alpha2_LoadBalancer_To_kops_LoadBalancer(in, out, s)
+// Convert_v1beta1_LoadBalancer_To_kops_LoadBalancer is an autogenerated conversion function.
+func Convert_v1beta1_LoadBalancer_To_kops_LoadBalancer(in *LoadBalancer, out *kops.LoadBalancer, s conversion.Scope) error {
+	return autoConvert_v1beta1_LoadBalancer_To_kops_LoadBalancer(in, out, s)
 }
 
-func autoConvert_kops_LoadBalancer_To_v1alpha2_LoadBalancer(in *kops.LoadBalancer, out *LoadBalancer, s conversion.Scope) error {
+func autoConvert_kops_LoadBalancer_To_v1beta1_LoadBalancer(in *kops.LoadBalancer, out *LoadBalancer, s conversion.Scope) error {
 	out.LoadBalancerName = in.LoadBalancerName
 	out.TargetGroupARN = in.TargetGroupARN
 	return nil
 }
 
-// Convert_kops_LoadBalancer_To_v1alpha2_LoadBalancer is an autogenerated conversion function.
-func Convert_kops_LoadBalancer_To_v1alpha2_LoadBalancer(in *kops.LoadBalancer, out *LoadBalancer, s conversion.Scope) error {
-	return autoConvert_kops_LoadBalancer_To_v1alpha2_LoadBalancer(in, out, s)
+// Convert_kops_LoadBalancer_To_v1beta1_LoadBalancer is an autogenerated conversion function.
+func Convert_kops_LoadBalancer_To_v1beta1_LoadBalancer(in *kops.LoadBalancer, out *LoadBalancer, s conversion.Scope) error {
+	return autoConvert_kops_LoadBalancer_To_v1beta1_LoadBalancer(in, out, s)
 }
 
-func autoConvert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in *LoadBalancerAccessSpec, out *kops.LoadBalancerAccessSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in *LoadBalancerAccessSpec, out *kops.LoadBalancerAccessSpec, s conversion.Scope) error {
 	out.Type = kops.LoadBalancerType(in.Type)
 	out.IdleTimeoutSeconds = in.IdleTimeoutSeconds
 	out.SecurityGroupOverride = in.SecurityGroupOverride
@@ -4473,12 +4473,12 @@ func autoConvert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(
 	return nil
 }
 
-// Convert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec is an autogenerated conversion function.
-func Convert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in *LoadBalancerAccessSpec, out *kops.LoadBalancerAccessSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in, out, s)
+// Convert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec is an autogenerated conversion function.
+func Convert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in *LoadBalancerAccessSpec, out *kops.LoadBalancerAccessSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_LoadBalancerAccessSpec_To_kops_LoadBalancerAccessSpec(in, out, s)
 }
 
-func autoConvert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(in *kops.LoadBalancerAccessSpec, out *LoadBalancerAccessSpec, s conversion.Scope) error {
+func autoConvert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec(in *kops.LoadBalancerAccessSpec, out *LoadBalancerAccessSpec, s conversion.Scope) error {
 	out.Type = LoadBalancerType(in.Type)
 	out.IdleTimeoutSeconds = in.IdleTimeoutSeconds
 	out.SecurityGroupOverride = in.SecurityGroupOverride
@@ -4489,32 +4489,32 @@ func autoConvert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(
 	return nil
 }
 
-// Convert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec is an autogenerated conversion function.
-func Convert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(in *kops.LoadBalancerAccessSpec, out *LoadBalancerAccessSpec, s conversion.Scope) error {
-	return autoConvert_kops_LoadBalancerAccessSpec_To_v1alpha2_LoadBalancerAccessSpec(in, out, s)
+// Convert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec is an autogenerated conversion function.
+func Convert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec(in *kops.LoadBalancerAccessSpec, out *LoadBalancerAccessSpec, s conversion.Scope) error {
+	return autoConvert_kops_LoadBalancerAccessSpec_To_v1beta1_LoadBalancerAccessSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in *LyftVPCNetworkingSpec, out *kops.LyftVPCNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in *LyftVPCNetworkingSpec, out *kops.LyftVPCNetworkingSpec, s conversion.Scope) error {
 	out.SubnetTags = in.SubnetTags
 	return nil
 }
 
-// Convert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in *LyftVPCNetworkingSpec, out *kops.LyftVPCNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in, out, s)
+// Convert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in *LyftVPCNetworkingSpec, out *kops.LyftVPCNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec(in *kops.LyftVPCNetworkingSpec, out *LyftVPCNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec(in *kops.LyftVPCNetworkingSpec, out *LyftVPCNetworkingSpec, s conversion.Scope) error {
 	out.SubnetTags = in.SubnetTags
 	return nil
 }
 
-// Convert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec(in *kops.LyftVPCNetworkingSpec, out *LyftVPCNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec(in, out, s)
+// Convert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec(in *kops.LyftVPCNetworkingSpec, out *LyftVPCNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in *MixedInstancesPolicySpec, out *kops.MixedInstancesPolicySpec, s conversion.Scope) error {
+func autoConvert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in *MixedInstancesPolicySpec, out *kops.MixedInstancesPolicySpec, s conversion.Scope) error {
 	out.Instances = in.Instances
 	out.OnDemandAllocationStrategy = in.OnDemandAllocationStrategy
 	out.OnDemandBase = in.OnDemandBase
@@ -4524,12 +4524,12 @@ func autoConvert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicyS
 	return nil
 }
 
-// Convert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec is an autogenerated conversion function.
-func Convert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in *MixedInstancesPolicySpec, out *kops.MixedInstancesPolicySpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in, out, s)
+// Convert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec is an autogenerated conversion function.
+func Convert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in *MixedInstancesPolicySpec, out *kops.MixedInstancesPolicySpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_MixedInstancesPolicySpec_To_kops_MixedInstancesPolicySpec(in, out, s)
 }
 
-func autoConvert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec(in *kops.MixedInstancesPolicySpec, out *MixedInstancesPolicySpec, s conversion.Scope) error {
+func autoConvert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec(in *kops.MixedInstancesPolicySpec, out *MixedInstancesPolicySpec, s conversion.Scope) error {
 	out.Instances = in.Instances
 	out.OnDemandAllocationStrategy = in.OnDemandAllocationStrategy
 	out.OnDemandBase = in.OnDemandBase
@@ -4539,16 +4539,16 @@ func autoConvert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicyS
 	return nil
 }
 
-// Convert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec is an autogenerated conversion function.
-func Convert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec(in *kops.MixedInstancesPolicySpec, out *MixedInstancesPolicySpec, s conversion.Scope) error {
-	return autoConvert_kops_MixedInstancesPolicySpec_To_v1alpha2_MixedInstancesPolicySpec(in, out, s)
+// Convert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec is an autogenerated conversion function.
+func Convert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec(in *kops.MixedInstancesPolicySpec, out *MixedInstancesPolicySpec, s conversion.Scope) error {
+	return autoConvert_kops_MixedInstancesPolicySpec_To_v1beta1_MixedInstancesPolicySpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSpec, out *kops.NetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSpec, out *kops.NetworkingSpec, s conversion.Scope) error {
 	if in.Classic != nil {
 		in, out := &in.Classic, &out.Classic
 		*out = new(kops.ClassicNetworkingSpec)
-		if err := Convert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4557,7 +4557,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Kubenet != nil {
 		in, out := &in.Kubenet, &out.Kubenet
 		*out = new(kops.KubenetNetworkingSpec)
-		if err := Convert_v1alpha2_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KubenetNetworkingSpec_To_kops_KubenetNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4566,7 +4566,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.External != nil {
 		in, out := &in.External, &out.External
 		*out = new(kops.ExternalNetworkingSpec)
-		if err := Convert_v1alpha2_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_ExternalNetworkingSpec_To_kops_ExternalNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4575,7 +4575,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.CNI != nil {
 		in, out := &in.CNI, &out.CNI
 		*out = new(kops.CNINetworkingSpec)
-		if err := Convert_v1alpha2_CNINetworkingSpec_To_kops_CNINetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CNINetworkingSpec_To_kops_CNINetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4584,7 +4584,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Kopeio != nil {
 		in, out := &in.Kopeio, &out.Kopeio
 		*out = new(kops.KopeioNetworkingSpec)
-		if err := Convert_v1alpha2_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KopeioNetworkingSpec_To_kops_KopeioNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4593,7 +4593,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Weave != nil {
 		in, out := &in.Weave, &out.Weave
 		*out = new(kops.WeaveNetworkingSpec)
-		if err := Convert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4602,7 +4602,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Flannel != nil {
 		in, out := &in.Flannel, &out.Flannel
 		*out = new(kops.FlannelNetworkingSpec)
-		if err := Convert_v1alpha2_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_FlannelNetworkingSpec_To_kops_FlannelNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4611,7 +4611,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Calico != nil {
 		in, out := &in.Calico, &out.Calico
 		*out = new(kops.CalicoNetworkingSpec)
-		if err := Convert_v1alpha2_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CalicoNetworkingSpec_To_kops_CalicoNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4620,7 +4620,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Canal != nil {
 		in, out := &in.Canal, &out.Canal
 		*out = new(kops.CanalNetworkingSpec)
-		if err := Convert_v1alpha2_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CanalNetworkingSpec_To_kops_CanalNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4629,7 +4629,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Kuberouter != nil {
 		in, out := &in.Kuberouter, &out.Kuberouter
 		*out = new(kops.KuberouterNetworkingSpec)
-		if err := Convert_v1alpha2_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_KuberouterNetworkingSpec_To_kops_KuberouterNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4638,7 +4638,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Romana != nil {
 		in, out := &in.Romana, &out.Romana
 		*out = new(kops.RomanaNetworkingSpec)
-		if err := Convert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4647,7 +4647,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.AmazonVPC != nil {
 		in, out := &in.AmazonVPC, &out.AmazonVPC
 		*out = new(kops.AmazonVPCNetworkingSpec)
-		if err := Convert_v1alpha2_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_AmazonVPCNetworkingSpec_To_kops_AmazonVPCNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4656,7 +4656,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.Cilium != nil {
 		in, out := &in.Cilium, &out.Cilium
 		*out = new(kops.CiliumNetworkingSpec)
-		if err := Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4665,7 +4665,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.LyftVPC != nil {
 		in, out := &in.LyftVPC, &out.LyftVPC
 		*out = new(kops.LyftVPCNetworkingSpec)
-		if err := Convert_v1alpha2_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_LyftVPCNetworkingSpec_To_kops_LyftVPCNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4674,7 +4674,7 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	if in.GCE != nil {
 		in, out := &in.GCE, &out.GCE
 		*out = new(kops.GCENetworkingSpec)
-		if err := Convert_v1alpha2_GCENetworkingSpec_To_kops_GCENetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_GCENetworkingSpec_To_kops_GCENetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4683,16 +4683,16 @@ func autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSp
 	return nil
 }
 
-// Convert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSpec, out *kops.NetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_NetworkingSpec_To_kops_NetworkingSpec(in, out, s)
+// Convert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec(in *NetworkingSpec, out *kops.NetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_NetworkingSpec_To_kops_NetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.NetworkingSpec, out *NetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec(in *kops.NetworkingSpec, out *NetworkingSpec, s conversion.Scope) error {
 	if in.Classic != nil {
 		in, out := &in.Classic, &out.Classic
 		*out = new(ClassicNetworkingSpec)
-		if err := Convert_kops_ClassicNetworkingSpec_To_v1alpha2_ClassicNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_ClassicNetworkingSpec_To_v1beta1_ClassicNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4701,7 +4701,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Kubenet != nil {
 		in, out := &in.Kubenet, &out.Kubenet
 		*out = new(KubenetNetworkingSpec)
-		if err := Convert_kops_KubenetNetworkingSpec_To_v1alpha2_KubenetNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KubenetNetworkingSpec_To_v1beta1_KubenetNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4710,7 +4710,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.External != nil {
 		in, out := &in.External, &out.External
 		*out = new(ExternalNetworkingSpec)
-		if err := Convert_kops_ExternalNetworkingSpec_To_v1alpha2_ExternalNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_ExternalNetworkingSpec_To_v1beta1_ExternalNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4719,7 +4719,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.CNI != nil {
 		in, out := &in.CNI, &out.CNI
 		*out = new(CNINetworkingSpec)
-		if err := Convert_kops_CNINetworkingSpec_To_v1alpha2_CNINetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_CNINetworkingSpec_To_v1beta1_CNINetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4728,7 +4728,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Kopeio != nil {
 		in, out := &in.Kopeio, &out.Kopeio
 		*out = new(KopeioNetworkingSpec)
-		if err := Convert_kops_KopeioNetworkingSpec_To_v1alpha2_KopeioNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KopeioNetworkingSpec_To_v1beta1_KopeioNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4737,7 +4737,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Weave != nil {
 		in, out := &in.Weave, &out.Weave
 		*out = new(WeaveNetworkingSpec)
-		if err := Convert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4746,7 +4746,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Flannel != nil {
 		in, out := &in.Flannel, &out.Flannel
 		*out = new(FlannelNetworkingSpec)
-		if err := Convert_kops_FlannelNetworkingSpec_To_v1alpha2_FlannelNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_FlannelNetworkingSpec_To_v1beta1_FlannelNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4755,7 +4755,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Calico != nil {
 		in, out := &in.Calico, &out.Calico
 		*out = new(CalicoNetworkingSpec)
-		if err := Convert_kops_CalicoNetworkingSpec_To_v1alpha2_CalicoNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_CalicoNetworkingSpec_To_v1beta1_CalicoNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4764,7 +4764,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Canal != nil {
 		in, out := &in.Canal, &out.Canal
 		*out = new(CanalNetworkingSpec)
-		if err := Convert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_CanalNetworkingSpec_To_v1beta1_CanalNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4773,7 +4773,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Kuberouter != nil {
 		in, out := &in.Kuberouter, &out.Kuberouter
 		*out = new(KuberouterNetworkingSpec)
-		if err := Convert_kops_KuberouterNetworkingSpec_To_v1alpha2_KuberouterNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_KuberouterNetworkingSpec_To_v1beta1_KuberouterNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4782,7 +4782,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Romana != nil {
 		in, out := &in.Romana, &out.Romana
 		*out = new(RomanaNetworkingSpec)
-		if err := Convert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4791,7 +4791,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.AmazonVPC != nil {
 		in, out := &in.AmazonVPC, &out.AmazonVPC
 		*out = new(AmazonVPCNetworkingSpec)
-		if err := Convert_kops_AmazonVPCNetworkingSpec_To_v1alpha2_AmazonVPCNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_AmazonVPCNetworkingSpec_To_v1beta1_AmazonVPCNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4800,7 +4800,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.Cilium != nil {
 		in, out := &in.Cilium, &out.Cilium
 		*out = new(CiliumNetworkingSpec)
-		if err := Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_CiliumNetworkingSpec_To_v1beta1_CiliumNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4809,7 +4809,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.LyftVPC != nil {
 		in, out := &in.LyftVPC, &out.LyftVPC
 		*out = new(LyftVPCNetworkingSpec)
-		if err := Convert_kops_LyftVPCNetworkingSpec_To_v1alpha2_LyftVPCNetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_LyftVPCNetworkingSpec_To_v1beta1_LyftVPCNetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4818,7 +4818,7 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	if in.GCE != nil {
 		in, out := &in.GCE, &out.GCE
 		*out = new(GCENetworkingSpec)
-		if err := Convert_kops_GCENetworkingSpec_To_v1alpha2_GCENetworkingSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_GCENetworkingSpec_To_v1beta1_GCENetworkingSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4827,16 +4827,16 @@ func autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.Network
 	return nil
 }
 
-// Convert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec is an autogenerated conversion function.
-func Convert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in *kops.NetworkingSpec, out *NetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_NetworkingSpec_To_v1alpha2_NetworkingSpec(in, out, s)
+// Convert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec is an autogenerated conversion function.
+func Convert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec(in *kops.NetworkingSpec, out *NetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_NetworkingSpec_To_v1beta1_NetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in *NodeAuthorizationSpec, out *kops.NodeAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in *NodeAuthorizationSpec, out *kops.NodeAuthorizationSpec, s conversion.Scope) error {
 	if in.NodeAuthorizer != nil {
 		in, out := &in.NodeAuthorizer, &out.NodeAuthorizer
 		*out = new(kops.NodeAuthorizerSpec)
-		if err := Convert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4845,16 +4845,16 @@ func autoConvert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in
 	return nil
 }
 
-// Convert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in *NodeAuthorizationSpec, out *kops.NodeAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in, out, s)
+// Convert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec is an autogenerated conversion function.
+func Convert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in *NodeAuthorizationSpec, out *kops.NodeAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_NodeAuthorizationSpec_To_kops_NodeAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(in *kops.NodeAuthorizationSpec, out *NodeAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec(in *kops.NodeAuthorizationSpec, out *NodeAuthorizationSpec, s conversion.Scope) error {
 	if in.NodeAuthorizer != nil {
 		in, out := &in.NodeAuthorizer, &out.NodeAuthorizer
 		*out = new(NodeAuthorizerSpec)
-		if err := Convert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4863,12 +4863,12 @@ func autoConvert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(in
 	return nil
 }
 
-// Convert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec is an autogenerated conversion function.
-func Convert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(in *kops.NodeAuthorizationSpec, out *NodeAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_kops_NodeAuthorizationSpec_To_v1alpha2_NodeAuthorizationSpec(in, out, s)
+// Convert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec is an autogenerated conversion function.
+func Convert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec(in *kops.NodeAuthorizationSpec, out *NodeAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_kops_NodeAuthorizationSpec_To_v1beta1_NodeAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in *NodeAuthorizerSpec, out *kops.NodeAuthorizerSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in *NodeAuthorizerSpec, out *kops.NodeAuthorizerSpec, s conversion.Scope) error {
 	out.Authorizer = in.Authorizer
 	out.Features = in.Features
 	out.Image = in.Image
@@ -4880,12 +4880,12 @@ func autoConvert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in *Node
 	return nil
 }
 
-// Convert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec is an autogenerated conversion function.
-func Convert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in *NodeAuthorizerSpec, out *kops.NodeAuthorizerSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in, out, s)
+// Convert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec is an autogenerated conversion function.
+func Convert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in *NodeAuthorizerSpec, out *kops.NodeAuthorizerSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_NodeAuthorizerSpec_To_kops_NodeAuthorizerSpec(in, out, s)
 }
 
-func autoConvert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(in *kops.NodeAuthorizerSpec, out *NodeAuthorizerSpec, s conversion.Scope) error {
+func autoConvert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec(in *kops.NodeAuthorizerSpec, out *NodeAuthorizerSpec, s conversion.Scope) error {
 	out.Authorizer = in.Authorizer
 	out.Features = in.Features
 	out.Image = in.Image
@@ -4897,62 +4897,62 @@ func autoConvert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(in *kops
 	return nil
 }
 
-// Convert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec is an autogenerated conversion function.
-func Convert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(in *kops.NodeAuthorizerSpec, out *NodeAuthorizerSpec, s conversion.Scope) error {
-	return autoConvert_kops_NodeAuthorizerSpec_To_v1alpha2_NodeAuthorizerSpec(in, out, s)
+// Convert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec is an autogenerated conversion function.
+func Convert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec(in *kops.NodeAuthorizerSpec, out *NodeAuthorizerSpec, s conversion.Scope) error {
+	return autoConvert_kops_NodeAuthorizerSpec_To_v1beta1_NodeAuthorizerSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in *NodeLocalDNSConfig, out *kops.NodeLocalDNSConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in *NodeLocalDNSConfig, out *kops.NodeLocalDNSConfig, s conversion.Scope) error {
 	out.Enabled = in.Enabled
 	out.LocalIP = in.LocalIP
 	return nil
 }
 
-// Convert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig is an autogenerated conversion function.
-func Convert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in *NodeLocalDNSConfig, out *kops.NodeLocalDNSConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in, out, s)
+// Convert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig is an autogenerated conversion function.
+func Convert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in *NodeLocalDNSConfig, out *kops.NodeLocalDNSConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_NodeLocalDNSConfig_To_kops_NodeLocalDNSConfig(in, out, s)
 }
 
-func autoConvert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig(in *kops.NodeLocalDNSConfig, out *NodeLocalDNSConfig, s conversion.Scope) error {
+func autoConvert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig(in *kops.NodeLocalDNSConfig, out *NodeLocalDNSConfig, s conversion.Scope) error {
 	out.Enabled = in.Enabled
 	out.LocalIP = in.LocalIP
 	return nil
 }
 
-// Convert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig is an autogenerated conversion function.
-func Convert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig(in *kops.NodeLocalDNSConfig, out *NodeLocalDNSConfig, s conversion.Scope) error {
-	return autoConvert_kops_NodeLocalDNSConfig_To_v1alpha2_NodeLocalDNSConfig(in, out, s)
+// Convert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig is an autogenerated conversion function.
+func Convert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig(in *kops.NodeLocalDNSConfig, out *NodeLocalDNSConfig, s conversion.Scope) error {
+	return autoConvert_kops_NodeLocalDNSConfig_To_v1beta1_NodeLocalDNSConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in *OpenstackBlockStorageConfig, out *kops.OpenstackBlockStorageConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in *OpenstackBlockStorageConfig, out *kops.OpenstackBlockStorageConfig, s conversion.Scope) error {
 	out.Version = in.Version
 	out.IgnoreAZ = in.IgnoreAZ
 	out.OverrideAZ = in.OverrideAZ
 	return nil
 }
 
-// Convert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig is an autogenerated conversion function.
-func Convert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in *OpenstackBlockStorageConfig, out *kops.OpenstackBlockStorageConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in, out, s)
+// Convert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig is an autogenerated conversion function.
+func Convert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in *OpenstackBlockStorageConfig, out *kops.OpenstackBlockStorageConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(in, out, s)
 }
 
-func autoConvert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig(in *kops.OpenstackBlockStorageConfig, out *OpenstackBlockStorageConfig, s conversion.Scope) error {
+func autoConvert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig(in *kops.OpenstackBlockStorageConfig, out *OpenstackBlockStorageConfig, s conversion.Scope) error {
 	out.Version = in.Version
 	out.IgnoreAZ = in.IgnoreAZ
 	out.OverrideAZ = in.OverrideAZ
 	return nil
 }
 
-// Convert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig is an autogenerated conversion function.
-func Convert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig(in *kops.OpenstackBlockStorageConfig, out *OpenstackBlockStorageConfig, s conversion.Scope) error {
-	return autoConvert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig(in, out, s)
+// Convert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig is an autogenerated conversion function.
+func Convert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig(in *kops.OpenstackBlockStorageConfig, out *OpenstackBlockStorageConfig, s conversion.Scope) error {
+	return autoConvert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(in *OpenstackConfiguration, out *kops.OpenstackConfiguration, s conversion.Scope) error {
+func autoConvert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration(in *OpenstackConfiguration, out *kops.OpenstackConfiguration, s conversion.Scope) error {
 	if in.Loadbalancer != nil {
 		in, out := &in.Loadbalancer, &out.Loadbalancer
 		*out = new(kops.OpenstackLoadbalancerConfig)
-		if err := Convert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4961,7 +4961,7 @@ func autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(
 	if in.Monitor != nil {
 		in, out := &in.Monitor, &out.Monitor
 		*out = new(kops.OpenstackMonitor)
-		if err := Convert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4970,7 +4970,7 @@ func autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(
 	if in.Router != nil {
 		in, out := &in.Router, &out.Router
 		*out = new(kops.OpenstackRouter)
-		if err := Convert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4979,7 +4979,7 @@ func autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(
 	if in.BlockStorage != nil {
 		in, out := &in.BlockStorage, &out.BlockStorage
 		*out = new(kops.OpenstackBlockStorageConfig)
-		if err := Convert_v1alpha2_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_OpenstackBlockStorageConfig_To_kops_OpenstackBlockStorageConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -4989,16 +4989,16 @@ func autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(
 	return nil
 }
 
-// Convert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration is an autogenerated conversion function.
-func Convert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(in *OpenstackConfiguration, out *kops.OpenstackConfiguration, s conversion.Scope) error {
-	return autoConvert_v1alpha2_OpenstackConfiguration_To_kops_OpenstackConfiguration(in, out, s)
+// Convert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration is an autogenerated conversion function.
+func Convert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration(in *OpenstackConfiguration, out *kops.OpenstackConfiguration, s conversion.Scope) error {
+	return autoConvert_v1beta1_OpenstackConfiguration_To_kops_OpenstackConfiguration(in, out, s)
 }
 
-func autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(in *kops.OpenstackConfiguration, out *OpenstackConfiguration, s conversion.Scope) error {
+func autoConvert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration(in *kops.OpenstackConfiguration, out *OpenstackConfiguration, s conversion.Scope) error {
 	if in.Loadbalancer != nil {
 		in, out := &in.Loadbalancer, &out.Loadbalancer
 		*out = new(OpenstackLoadbalancerConfig)
-		if err := Convert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5007,7 +5007,7 @@ func autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(
 	if in.Monitor != nil {
 		in, out := &in.Monitor, &out.Monitor
 		*out = new(OpenstackMonitor)
-		if err := Convert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor(*in, *out, s); err != nil {
+		if err := Convert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5016,7 +5016,7 @@ func autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(
 	if in.Router != nil {
 		in, out := &in.Router, &out.Router
 		*out = new(OpenstackRouter)
-		if err := Convert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter(*in, *out, s); err != nil {
+		if err := Convert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5025,7 +5025,7 @@ func autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(
 	if in.BlockStorage != nil {
 		in, out := &in.BlockStorage, &out.BlockStorage
 		*out = new(OpenstackBlockStorageConfig)
-		if err := Convert_kops_OpenstackBlockStorageConfig_To_v1alpha2_OpenstackBlockStorageConfig(*in, *out, s); err != nil {
+		if err := Convert_kops_OpenstackBlockStorageConfig_To_v1beta1_OpenstackBlockStorageConfig(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5035,12 +5035,12 @@ func autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(
 	return nil
 }
 
-// Convert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration is an autogenerated conversion function.
-func Convert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(in *kops.OpenstackConfiguration, out *OpenstackConfiguration, s conversion.Scope) error {
-	return autoConvert_kops_OpenstackConfiguration_To_v1alpha2_OpenstackConfiguration(in, out, s)
+// Convert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration is an autogenerated conversion function.
+func Convert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration(in *kops.OpenstackConfiguration, out *OpenstackConfiguration, s conversion.Scope) error {
+	return autoConvert_kops_OpenstackConfiguration_To_v1beta1_OpenstackConfiguration(in, out, s)
 }
 
-func autoConvert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in *OpenstackLoadbalancerConfig, out *kops.OpenstackLoadbalancerConfig, s conversion.Scope) error {
+func autoConvert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in *OpenstackLoadbalancerConfig, out *kops.OpenstackLoadbalancerConfig, s conversion.Scope) error {
 	out.Method = in.Method
 	out.Provider = in.Provider
 	out.UseOctavia = in.UseOctavia
@@ -5052,12 +5052,12 @@ func autoConvert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalan
 	return nil
 }
 
-// Convert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig is an autogenerated conversion function.
-func Convert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in *OpenstackLoadbalancerConfig, out *kops.OpenstackLoadbalancerConfig, s conversion.Scope) error {
-	return autoConvert_v1alpha2_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in, out, s)
+// Convert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig is an autogenerated conversion function.
+func Convert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in *OpenstackLoadbalancerConfig, out *kops.OpenstackLoadbalancerConfig, s conversion.Scope) error {
+	return autoConvert_v1beta1_OpenstackLoadbalancerConfig_To_kops_OpenstackLoadbalancerConfig(in, out, s)
 }
 
-func autoConvert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig(in *kops.OpenstackLoadbalancerConfig, out *OpenstackLoadbalancerConfig, s conversion.Scope) error {
+func autoConvert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig(in *kops.OpenstackLoadbalancerConfig, out *OpenstackLoadbalancerConfig, s conversion.Scope) error {
 	out.Method = in.Method
 	out.Provider = in.Provider
 	out.UseOctavia = in.UseOctavia
@@ -5069,154 +5069,154 @@ func autoConvert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalan
 	return nil
 }
 
-// Convert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig is an autogenerated conversion function.
-func Convert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig(in *kops.OpenstackLoadbalancerConfig, out *OpenstackLoadbalancerConfig, s conversion.Scope) error {
-	return autoConvert_kops_OpenstackLoadbalancerConfig_To_v1alpha2_OpenstackLoadbalancerConfig(in, out, s)
+// Convert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig is an autogenerated conversion function.
+func Convert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig(in *kops.OpenstackLoadbalancerConfig, out *OpenstackLoadbalancerConfig, s conversion.Scope) error {
+	return autoConvert_kops_OpenstackLoadbalancerConfig_To_v1beta1_OpenstackLoadbalancerConfig(in, out, s)
 }
 
-func autoConvert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor(in *OpenstackMonitor, out *kops.OpenstackMonitor, s conversion.Scope) error {
+func autoConvert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor(in *OpenstackMonitor, out *kops.OpenstackMonitor, s conversion.Scope) error {
 	out.Delay = in.Delay
 	out.Timeout = in.Timeout
 	out.MaxRetries = in.MaxRetries
 	return nil
 }
 
-// Convert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor is an autogenerated conversion function.
-func Convert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor(in *OpenstackMonitor, out *kops.OpenstackMonitor, s conversion.Scope) error {
-	return autoConvert_v1alpha2_OpenstackMonitor_To_kops_OpenstackMonitor(in, out, s)
+// Convert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor is an autogenerated conversion function.
+func Convert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor(in *OpenstackMonitor, out *kops.OpenstackMonitor, s conversion.Scope) error {
+	return autoConvert_v1beta1_OpenstackMonitor_To_kops_OpenstackMonitor(in, out, s)
 }
 
-func autoConvert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor(in *kops.OpenstackMonitor, out *OpenstackMonitor, s conversion.Scope) error {
+func autoConvert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor(in *kops.OpenstackMonitor, out *OpenstackMonitor, s conversion.Scope) error {
 	out.Delay = in.Delay
 	out.Timeout = in.Timeout
 	out.MaxRetries = in.MaxRetries
 	return nil
 }
 
-// Convert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor is an autogenerated conversion function.
-func Convert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor(in *kops.OpenstackMonitor, out *OpenstackMonitor, s conversion.Scope) error {
-	return autoConvert_kops_OpenstackMonitor_To_v1alpha2_OpenstackMonitor(in, out, s)
+// Convert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor is an autogenerated conversion function.
+func Convert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor(in *kops.OpenstackMonitor, out *OpenstackMonitor, s conversion.Scope) error {
+	return autoConvert_kops_OpenstackMonitor_To_v1beta1_OpenstackMonitor(in, out, s)
 }
 
-func autoConvert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter(in *OpenstackRouter, out *kops.OpenstackRouter, s conversion.Scope) error {
+func autoConvert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter(in *OpenstackRouter, out *kops.OpenstackRouter, s conversion.Scope) error {
 	out.ExternalNetwork = in.ExternalNetwork
 	out.DNSServers = in.DNSServers
 	out.ExternalSubnet = in.ExternalSubnet
 	return nil
 }
 
-// Convert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter is an autogenerated conversion function.
-func Convert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter(in *OpenstackRouter, out *kops.OpenstackRouter, s conversion.Scope) error {
-	return autoConvert_v1alpha2_OpenstackRouter_To_kops_OpenstackRouter(in, out, s)
+// Convert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter is an autogenerated conversion function.
+func Convert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter(in *OpenstackRouter, out *kops.OpenstackRouter, s conversion.Scope) error {
+	return autoConvert_v1beta1_OpenstackRouter_To_kops_OpenstackRouter(in, out, s)
 }
 
-func autoConvert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter(in *kops.OpenstackRouter, out *OpenstackRouter, s conversion.Scope) error {
+func autoConvert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter(in *kops.OpenstackRouter, out *OpenstackRouter, s conversion.Scope) error {
 	out.ExternalNetwork = in.ExternalNetwork
 	out.DNSServers = in.DNSServers
 	out.ExternalSubnet = in.ExternalSubnet
 	return nil
 }
 
-// Convert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter is an autogenerated conversion function.
-func Convert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter(in *kops.OpenstackRouter, out *OpenstackRouter, s conversion.Scope) error {
-	return autoConvert_kops_OpenstackRouter_To_v1alpha2_OpenstackRouter(in, out, s)
+// Convert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter is an autogenerated conversion function.
+func Convert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter(in *kops.OpenstackRouter, out *OpenstackRouter, s conversion.Scope) error {
+	return autoConvert_kops_OpenstackRouter_To_v1beta1_OpenstackRouter(in, out, s)
 }
 
-func autoConvert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in *RBACAuthorizationSpec, out *kops.RBACAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in *RBACAuthorizationSpec, out *kops.RBACAuthorizationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec is an autogenerated conversion function.
-func Convert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in *RBACAuthorizationSpec, out *kops.RBACAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in, out, s)
+// Convert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec is an autogenerated conversion function.
+func Convert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in *RBACAuthorizationSpec, out *kops.RBACAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_RBACAuthorizationSpec_To_kops_RBACAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec(in *kops.RBACAuthorizationSpec, out *RBACAuthorizationSpec, s conversion.Scope) error {
+func autoConvert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec(in *kops.RBACAuthorizationSpec, out *RBACAuthorizationSpec, s conversion.Scope) error {
 	return nil
 }
 
-// Convert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec is an autogenerated conversion function.
-func Convert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec(in *kops.RBACAuthorizationSpec, out *RBACAuthorizationSpec, s conversion.Scope) error {
-	return autoConvert_kops_RBACAuthorizationSpec_To_v1alpha2_RBACAuthorizationSpec(in, out, s)
+// Convert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec is an autogenerated conversion function.
+func Convert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec(in *kops.RBACAuthorizationSpec, out *RBACAuthorizationSpec, s conversion.Scope) error {
+	return autoConvert_kops_RBACAuthorizationSpec_To_v1beta1_RBACAuthorizationSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(in *RollingUpdate, out *kops.RollingUpdate, s conversion.Scope) error {
+func autoConvert_v1beta1_RollingUpdate_To_kops_RollingUpdate(in *RollingUpdate, out *kops.RollingUpdate, s conversion.Scope) error {
 	out.MaxUnavailable = in.MaxUnavailable
 	out.MaxSurge = in.MaxSurge
 	return nil
 }
 
-// Convert_v1alpha2_RollingUpdate_To_kops_RollingUpdate is an autogenerated conversion function.
-func Convert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(in *RollingUpdate, out *kops.RollingUpdate, s conversion.Scope) error {
-	return autoConvert_v1alpha2_RollingUpdate_To_kops_RollingUpdate(in, out, s)
+// Convert_v1beta1_RollingUpdate_To_kops_RollingUpdate is an autogenerated conversion function.
+func Convert_v1beta1_RollingUpdate_To_kops_RollingUpdate(in *RollingUpdate, out *kops.RollingUpdate, s conversion.Scope) error {
+	return autoConvert_v1beta1_RollingUpdate_To_kops_RollingUpdate(in, out, s)
 }
 
-func autoConvert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(in *kops.RollingUpdate, out *RollingUpdate, s conversion.Scope) error {
+func autoConvert_kops_RollingUpdate_To_v1beta1_RollingUpdate(in *kops.RollingUpdate, out *RollingUpdate, s conversion.Scope) error {
 	out.MaxUnavailable = in.MaxUnavailable
 	out.MaxSurge = in.MaxSurge
 	return nil
 }
 
-// Convert_kops_RollingUpdate_To_v1alpha2_RollingUpdate is an autogenerated conversion function.
-func Convert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(in *kops.RollingUpdate, out *RollingUpdate, s conversion.Scope) error {
-	return autoConvert_kops_RollingUpdate_To_v1alpha2_RollingUpdate(in, out, s)
+// Convert_kops_RollingUpdate_To_v1beta1_RollingUpdate is an autogenerated conversion function.
+func Convert_kops_RollingUpdate_To_v1beta1_RollingUpdate(in *kops.RollingUpdate, out *RollingUpdate, s conversion.Scope) error {
+	return autoConvert_kops_RollingUpdate_To_v1beta1_RollingUpdate(in, out, s)
 }
 
-func autoConvert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in *RomanaNetworkingSpec, out *kops.RomanaNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in *RomanaNetworkingSpec, out *kops.RomanaNetworkingSpec, s conversion.Scope) error {
 	out.DaemonServiceIP = in.DaemonServiceIP
 	out.EtcdServiceIP = in.EtcdServiceIP
 	return nil
 }
 
-// Convert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in *RomanaNetworkingSpec, out *kops.RomanaNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in, out, s)
+// Convert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in *RomanaNetworkingSpec, out *kops.RomanaNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_RomanaNetworkingSpec_To_kops_RomanaNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec(in *kops.RomanaNetworkingSpec, out *RomanaNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec(in *kops.RomanaNetworkingSpec, out *RomanaNetworkingSpec, s conversion.Scope) error {
 	out.DaemonServiceIP = in.DaemonServiceIP
 	out.EtcdServiceIP = in.EtcdServiceIP
 	return nil
 }
 
-// Convert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec(in *kops.RomanaNetworkingSpec, out *RomanaNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_RomanaNetworkingSpec_To_v1alpha2_RomanaNetworkingSpec(in, out, s)
+// Convert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec(in *kops.RomanaNetworkingSpec, out *RomanaNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_RomanaNetworkingSpec_To_v1beta1_RomanaNetworkingSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_SSHCredential_To_kops_SSHCredential(in *SSHCredential, out *kops.SSHCredential, s conversion.Scope) error {
+func autoConvert_v1beta1_SSHCredential_To_kops_SSHCredential(in *SSHCredential, out *kops.SSHCredential, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_v1alpha2_SSHCredential_To_kops_SSHCredential is an autogenerated conversion function.
-func Convert_v1alpha2_SSHCredential_To_kops_SSHCredential(in *SSHCredential, out *kops.SSHCredential, s conversion.Scope) error {
-	return autoConvert_v1alpha2_SSHCredential_To_kops_SSHCredential(in, out, s)
+// Convert_v1beta1_SSHCredential_To_kops_SSHCredential is an autogenerated conversion function.
+func Convert_v1beta1_SSHCredential_To_kops_SSHCredential(in *SSHCredential, out *kops.SSHCredential, s conversion.Scope) error {
+	return autoConvert_v1beta1_SSHCredential_To_kops_SSHCredential(in, out, s)
 }
 
-func autoConvert_kops_SSHCredential_To_v1alpha2_SSHCredential(in *kops.SSHCredential, out *SSHCredential, s conversion.Scope) error {
+func autoConvert_kops_SSHCredential_To_v1beta1_SSHCredential(in *kops.SSHCredential, out *SSHCredential, s conversion.Scope) error {
 	out.ObjectMeta = in.ObjectMeta
-	if err := Convert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec(&in.Spec, &out.Spec, s); err != nil {
+	if err := Convert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec(&in.Spec, &out.Spec, s); err != nil {
 		return err
 	}
 	return nil
 }
 
-// Convert_kops_SSHCredential_To_v1alpha2_SSHCredential is an autogenerated conversion function.
-func Convert_kops_SSHCredential_To_v1alpha2_SSHCredential(in *kops.SSHCredential, out *SSHCredential, s conversion.Scope) error {
-	return autoConvert_kops_SSHCredential_To_v1alpha2_SSHCredential(in, out, s)
+// Convert_kops_SSHCredential_To_v1beta1_SSHCredential is an autogenerated conversion function.
+func Convert_kops_SSHCredential_To_v1beta1_SSHCredential(in *kops.SSHCredential, out *SSHCredential, s conversion.Scope) error {
+	return autoConvert_kops_SSHCredential_To_v1beta1_SSHCredential(in, out, s)
 }
 
-func autoConvert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList(in *SSHCredentialList, out *kops.SSHCredentialList, s conversion.Scope) error {
+func autoConvert_v1beta1_SSHCredentialList_To_kops_SSHCredentialList(in *SSHCredentialList, out *kops.SSHCredentialList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]kops.SSHCredential, len(*in))
 		for i := range *in {
-			if err := Convert_v1alpha2_SSHCredential_To_kops_SSHCredential(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_v1beta1_SSHCredential_To_kops_SSHCredential(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -5226,18 +5226,18 @@ func autoConvert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList(in *SSHCre
 	return nil
 }
 
-// Convert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList is an autogenerated conversion function.
-func Convert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList(in *SSHCredentialList, out *kops.SSHCredentialList, s conversion.Scope) error {
-	return autoConvert_v1alpha2_SSHCredentialList_To_kops_SSHCredentialList(in, out, s)
+// Convert_v1beta1_SSHCredentialList_To_kops_SSHCredentialList is an autogenerated conversion function.
+func Convert_v1beta1_SSHCredentialList_To_kops_SSHCredentialList(in *SSHCredentialList, out *kops.SSHCredentialList, s conversion.Scope) error {
+	return autoConvert_v1beta1_SSHCredentialList_To_kops_SSHCredentialList(in, out, s)
 }
 
-func autoConvert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList(in *kops.SSHCredentialList, out *SSHCredentialList, s conversion.Scope) error {
+func autoConvert_kops_SSHCredentialList_To_v1beta1_SSHCredentialList(in *kops.SSHCredentialList, out *SSHCredentialList, s conversion.Scope) error {
 	out.ListMeta = in.ListMeta
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
 		*out = make([]SSHCredential, len(*in))
 		for i := range *in {
-			if err := Convert_kops_SSHCredential_To_v1alpha2_SSHCredential(&(*in)[i], &(*out)[i], s); err != nil {
+			if err := Convert_kops_SSHCredential_To_v1beta1_SSHCredential(&(*in)[i], &(*out)[i], s); err != nil {
 				return err
 			}
 		}
@@ -5247,36 +5247,36 @@ func autoConvert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList(in *kops.S
 	return nil
 }
 
-// Convert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList is an autogenerated conversion function.
-func Convert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList(in *kops.SSHCredentialList, out *SSHCredentialList, s conversion.Scope) error {
-	return autoConvert_kops_SSHCredentialList_To_v1alpha2_SSHCredentialList(in, out, s)
+// Convert_kops_SSHCredentialList_To_v1beta1_SSHCredentialList is an autogenerated conversion function.
+func Convert_kops_SSHCredentialList_To_v1beta1_SSHCredentialList(in *kops.SSHCredentialList, out *SSHCredentialList, s conversion.Scope) error {
+	return autoConvert_kops_SSHCredentialList_To_v1beta1_SSHCredentialList(in, out, s)
 }
 
-func autoConvert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec(in *SSHCredentialSpec, out *kops.SSHCredentialSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec(in *SSHCredentialSpec, out *kops.SSHCredentialSpec, s conversion.Scope) error {
 	out.PublicKey = in.PublicKey
 	return nil
 }
 
-// Convert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec is an autogenerated conversion function.
-func Convert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec(in *SSHCredentialSpec, out *kops.SSHCredentialSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_SSHCredentialSpec_To_kops_SSHCredentialSpec(in, out, s)
+// Convert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec is an autogenerated conversion function.
+func Convert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec(in *SSHCredentialSpec, out *kops.SSHCredentialSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_SSHCredentialSpec_To_kops_SSHCredentialSpec(in, out, s)
 }
 
-func autoConvert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec(in *kops.SSHCredentialSpec, out *SSHCredentialSpec, s conversion.Scope) error {
+func autoConvert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec(in *kops.SSHCredentialSpec, out *SSHCredentialSpec, s conversion.Scope) error {
 	out.PublicKey = in.PublicKey
 	return nil
 }
 
-// Convert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec is an autogenerated conversion function.
-func Convert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec(in *kops.SSHCredentialSpec, out *SSHCredentialSpec, s conversion.Scope) error {
-	return autoConvert_kops_SSHCredentialSpec_To_v1alpha2_SSHCredentialSpec(in, out, s)
+// Convert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec is an autogenerated conversion function.
+func Convert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec(in *kops.SSHCredentialSpec, out *SSHCredentialSpec, s conversion.Scope) error {
+	return autoConvert_kops_SSHCredentialSpec_To_v1beta1_SSHCredentialSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_TargetSpec_To_kops_TargetSpec(in *TargetSpec, out *kops.TargetSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_TargetSpec_To_kops_TargetSpec(in *TargetSpec, out *kops.TargetSpec, s conversion.Scope) error {
 	if in.Terraform != nil {
 		in, out := &in.Terraform, &out.Terraform
 		*out = new(kops.TerraformSpec)
-		if err := Convert_v1alpha2_TerraformSpec_To_kops_TerraformSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_TerraformSpec_To_kops_TerraformSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5285,16 +5285,16 @@ func autoConvert_v1alpha2_TargetSpec_To_kops_TargetSpec(in *TargetSpec, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_TargetSpec_To_kops_TargetSpec is an autogenerated conversion function.
-func Convert_v1alpha2_TargetSpec_To_kops_TargetSpec(in *TargetSpec, out *kops.TargetSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_TargetSpec_To_kops_TargetSpec(in, out, s)
+// Convert_v1beta1_TargetSpec_To_kops_TargetSpec is an autogenerated conversion function.
+func Convert_v1beta1_TargetSpec_To_kops_TargetSpec(in *TargetSpec, out *kops.TargetSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_TargetSpec_To_kops_TargetSpec(in, out, s)
 }
 
-func autoConvert_kops_TargetSpec_To_v1alpha2_TargetSpec(in *kops.TargetSpec, out *TargetSpec, s conversion.Scope) error {
+func autoConvert_kops_TargetSpec_To_v1beta1_TargetSpec(in *kops.TargetSpec, out *TargetSpec, s conversion.Scope) error {
 	if in.Terraform != nil {
 		in, out := &in.Terraform, &out.Terraform
 		*out = new(TerraformSpec)
-		if err := Convert_kops_TerraformSpec_To_v1alpha2_TerraformSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_TerraformSpec_To_v1beta1_TerraformSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5303,38 +5303,38 @@ func autoConvert_kops_TargetSpec_To_v1alpha2_TargetSpec(in *kops.TargetSpec, out
 	return nil
 }
 
-// Convert_kops_TargetSpec_To_v1alpha2_TargetSpec is an autogenerated conversion function.
-func Convert_kops_TargetSpec_To_v1alpha2_TargetSpec(in *kops.TargetSpec, out *TargetSpec, s conversion.Scope) error {
-	return autoConvert_kops_TargetSpec_To_v1alpha2_TargetSpec(in, out, s)
+// Convert_kops_TargetSpec_To_v1beta1_TargetSpec is an autogenerated conversion function.
+func Convert_kops_TargetSpec_To_v1beta1_TargetSpec(in *kops.TargetSpec, out *TargetSpec, s conversion.Scope) error {
+	return autoConvert_kops_TargetSpec_To_v1beta1_TargetSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_TerraformSpec_To_kops_TerraformSpec(in *TerraformSpec, out *kops.TerraformSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_TerraformSpec_To_kops_TerraformSpec(in *TerraformSpec, out *kops.TerraformSpec, s conversion.Scope) error {
 	out.ProviderExtraConfig = in.ProviderExtraConfig
 	return nil
 }
 
-// Convert_v1alpha2_TerraformSpec_To_kops_TerraformSpec is an autogenerated conversion function.
-func Convert_v1alpha2_TerraformSpec_To_kops_TerraformSpec(in *TerraformSpec, out *kops.TerraformSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_TerraformSpec_To_kops_TerraformSpec(in, out, s)
+// Convert_v1beta1_TerraformSpec_To_kops_TerraformSpec is an autogenerated conversion function.
+func Convert_v1beta1_TerraformSpec_To_kops_TerraformSpec(in *TerraformSpec, out *kops.TerraformSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_TerraformSpec_To_kops_TerraformSpec(in, out, s)
 }
 
-func autoConvert_kops_TerraformSpec_To_v1alpha2_TerraformSpec(in *kops.TerraformSpec, out *TerraformSpec, s conversion.Scope) error {
+func autoConvert_kops_TerraformSpec_To_v1beta1_TerraformSpec(in *kops.TerraformSpec, out *TerraformSpec, s conversion.Scope) error {
 	out.ProviderExtraConfig = in.ProviderExtraConfig
 	return nil
 }
 
-// Convert_kops_TerraformSpec_To_v1alpha2_TerraformSpec is an autogenerated conversion function.
-func Convert_kops_TerraformSpec_To_v1alpha2_TerraformSpec(in *kops.TerraformSpec, out *TerraformSpec, s conversion.Scope) error {
-	return autoConvert_kops_TerraformSpec_To_v1alpha2_TerraformSpec(in, out, s)
+// Convert_kops_TerraformSpec_To_v1beta1_TerraformSpec is an autogenerated conversion function.
+func Convert_kops_TerraformSpec_To_v1beta1_TerraformSpec(in *kops.TerraformSpec, out *TerraformSpec, s conversion.Scope) error {
+	return autoConvert_kops_TerraformSpec_To_v1beta1_TerraformSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_TopologySpec_To_kops_TopologySpec(in *TopologySpec, out *kops.TopologySpec, s conversion.Scope) error {
+func autoConvert_v1beta1_TopologySpec_To_kops_TopologySpec(in *TopologySpec, out *kops.TopologySpec, s conversion.Scope) error {
 	out.Masters = in.Masters
 	out.Nodes = in.Nodes
 	if in.Bastion != nil {
 		in, out := &in.Bastion, &out.Bastion
 		*out = new(kops.BastionSpec)
-		if err := Convert_v1alpha2_BastionSpec_To_kops_BastionSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_BastionSpec_To_kops_BastionSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5343,7 +5343,7 @@ func autoConvert_v1alpha2_TopologySpec_To_kops_TopologySpec(in *TopologySpec, ou
 	if in.DNS != nil {
 		in, out := &in.DNS, &out.DNS
 		*out = new(kops.DNSSpec)
-		if err := Convert_v1alpha2_DNSSpec_To_kops_DNSSpec(*in, *out, s); err != nil {
+		if err := Convert_v1beta1_DNSSpec_To_kops_DNSSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5352,18 +5352,18 @@ func autoConvert_v1alpha2_TopologySpec_To_kops_TopologySpec(in *TopologySpec, ou
 	return nil
 }
 
-// Convert_v1alpha2_TopologySpec_To_kops_TopologySpec is an autogenerated conversion function.
-func Convert_v1alpha2_TopologySpec_To_kops_TopologySpec(in *TopologySpec, out *kops.TopologySpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_TopologySpec_To_kops_TopologySpec(in, out, s)
+// Convert_v1beta1_TopologySpec_To_kops_TopologySpec is an autogenerated conversion function.
+func Convert_v1beta1_TopologySpec_To_kops_TopologySpec(in *TopologySpec, out *kops.TopologySpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_TopologySpec_To_kops_TopologySpec(in, out, s)
 }
 
-func autoConvert_kops_TopologySpec_To_v1alpha2_TopologySpec(in *kops.TopologySpec, out *TopologySpec, s conversion.Scope) error {
+func autoConvert_kops_TopologySpec_To_v1beta1_TopologySpec(in *kops.TopologySpec, out *TopologySpec, s conversion.Scope) error {
 	out.Masters = in.Masters
 	out.Nodes = in.Nodes
 	if in.Bastion != nil {
 		in, out := &in.Bastion, &out.Bastion
 		*out = new(BastionSpec)
-		if err := Convert_kops_BastionSpec_To_v1alpha2_BastionSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_BastionSpec_To_v1beta1_BastionSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5372,7 +5372,7 @@ func autoConvert_kops_TopologySpec_To_v1alpha2_TopologySpec(in *kops.TopologySpe
 	if in.DNS != nil {
 		in, out := &in.DNS, &out.DNS
 		*out = new(DNSSpec)
-		if err := Convert_kops_DNSSpec_To_v1alpha2_DNSSpec(*in, *out, s); err != nil {
+		if err := Convert_kops_DNSSpec_To_v1beta1_DNSSpec(*in, *out, s); err != nil {
 			return err
 		}
 	} else {
@@ -5381,36 +5381,36 @@ func autoConvert_kops_TopologySpec_To_v1alpha2_TopologySpec(in *kops.TopologySpe
 	return nil
 }
 
-// Convert_kops_TopologySpec_To_v1alpha2_TopologySpec is an autogenerated conversion function.
-func Convert_kops_TopologySpec_To_v1alpha2_TopologySpec(in *kops.TopologySpec, out *TopologySpec, s conversion.Scope) error {
-	return autoConvert_kops_TopologySpec_To_v1alpha2_TopologySpec(in, out, s)
+// Convert_kops_TopologySpec_To_v1beta1_TopologySpec is an autogenerated conversion function.
+func Convert_kops_TopologySpec_To_v1beta1_TopologySpec(in *kops.TopologySpec, out *TopologySpec, s conversion.Scope) error {
+	return autoConvert_kops_TopologySpec_To_v1beta1_TopologySpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_UserData_To_kops_UserData(in *UserData, out *kops.UserData, s conversion.Scope) error {
+func autoConvert_v1beta1_UserData_To_kops_UserData(in *UserData, out *kops.UserData, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Type = in.Type
 	out.Content = in.Content
 	return nil
 }
 
-// Convert_v1alpha2_UserData_To_kops_UserData is an autogenerated conversion function.
-func Convert_v1alpha2_UserData_To_kops_UserData(in *UserData, out *kops.UserData, s conversion.Scope) error {
-	return autoConvert_v1alpha2_UserData_To_kops_UserData(in, out, s)
+// Convert_v1beta1_UserData_To_kops_UserData is an autogenerated conversion function.
+func Convert_v1beta1_UserData_To_kops_UserData(in *UserData, out *kops.UserData, s conversion.Scope) error {
+	return autoConvert_v1beta1_UserData_To_kops_UserData(in, out, s)
 }
 
-func autoConvert_kops_UserData_To_v1alpha2_UserData(in *kops.UserData, out *UserData, s conversion.Scope) error {
+func autoConvert_kops_UserData_To_v1beta1_UserData(in *kops.UserData, out *UserData, s conversion.Scope) error {
 	out.Name = in.Name
 	out.Type = in.Type
 	out.Content = in.Content
 	return nil
 }
 
-// Convert_kops_UserData_To_v1alpha2_UserData is an autogenerated conversion function.
-func Convert_kops_UserData_To_v1alpha2_UserData(in *kops.UserData, out *UserData, s conversion.Scope) error {
-	return autoConvert_kops_UserData_To_v1alpha2_UserData(in, out, s)
+// Convert_kops_UserData_To_v1beta1_UserData is an autogenerated conversion function.
+func Convert_kops_UserData_To_v1beta1_UserData(in *kops.UserData, out *UserData, s conversion.Scope) error {
+	return autoConvert_kops_UserData_To_v1beta1_UserData(in, out, s)
 }
 
-func autoConvert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec(in *VolumeMountSpec, out *kops.VolumeMountSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_VolumeMountSpec_To_kops_VolumeMountSpec(in *VolumeMountSpec, out *kops.VolumeMountSpec, s conversion.Scope) error {
 	out.Device = in.Device
 	out.Filesystem = in.Filesystem
 	out.FormatOptions = in.FormatOptions
@@ -5419,12 +5419,12 @@ func autoConvert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec(in *VolumeMoun
 	return nil
 }
 
-// Convert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec is an autogenerated conversion function.
-func Convert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec(in *VolumeMountSpec, out *kops.VolumeMountSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_VolumeMountSpec_To_kops_VolumeMountSpec(in, out, s)
+// Convert_v1beta1_VolumeMountSpec_To_kops_VolumeMountSpec is an autogenerated conversion function.
+func Convert_v1beta1_VolumeMountSpec_To_kops_VolumeMountSpec(in *VolumeMountSpec, out *kops.VolumeMountSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_VolumeMountSpec_To_kops_VolumeMountSpec(in, out, s)
 }
 
-func autoConvert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec(in *kops.VolumeMountSpec, out *VolumeMountSpec, s conversion.Scope) error {
+func autoConvert_kops_VolumeMountSpec_To_v1beta1_VolumeMountSpec(in *kops.VolumeMountSpec, out *VolumeMountSpec, s conversion.Scope) error {
 	out.Device = in.Device
 	out.Filesystem = in.Filesystem
 	out.FormatOptions = in.FormatOptions
@@ -5433,12 +5433,12 @@ func autoConvert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec(in *kops.Volum
 	return nil
 }
 
-// Convert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec is an autogenerated conversion function.
-func Convert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec(in *kops.VolumeMountSpec, out *VolumeMountSpec, s conversion.Scope) error {
-	return autoConvert_kops_VolumeMountSpec_To_v1alpha2_VolumeMountSpec(in, out, s)
+// Convert_kops_VolumeMountSpec_To_v1beta1_VolumeMountSpec is an autogenerated conversion function.
+func Convert_kops_VolumeMountSpec_To_v1beta1_VolumeMountSpec(in *kops.VolumeMountSpec, out *VolumeMountSpec, s conversion.Scope) error {
+	return autoConvert_kops_VolumeMountSpec_To_v1beta1_VolumeMountSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_VolumeSpec_To_kops_VolumeSpec(in *VolumeSpec, out *kops.VolumeSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_VolumeSpec_To_kops_VolumeSpec(in *VolumeSpec, out *kops.VolumeSpec, s conversion.Scope) error {
 	out.DeleteOnTermination = in.DeleteOnTermination
 	out.Device = in.Device
 	out.Encrypted = in.Encrypted
@@ -5448,12 +5448,12 @@ func autoConvert_v1alpha2_VolumeSpec_To_kops_VolumeSpec(in *VolumeSpec, out *kop
 	return nil
 }
 
-// Convert_v1alpha2_VolumeSpec_To_kops_VolumeSpec is an autogenerated conversion function.
-func Convert_v1alpha2_VolumeSpec_To_kops_VolumeSpec(in *VolumeSpec, out *kops.VolumeSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_VolumeSpec_To_kops_VolumeSpec(in, out, s)
+// Convert_v1beta1_VolumeSpec_To_kops_VolumeSpec is an autogenerated conversion function.
+func Convert_v1beta1_VolumeSpec_To_kops_VolumeSpec(in *VolumeSpec, out *kops.VolumeSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_VolumeSpec_To_kops_VolumeSpec(in, out, s)
 }
 
-func autoConvert_kops_VolumeSpec_To_v1alpha2_VolumeSpec(in *kops.VolumeSpec, out *VolumeSpec, s conversion.Scope) error {
+func autoConvert_kops_VolumeSpec_To_v1beta1_VolumeSpec(in *kops.VolumeSpec, out *VolumeSpec, s conversion.Scope) error {
 	out.DeleteOnTermination = in.DeleteOnTermination
 	out.Device = in.Device
 	out.Encrypted = in.Encrypted
@@ -5463,12 +5463,12 @@ func autoConvert_kops_VolumeSpec_To_v1alpha2_VolumeSpec(in *kops.VolumeSpec, out
 	return nil
 }
 
-// Convert_kops_VolumeSpec_To_v1alpha2_VolumeSpec is an autogenerated conversion function.
-func Convert_kops_VolumeSpec_To_v1alpha2_VolumeSpec(in *kops.VolumeSpec, out *VolumeSpec, s conversion.Scope) error {
-	return autoConvert_kops_VolumeSpec_To_v1alpha2_VolumeSpec(in, out, s)
+// Convert_kops_VolumeSpec_To_v1beta1_VolumeSpec is an autogenerated conversion function.
+func Convert_kops_VolumeSpec_To_v1beta1_VolumeSpec(in *kops.VolumeSpec, out *VolumeSpec, s conversion.Scope) error {
+	return autoConvert_kops_VolumeSpec_To_v1beta1_VolumeSpec(in, out, s)
 }
 
-func autoConvert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in *WeaveNetworkingSpec, out *kops.WeaveNetworkingSpec, s conversion.Scope) error {
+func autoConvert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in *WeaveNetworkingSpec, out *kops.WeaveNetworkingSpec, s conversion.Scope) error {
 	out.MTU = in.MTU
 	out.ConnLimit = in.ConnLimit
 	out.NoMasqLocal = in.NoMasqLocal
@@ -5485,12 +5485,12 @@ func autoConvert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in *We
 	return nil
 }
 
-// Convert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in *WeaveNetworkingSpec, out *kops.WeaveNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in, out, s)
+// Convert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec is an autogenerated conversion function.
+func Convert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in *WeaveNetworkingSpec, out *kops.WeaveNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_v1beta1_WeaveNetworkingSpec_To_kops_WeaveNetworkingSpec(in, out, s)
 }
 
-func autoConvert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(in *kops.WeaveNetworkingSpec, out *WeaveNetworkingSpec, s conversion.Scope) error {
+func autoConvert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec(in *kops.WeaveNetworkingSpec, out *WeaveNetworkingSpec, s conversion.Scope) error {
 	out.MTU = in.MTU
 	out.ConnLimit = in.ConnLimit
 	out.NoMasqLocal = in.NoMasqLocal
@@ -5507,7 +5507,7 @@ func autoConvert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(in *ko
 	return nil
 }
 
-// Convert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(in *kops.WeaveNetworkingSpec, out *WeaveNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_WeaveNetworkingSpec_To_v1alpha2_WeaveNetworkingSpec(in, out, s)
+// Convert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec is an autogenerated conversion function.
+func Convert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec(in *kops.WeaveNetworkingSpec, out *WeaveNetworkingSpec, s conversion.Scope) error {
+	return autoConvert_kops_WeaveNetworkingSpec_To_v1beta1_WeaveNetworkingSpec(in, out, s)
 }
