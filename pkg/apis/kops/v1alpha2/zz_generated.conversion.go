@@ -163,16 +163,6 @@ func RegisterConversions(s *runtime.Scheme) error {
 	}); err != nil {
 		return err
 	}
-	if err := s.AddGeneratedConversionFunc((*CiliumNetworkingSpec)(nil), (*kops.CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(a.(*CiliumNetworkingSpec), b.(*kops.CiliumNetworkingSpec), scope)
-	}); err != nil {
-		return err
-	}
-	if err := s.AddGeneratedConversionFunc((*kops.CiliumNetworkingSpec)(nil), (*CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
-		return Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(a.(*kops.CiliumNetworkingSpec), b.(*CiliumNetworkingSpec), scope)
-	}); err != nil {
-		return err
-	}
 	if err := s.AddGeneratedConversionFunc((*ClassicNetworkingSpec)(nil), (*kops.ClassicNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
 		return Convert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(a.(*ClassicNetworkingSpec), b.(*kops.ClassicNetworkingSpec), scope)
 	}); err != nil {
@@ -903,6 +893,16 @@ func RegisterConversions(s *runtime.Scheme) error {
 	}); err != nil {
 		return err
 	}
+	if err := s.AddConversionFunc((*kops.CiliumNetworkingSpec)(nil), (*CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(a.(*kops.CiliumNetworkingSpec), b.(*CiliumNetworkingSpec), scope)
+	}); err != nil {
+		return err
+	}
+	if err := s.AddConversionFunc((*CiliumNetworkingSpec)(nil), (*kops.CiliumNetworkingSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+		return Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(a.(*CiliumNetworkingSpec), b.(*kops.CiliumNetworkingSpec), scope)
+	}); err != nil {
+		return err
+	}
 	return nil
 }
 
@@ -1374,55 +1374,55 @@ func Convert_kops_CanalNetworkingSpec_To_v1alpha2_CanalNetworkingSpec(in *kops.C
 
 func autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
 	out.Version = in.Version
-	out.AccessLog = in.AccessLog
-	out.AgentLabels = in.AgentLabels
-	out.AgentPrometheusPort = in.AgentPrometheusPort
-	out.AllowLocalhost = in.AllowLocalhost
-	out.AutoIpv6NodeRoutes = in.AutoIpv6NodeRoutes
-	out.BPFRoot = in.BPFRoot
-	out.ContainerRuntime = in.ContainerRuntime
-	out.ContainerRuntimeEndpoint = in.ContainerRuntimeEndpoint
+	// WARNING: in.AccessLog requires manual conversion: does not exist in peer-type
+	// WARNING: in.AgentLabels requires manual conversion: does not exist in peer-type
+	// WARNING: in.AgentPrometheusPort requires manual conversion: does not exist in peer-type
+	// WARNING: in.AllowLocalhost requires manual conversion: does not exist in peer-type
+	// WARNING: in.AutoIpv6NodeRoutes requires manual conversion: does not exist in peer-type
+	// WARNING: in.BPFRoot requires manual conversion: does not exist in peer-type
+	// WARNING: in.ContainerRuntime requires manual conversion: does not exist in peer-type
+	// WARNING: in.ContainerRuntimeEndpoint requires manual conversion: does not exist in peer-type
 	out.Debug = in.Debug
-	out.DebugVerbose = in.DebugVerbose
-	out.Device = in.Device
-	out.DisableConntrack = in.DisableConntrack
-	out.DisableIpv4 = in.DisableIpv4
-	out.DisableK8sServices = in.DisableK8sServices
+	// WARNING: in.DebugVerbose requires manual conversion: does not exist in peer-type
+	// WARNING: in.Device requires manual conversion: does not exist in peer-type
+	// WARNING: in.DisableConntrack requires manual conversion: does not exist in peer-type
+	// WARNING: in.DisableIpv4 requires manual conversion: does not exist in peer-type
+	// WARNING: in.DisableK8sServices requires manual conversion: does not exist in peer-type
 	out.EnablePolicy = in.EnablePolicy
-	out.EnableTracing = in.EnableTracing
-	out.EnablePrometheusMetrics = in.EnablePrometheusMetrics
-	out.EnvoyLog = in.EnvoyLog
-	out.Ipv4ClusterCIDRMaskSize = in.Ipv4ClusterCIDRMaskSize
-	out.Ipv4Node = in.Ipv4Node
-	out.Ipv4Range = in.Ipv4Range
-	out.Ipv4ServiceRange = in.Ipv4ServiceRange
-	out.Ipv6ClusterAllocCidr = in.Ipv6ClusterAllocCidr
-	out.Ipv6Node = in.Ipv6Node
-	out.Ipv6Range = in.Ipv6Range
-	out.Ipv6ServiceRange = in.Ipv6ServiceRange
-	out.K8sAPIServer = in.K8sAPIServer
-	out.K8sKubeconfigPath = in.K8sKubeconfigPath
-	out.KeepBPFTemplates = in.KeepBPFTemplates
-	out.KeepConfig = in.KeepConfig
-	out.LabelPrefixFile = in.LabelPrefixFile
-	out.Labels = in.Labels
-	out.LB = in.LB
-	out.LibDir = in.LibDir
-	out.LogDrivers = in.LogDrivers
-	out.LogOpt = in.LogOpt
-	out.Logstash = in.Logstash
-	out.LogstashAgent = in.LogstashAgent
-	out.LogstashProbeTimer = in.LogstashProbeTimer
+	// WARNING: in.EnableTracing requires manual conversion: does not exist in peer-type
+	// WARNING: in.EnablePrometheusMetrics requires manual conversion: does not exist in peer-type
+	// WARNING: in.EnvoyLog requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv4ClusterCIDRMaskSize requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv4Node requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv4Range requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv4ServiceRange requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv6ClusterAllocCidr requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv6Node requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv6Range requires manual conversion: does not exist in peer-type
+	// WARNING: in.Ipv6ServiceRange requires manual conversion: does not exist in peer-type
+	// WARNING: in.K8sAPIServer requires manual conversion: does not exist in peer-type
+	// WARNING: in.K8sKubeconfigPath requires manual conversion: does not exist in peer-type
+	// WARNING: in.KeepBPFTemplates requires manual conversion: does not exist in peer-type
+	// WARNING: in.KeepConfig requires manual conversion: does not exist in peer-type
+	// WARNING: in.LabelPrefixFile requires manual conversion: does not exist in peer-type
+	// WARNING: in.Labels requires manual conversion: does not exist in peer-type
+	// WARNING: in.LB requires manual conversion: does not exist in peer-type
+	// WARNING: in.LibDir requires manual conversion: does not exist in peer-type
+	// WARNING: in.LogDrivers requires manual conversion: does not exist in peer-type
+	// WARNING: in.LogOpt requires manual conversion: does not exist in peer-type
+	// WARNING: in.Logstash requires manual conversion: does not exist in peer-type
+	// WARNING: in.LogstashAgent requires manual conversion: does not exist in peer-type
+	// WARNING: in.LogstashProbeTimer requires manual conversion: does not exist in peer-type
 	out.DisableMasquerade = in.DisableMasquerade
-	out.Nat46Range = in.Nat46Range
-	out.Pprof = in.Pprof
-	out.PrefilterDevice = in.PrefilterDevice
-	out.PrometheusServeAddr = in.PrometheusServeAddr
-	out.Restore = in.Restore
-	out.SingleClusterRoute = in.SingleClusterRoute
-	out.SocketPath = in.SocketPath
-	out.StateDir = in.StateDir
-	out.TracePayloadLen = in.TracePayloadLen
+	// WARNING: in.Nat46Range requires manual conversion: does not exist in peer-type
+	// WARNING: in.Pprof requires manual conversion: does not exist in peer-type
+	// WARNING: in.PrefilterDevice requires manual conversion: does not exist in peer-type
+	// WARNING: in.PrometheusServeAddr requires manual conversion: does not exist in peer-type
+	// WARNING: in.Restore requires manual conversion: does not exist in peer-type
+	// WARNING: in.SingleClusterRoute requires manual conversion: does not exist in peer-type
+	// WARNING: in.SocketPath requires manual conversion: does not exist in peer-type
+	// WARNING: in.StateDir requires manual conversion: does not exist in peer-type
+	// WARNING: in.TracePayloadLen requires manual conversion: does not exist in peer-type
 	out.Tunnel = in.Tunnel
 	out.EnableIpv6 = in.EnableIpv6
 	out.EnableIpv4 = in.EnableIpv4
@@ -1436,75 +1436,25 @@ func autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *
 	out.ToFqdnsEnablePoller = in.ToFqdnsEnablePoller
 	out.ContainerRuntimeLabels = in.ContainerRuntimeLabels
 	out.Ipam = in.Ipam
-	out.IPTablesRulesNoinstall = in.IPTablesRulesNoinstall
+	// WARNING: in.IPTablesRulesNoinstall requires manual conversion: does not exist in peer-type
 	out.AutoDirectNodeRoutes = in.AutoDirectNodeRoutes
 	out.EnableNodePort = in.EnableNodePort
 	out.EtcdManaged = in.EtcdManaged
 	out.EnableRemoteNodeIdentity = in.EnableRemoteNodeIdentity
-	out.RemoveCbrBridge = in.RemoveCbrBridge
-	out.RestartPods = in.RestartPods
-	out.ReconfigureKubelet = in.ReconfigureKubelet
-	out.NodeInitBootstrapFile = in.NodeInitBootstrapFile
-	out.CniBinPath = in.CniBinPath
+	// WARNING: in.RemoveCbrBridge requires manual conversion: does not exist in peer-type
+	// WARNING: in.RestartPods requires manual conversion: does not exist in peer-type
+	// WARNING: in.ReconfigureKubelet requires manual conversion: does not exist in peer-type
+	// WARNING: in.NodeInitBootstrapFile requires manual conversion: does not exist in peer-type
+	// WARNING: in.CniBinPath requires manual conversion: does not exist in peer-type
 	return nil
-}
-
-// Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec is an autogenerated conversion function.
-func Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in, out, s)
 }
 
 func autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
 	out.Version = in.Version
-	out.AccessLog = in.AccessLog
-	out.AgentLabels = in.AgentLabels
-	out.AgentPrometheusPort = in.AgentPrometheusPort
-	out.AllowLocalhost = in.AllowLocalhost
-	out.AutoIpv6NodeRoutes = in.AutoIpv6NodeRoutes
-	out.BPFRoot = in.BPFRoot
-	out.ContainerRuntime = in.ContainerRuntime
-	out.ContainerRuntimeEndpoint = in.ContainerRuntimeEndpoint
+	// WARNING: in.Prometheus requires manual conversion: does not exist in peer-type
 	out.Debug = in.Debug
-	out.DebugVerbose = in.DebugVerbose
-	out.Device = in.Device
-	out.DisableConntrack = in.DisableConntrack
-	out.DisableIpv4 = in.DisableIpv4
-	out.DisableK8sServices = in.DisableK8sServices
 	out.EnablePolicy = in.EnablePolicy
-	out.EnableTracing = in.EnableTracing
-	out.EnablePrometheusMetrics = in.EnablePrometheusMetrics
-	out.EnvoyLog = in.EnvoyLog
-	out.Ipv4ClusterCIDRMaskSize = in.Ipv4ClusterCIDRMaskSize
-	out.Ipv4Node = in.Ipv4Node
-	out.Ipv4Range = in.Ipv4Range
-	out.Ipv4ServiceRange = in.Ipv4ServiceRange
-	out.Ipv6ClusterAllocCidr = in.Ipv6ClusterAllocCidr
-	out.Ipv6Node = in.Ipv6Node
-	out.Ipv6Range = in.Ipv6Range
-	out.Ipv6ServiceRange = in.Ipv6ServiceRange
-	out.K8sAPIServer = in.K8sAPIServer
-	out.K8sKubeconfigPath = in.K8sKubeconfigPath
-	out.KeepBPFTemplates = in.KeepBPFTemplates
-	out.KeepConfig = in.KeepConfig
-	out.LabelPrefixFile = in.LabelPrefixFile
-	out.Labels = in.Labels
-	out.LB = in.LB
-	out.LibDir = in.LibDir
-	out.LogDrivers = in.LogDrivers
-	out.LogOpt = in.LogOpt
-	out.Logstash = in.Logstash
-	out.LogstashAgent = in.LogstashAgent
-	out.LogstashProbeTimer = in.LogstashProbeTimer
 	out.DisableMasquerade = in.DisableMasquerade
-	out.Nat46Range = in.Nat46Range
-	out.Pprof = in.Pprof
-	out.PrefilterDevice = in.PrefilterDevice
-	out.PrometheusServeAddr = in.PrometheusServeAddr
-	out.Restore = in.Restore
-	out.SingleClusterRoute = in.SingleClusterRoute
-	out.SocketPath = in.SocketPath
-	out.StateDir = in.StateDir
-	out.TracePayloadLen = in.TracePayloadLen
 	out.Tunnel = in.Tunnel
 	out.EnableIpv6 = in.EnableIpv6
 	out.EnableIpv4 = in.EnableIpv4
@@ -1518,22 +1468,12 @@ func autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *
 	out.ToFqdnsEnablePoller = in.ToFqdnsEnablePoller
 	out.ContainerRuntimeLabels = in.ContainerRuntimeLabels
 	out.Ipam = in.Ipam
-	out.IPTablesRulesNoinstall = in.IPTablesRulesNoinstall
+	// WARNING: in.InstallIPTablesRules requires manual conversion: does not exist in peer-type
 	out.AutoDirectNodeRoutes = in.AutoDirectNodeRoutes
 	out.EnableNodePort = in.EnableNodePort
 	out.EtcdManaged = in.EtcdManaged
 	out.EnableRemoteNodeIdentity = in.EnableRemoteNodeIdentity
-	out.RemoveCbrBridge = in.RemoveCbrBridge
-	out.RestartPods = in.RestartPods
-	out.ReconfigureKubelet = in.ReconfigureKubelet
-	out.NodeInitBootstrapFile = in.NodeInitBootstrapFile
-	out.CniBinPath = in.CniBinPath
 	return nil
-}
-
-// Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec is an autogenerated conversion function.
-func Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
-	return autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in, out, s)
 }
 
 func autoConvert_v1alpha2_ClassicNetworkingSpec_To_kops_ClassicNetworkingSpec(in *ClassicNetworkingSpec, out *kops.ClassicNetworkingSpec, s conversion.Scope) error {
