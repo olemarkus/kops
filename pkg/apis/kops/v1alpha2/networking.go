@@ -455,7 +455,8 @@ func Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *Cili
 		AgentPort: in.AgentPrometheusPort,
 	}
 
-	//	out.InstallIPTablesRules = fi.Bool(!in.IPTablesRulesNoinstall)
+	ipt := !in.IPTablesRulesNoinstall
+	out.InstallIPTablesRules = &ipt
 
 	return nil
 }
@@ -465,8 +466,16 @@ func Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops
 	if err != nil {
 		return err
 	}
-	out.AgentPrometheusPort = in.Prometheus.AgentPort
-	out.EnablePrometheusMetrics = in.Prometheus.Enable
-	//	in.IPTablesRulesNoinstall = !out.IPTablesRulesNoinstall
+	if in.Prometheus != nil {
+		out.AgentPrometheusPort = in.Prometheus.AgentPort
+		out.EnablePrometheusMetrics = in.Prometheus.Enable
+	}
+	ipt := in.InstallIPTablesRules
+	if ipt == nil {
+		out.IPTablesRulesNoinstall = true
+	} else {
+		iptVal := *ipt
+		out.IPTablesRulesNoinstall = !iptVal
+	}
 	return nil
 }

@@ -35,14 +35,14 @@ data:
   identity-allocation-mode: crd
   # If you want to run cilium in debug mode change this value to true
   debug: "{{- if .Debug -}}true{{- else -}}false{{- end -}}"
-  {{ if .EnablePrometheusMetrics }}
+  {{ if .Prometheus.Enable }}
   # If you want metrics enabled in all of your Cilium agents, set the port for
   # which the Cilium agents will have their metrics exposed.
   # This option deprecates the "prometheus-serve-addr" in the
   # "cilium-metrics-config" ConfigMap
   # NOTE that this will open the port on ALL nodes where Cilium pods are
   # scheduled.
-  prometheus-serve-addr: ":{{- or .AgentPrometheusPort "9090" }}"
+  prometheus-serve-addr: ":{{- or .Prometheus.AgentPort "9090" }}"
   {{ end }}
   # Enable IPv4 addressing. If enabled, all endpoints are allocated an IPv4
   # address.
@@ -136,7 +136,7 @@ data:
   #
   container-runtime: "{{- if eq .ContainerRuntimeLabels "" -}}none{{- else -}}{{ .ContainerRuntimeLabels }}{{- end -}}"
   masquerade: "{{- if .DisableMasquerade -}}false{{- else -}}true{{- end -}}"
-  install-iptables-rules: "{{- if .IPTablesRulesNoinstall -}}false{{- else -}}true{{- end -}}"
+  install-iptables-rules: "{{- if .InstallIPTablesRules -}}true{{- else -}}false{{- end -}}"
   auto-direct-node-routes: "{{- if .AutoDirectNodeRoutes -}}true{{- else -}}false{{- end -}}"
   enable-node-port: "{{- if .EnableNodePort -}}true{{- else -}}false{{- end -}}"
   kube-proxy-replacement: "{{- if .EnableNodePort -}}strict{{- else -}}partial{{- end -}}"
@@ -445,10 +445,10 @@ spec:
           successThreshold: 1
           timeoutSeconds: 5
         name: cilium-agent
-        {{ if .EnablePrometheusMetrics }}
+        {{ if .Prometheus.Enable }}
         ports:
-        - containerPort: {{ or .AgentPrometheusPort "9090" }}
-          hostPort: {{ or .AgentPrometheusPort "9090" }}
+        - containerPort: {{ or .Prometheus.AgentPort "9090" }}
+          hostPort: {{ or .Prometheus.AgentPort "9090" }}
           name: prometheus
           protocol: TCP
         {{ end }}
@@ -635,7 +635,7 @@ spec:
         - --debug=$(CILIUM_DEBUG)
         - --identity-allocation-mode=$(CILIUM_IDENTITY_ALLOCATION_MODE)
 {{ with .Networking.Cilium }}
-        {{ if .EnablePrometheusMetrics }}
+        {{ if .Prometheus.Enable }}
         - --enable-metrics
         {{ end }}
 {{ end }}
@@ -726,7 +726,7 @@ spec:
         image: "docker.io/cilium/operator:{{- if eq .Version "" -}}v1.7.3{{- else -}}{{ .Version }}{{- end -}}"
         imagePullPolicy: IfNotPresent
         name: cilium-operator
-        {{ if .EnablePrometheusMetrics }}
+        {{ if .Prometheus.Enable }}
         ports:
         - containerPort: 6942
           hostPort: 6942
