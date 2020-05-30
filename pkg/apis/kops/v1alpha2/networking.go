@@ -16,7 +16,11 @@ limitations under the License.
 
 package v1alpha2
 
-import "k8s.io/apimachinery/pkg/api/resource"
+import (
+	"k8s.io/apimachinery/pkg/api/resource"
+	"k8s.io/apimachinery/pkg/conversion"
+	"k8s.io/kops/pkg/apis/kops"
+)
 
 // NetworkingSpec allows selection and configuration of a networking plugin
 type NetworkingSpec struct {
@@ -439,4 +443,30 @@ type LyftVPCNetworkingSpec struct {
 
 // GCENetworkingSpec is the specification of GCE's native networking mode, using IP aliases
 type GCENetworkingSpec struct {
+}
+
+func Convert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in *CiliumNetworkingSpec, out *kops.CiliumNetworkingSpec, s conversion.Scope) error {
+	err := autoConvert_v1alpha2_CiliumNetworkingSpec_To_kops_CiliumNetworkingSpec(in, out, s)
+	if err != nil {
+		return err
+	}
+	out.Prometheus = &kops.CiliumNetworkingPrometheusSpec{
+		Enable:    in.EnablePrometheusMetrics,
+		AgentPort: in.AgentPrometheusPort,
+	}
+
+	//	out.InstallIPTablesRules = fi.Bool(!in.IPTablesRulesNoinstall)
+
+	return nil
+}
+
+func Convert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in *kops.CiliumNetworkingSpec, out *CiliumNetworkingSpec, s conversion.Scope) error {
+	err := autoConvert_kops_CiliumNetworkingSpec_To_v1alpha2_CiliumNetworkingSpec(in, out, s)
+	if err != nil {
+		return err
+	}
+	out.AgentPrometheusPort = in.Prometheus.AgentPort
+	out.EnablePrometheusMetrics = in.Prometheus.Enable
+	//	in.IPTablesRulesNoinstall = !out.IPTablesRulesNoinstall
+	return nil
 }

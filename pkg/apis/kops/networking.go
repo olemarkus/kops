@@ -16,7 +16,9 @@ limitations under the License.
 
 package kops
 
-import "k8s.io/apimachinery/pkg/api/resource"
+import (
+	"k8s.io/apimachinery/pkg/api/resource"
+)
 
 // NetworkingSpec allows selection and configuration of a networking plugin
 type NetworkingSpec struct {
@@ -198,158 +200,31 @@ type AmazonVPCNetworkingSpec struct {
 
 const CiliumIpamEni = "eni"
 
+type CiliumNetworkingPrometheusSpec struct {
+	// Enable enables the Cilium "/metrics" endpoint for both the agent and the operator.
+	Enable bool `json:"enablePrometheusMetrics,omitempty"`
+	// AgentPort is the port to listen to for Prometheus metrics.
+	// Defaults to 9090.
+	AgentPort int `json:"agentPrometheusPort,omitempty"`
+}
+
 // CiliumNetworkingSpec declares that we want Cilium networking
 type CiliumNetworkingSpec struct {
 	// Version is the version of the Cilium agent and the Cilium Operator.
 	Version string `json:"version,omitempty"`
 
-	// AccessLog is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	AccessLog string `json:"accessLog,omitempty"`
-	// AgentLabels is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	AgentLabels []string `json:"agentLabels,omitempty"`
-	// AgentPrometheusPort is the port to listen to for Prometheus metrics.
-	// Defaults to 9090.
-	AgentPrometheusPort int `json:"agentPrometheusPort,omitempty"`
-	// AllowLocalhost is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	AllowLocalhost string `json:"allowLocalhost,omitempty"`
-	// AutoIpv6NodeRoutes is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	AutoIpv6NodeRoutes bool `json:"autoIpv6NodeRoutes,omitempty"`
-	// BPFRoot is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	BPFRoot string `json:"bpfRoot,omitempty"`
-	// ContainerRuntime is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	ContainerRuntime []string `json:"containerRuntime,omitempty"`
-	// ContainerRuntimeEndpoint is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	ContainerRuntimeEndpoint map[string]string `json:"containerRuntimeEndpoint,omitempty"`
+	Prometheus *CiliumNetworkingPrometheusSpec
+
 	// Debug runs Cilium in debug mode.
 	Debug bool `json:"debug,omitempty"`
-	// DebugVerbose is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	DebugVerbose []string `json:"debugVerbose,omitempty"`
-	// Device is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Device string `json:"device,omitempty"`
-	// DisableConntrack is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	DisableConntrack bool `json:"disableConntrack,omitempty"`
-	// DisableIpv4 is deprecated: Use EnableIpv4 instead.
-	// Setting this flag has no effect.
-	DisableIpv4 bool `json:"disableIpv4,omitempty"`
-	// DisableK8sServices is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	DisableK8sServices bool `json:"disableK8sServices,omitempty"`
 	// EnablePolicy specifies the policy enforcement mode.
 	// "default": Follows Kubernetes policy enforcement.
 	// "always": Cilium restricts all traffic if no policy is in place.
 	// "never": Cilium allows all traffic regardless of policies in place.
 	// If unspecified, "default" policy mode will be used.
 	EnablePolicy string `json:"enablePolicy,omitempty"`
-	// EnableTracing is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	EnableTracing bool `json:"enableTracing,omitempty"`
-	// EnablePrometheusMetrics enables the Cilium "/metrics" endpoint for both the agent and the operator.
-	EnablePrometheusMetrics bool `json:"enablePrometheusMetrics,omitempty"`
-	// EnvoyLog is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	EnvoyLog string `json:"envoyLog,omitempty"`
-	// Ipv4ClusterCIDRMaskSize is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv4ClusterCIDRMaskSize int `json:"ipv4ClusterCidrMaskSize,omitempty"`
-	// Ipv4Node is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv4Node string `json:"ipv4Node,omitempty"`
-	// Ipv4Range is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv4Range string `json:"ipv4Range,omitempty"`
-	// Ipv4ServiceRange is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv4ServiceRange string `json:"ipv4ServiceRange,omitempty"`
-	// Ipv6ClusterAllocCidr is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv6ClusterAllocCidr string `json:"ipv6ClusterAllocCidr,omitempty"`
-	// Ipv6Node is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv6Node string `json:"ipv6Node,omitempty"`
-	// Ipv6Range is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv6Range string `json:"ipv6Range,omitempty"`
-	// Ipv6ServiceRange is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Ipv6ServiceRange string `json:"ipv6ServiceRange,omitempty"`
-	// K8sAPIServer is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	K8sAPIServer string `json:"k8sApiServer,omitempty"`
-	// K8sKubeconfigPath is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	K8sKubeconfigPath string `json:"k8sKubeconfigPath,omitempty"`
-	// KeepBPFTemplates is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	KeepBPFTemplates bool `json:"keepBpfTemplates,omitempty"`
-	// KeepConfig is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	KeepConfig bool `json:"keepConfig,omitempty"`
-	// LabelPrefixFile is not implemented and may be removed in the future.
-	// Setting this has currently no effect
-	LabelPrefixFile string `json:"labelPrefixFile,omitempty"`
-	// Labels is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Labels []string `json:"labels,omitempty"`
-	// LB is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LB string `json:"lb,omitempty"`
-	// LibDir is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LibDir string `json:"libDir,omitempty"`
-	// LogDrivers is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LogDrivers []string `json:"logDriver,omitempty"`
-	// LogOpt is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LogOpt map[string]string `json:"logOpt,omitempty"`
-	// Logstash is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Logstash bool `json:"logstash,omitempty"`
-	// LogstashAgent is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LogstashAgent string `json:"logstashAgent,omitempty"`
-	// LogstashProbeTimer is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	LogstashProbeTimer uint32 `json:"logstashProbeTimer,omitempty"`
 	// DisableMasquerade disables masquerading traffic to external destinations behind the node IP.
 	DisableMasquerade bool `json:"disableMasquerade,omitempty"`
-	// Nat6Range is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Nat46Range string `json:"nat46Range,omitempty"`
-	// Pprof is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Pprof bool `json:"pprof,omitempty"`
-	// PrefilterDevice is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	PrefilterDevice string `json:"prefilterDevice,omitempty"`
-	// PrometheusServeAddr is deprecated. Use EnablePrometheusMetrics and AgentPrometheusPort instead.
-	// Setting this has no effect.
-	PrometheusServeAddr string `json:"prometheusServeAddr,omitempty"`
-	// Restore is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	Restore bool `json:"restore,omitempty"`
-	// SingleClusterRoute is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	SingleClusterRoute bool `json:"singleClusterRoute,omitempty"`
-	// SocketPath is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	SocketPath string `json:"socketPath,omitempty"`
-	// StateDir is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	StateDir string `json:"stateDir,omitempty"`
-	// TracePayloadLen is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	TracePayloadLen int `json:"tracePayloadlen,omitempty"`
 	// Tunnel specifies the Cilium tunelling mode. Possible values are "vxlan", "geneve", or "disabled".
 	// Default: vxlan
 	Tunnel string `json:"tunnel,omitempty"`
@@ -401,37 +276,21 @@ type CiliumNetworkingSpec struct {
 	Ipam string `json:"ipam,omitempty"`
 	// IPTablesRulesNoinstall disables installing the base IPTables rules used for masquerading and kube-proxy.
 	// Default: false
-	IPTablesRulesNoinstall bool `json:"IPTablesRulesNoinstall"`
+	InstallIPTablesRules *bool `json:"installIPTablesRules,omitempty"`
 	// AutoDirectNodeRoutes adds automatic L2 routing between nodes.
 	// Default: false
-	AutoDirectNodeRoutes bool `json:"autoDirectNodeRoutes"`
+	AutoDirectNodeRoutes bool `json:"autoDirectNodeRoutes,omitempty"`
 	// EnableNodePort replaces kube-proxy with Cilium's BPF implementation.
 	// Requires spec.kubeProxy.enabled be set to false.
 	// Default: false
-	EnableNodePort bool `json:"enableNodePort"`
+	EnableNodePort bool `json:"enableNodePort,omitempty"`
 	// EtcdManagd installs an additional etcd cluster that is used for Cilium state change.
 	// The cluster is operated by cilium-etcd-operator.
 	// Default: false
 	EtcdManaged bool `json:"etcdManaged,omitempty"`
 	// EnableRemoteNodeIdentity enables the remote-node-identity added in Cilium 1.7.0.
 	// Default: false
-	EnableRemoteNodeIdentity bool `json:"enableRemoteNodeIdentity"`
-
-	// RemoveCbrBridge is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	RemoveCbrBridge bool `json:"removeCbrBridge"`
-	// RestartPods is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	RestartPods bool `json:"restartPods"`
-	// ReconfigureKubelet is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	ReconfigureKubelet bool `json:"reconfigureKubelet"`
-	// NodeInitBootstrapFile is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	NodeInitBootstrapFile string `json:"nodeInitBootstrapFile"`
-	// CniBinPath is not implemented and may be removed in the future.
-	// Setting this has no effect.
-	CniBinPath string `json:"cniBinPath"`
+	EnableRemoteNodeIdentity bool `json:"enableRemoteNodeIdentity,omitempty"`
 }
 
 // LyftVPCNetworkingSpec declares that we want to use the cni-ipvlan-vpc-k8s CNI networking.
