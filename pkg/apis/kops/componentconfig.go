@@ -837,6 +837,15 @@ type CertManagerConfig struct {
 	Enabled *bool `json:"enabled,omitempty"`
 	// Image is the docker container used.
 	// Default: the latest supported image for the specified kubernetes version.
+	// AWSLoadbalancerControllerConfig determines the AWS LB controller configuration.
+}
+
+type AWSLoadbalancerControllerConfig struct {
+	// Enabled enables the loadbalancer controller.
+	// Default: false
+	Enabled *bool `json:"enabled,omitempty"`
+	// Image is the docker container used.
+	// Default: v2.0.0
 	Image *string `json:"image,omitempty"`
 }
 

@@ -23,6 +23,7 @@ type Options struct {
 	ConfigBase            string         `json:"configBase,omitempty"`
 	Server                *ServerOptions `json:"server,omitempty"`
 	CacheNodeidentityInfo bool           `json:"cacheNodeidentityInfo,omitempty"`
+	Secrets               []string       `json:"secrets"`
 }
 
 func (o *Options) PopulateDefaults() {

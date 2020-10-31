@@ -164,6 +164,17 @@ func buildScheme() error {
 	return nil
 }
 
+func addSecretsController(mgr manager.Manager, opt *config.Options) error {
+	secretsController, err := controllers.NewSecretsReconciler(mgr, opt.Secrets)
+	if err != nil {
+		return err
+	}
+	if err := secretsController.SetupWithManager(mgr); err != nil {
+		return err
+	}
+
+}
+
 func addNodeController(mgr manager.Manager, opt *config.Options) error {
 	var legacyIdentifier nodeidentity.LegacyIdentifier
 	var identifier nodeidentity.Identifier

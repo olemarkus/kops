@@ -528,6 +528,26 @@ func (b *BootstrapChannelBuilder) buildAddons(c *fi.ModelBuilderContext) (*chann
 		}
 	}
 
+	if b.Cluster.Spec.AWSLoadbalancerController != nil && fi.BoolValue(b.Cluster.Spec.AWSLoadbalancerController.Enabled) {
+
+		key := "aws-loadbalancer-controller.addons.k8s.io"
+		version := "2.0.0"
+
+		{
+			location := key + "/k8s-1.9.yaml"
+			id := "k8s-1.9"
+
+			addons.Spec.Addons = append(addons.Spec.Addons, &channelsapi.AddonSpec{
+				Name:              fi.String(key),
+				Version:           fi.String(version),
+				Selector:          map[string]string{"k8s-addon": key},
+				Manifest:          fi.String(location),
+				KubernetesVersion: ">=1.11.0",
+				Id:                id,
+			})
+		}
+	}
+
 	if kops.CloudProviderID(b.Cluster.Spec.CloudProvider) == kops.CloudProviderAWS {
 		key := "storage-aws.addons.k8s.io"
 		version := "1.17.0"
