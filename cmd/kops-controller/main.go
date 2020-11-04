@@ -173,6 +173,8 @@ func addSecretsController(mgr manager.Manager, opt *config.Options) error {
 		return err
 	}
 
+	return nil
+
 }
 
 func addNodeController(mgr manager.Manager, opt *config.Options) error {

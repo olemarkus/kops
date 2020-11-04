@@ -162,6 +162,10 @@ func (a *Addon) EnsureUpdated(ctx context.Context, k8sClient kubernetes.Interfac
 		return nil, fmt.Errorf("error applying annotation to record addon installation: %v", err)
 	}
 
+	if a.Spec.NeedsRollingUpdate != "" {
+		a.AddNeedsUpdateLabel(ctx, k8sClient)
+	}
+
 	return required, nil
 }
 
