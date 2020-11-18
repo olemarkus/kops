@@ -63,7 +63,7 @@ require (
 	github.com/client9/misspell v0.3.4
 	github.com/coreos/etcd v3.3.17+incompatible
 	github.com/denverdino/aliyungo v0.0.0-20191128015008-acd8035bbb1d
-	github.com/digitalocean/godo v1.19.0
+	github.com/digitalocean/godo v1.29.0
 	github.com/docker/docker v1.4.2-0.20200309214505-aa6a9891b09c
 	github.com/docker/spdystream v0.0.0-20181023171402-6480d4af844c // indirect
 	github.com/fullsailor/pkcs7 v0.0.0-20180422025557-ae226422660e
@@ -79,6 +79,7 @@ require (
 	github.com/hashicorp/hcl/v2 v2.7.0
 	github.com/hashicorp/vault/api v1.0.4
 	github.com/jacksontj/memberlistmesh v0.0.0-20190905163944-93462b9d2bb7
+	github.com/jetstack/cert-manager v1.0.4
 	github.com/jpillora/backoff v0.0.0-20170918002102-8eab2debe79d
 	github.com/kr/fs v0.1.0 // indirect
 	github.com/miekg/coredns v0.0.0-20161111164017-20e25559d5ea
@@ -114,10 +115,10 @@ require (
 	k8s.io/component-base v0.20.0-beta.2
 	k8s.io/gengo v0.0.0-20201113003025-83324d819ded
 	k8s.io/klog/v2 v2.4.0
-	k8s.io/kubectl v0.0.0
+	k8s.io/kubectl v0.19.0
 	k8s.io/legacy-cloud-providers v0.0.0
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
-	sigs.k8s.io/controller-runtime v0.6.1
-	sigs.k8s.io/controller-tools v0.2.8
+	sigs.k8s.io/controller-runtime v0.6.2
+	sigs.k8s.io/controller-tools v0.2.9-0.20200414181213-645d44dca7c0
 	sigs.k8s.io/yaml v1.2.0
 )

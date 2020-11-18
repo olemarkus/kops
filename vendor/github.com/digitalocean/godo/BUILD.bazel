@@ -5,6 +5,7 @@ go_library(
     srcs = [
         "account.go",
         "action.go",
+        "balance.go",
         "cdn.go",
         "certificates.go",
         "databases.go",
@@ -23,8 +24,10 @@ go_library(
         "kubernetes.go",
         "links.go",
         "load_balancers.go",
+        "meta.go",
         "projects.go",
         "regions.go",
+        "registry.go",
         "sizes.go",
         "snapshots.go",
         "storage.go",

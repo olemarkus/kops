@@ -119,6 +119,7 @@ func main() {
 		MetricsBindAddress: metricsAddress,
 		LeaderElection:     true,
 		LeaderElectionID:   "kops-controller-leader",
+		Namespace:          "kube-system",
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")
