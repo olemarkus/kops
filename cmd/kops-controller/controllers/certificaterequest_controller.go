@@ -3,7 +3,6 @@ package controllers
 import (
 	"context"
 	"crypto/x509"
-	"encoding/base64"
 	"encoding/pem"
 	"fmt"
 
@@ -75,13 +74,7 @@ func (r *CertificateRequestReconciler) Reconcile(req ctrl.Request) (ctrl.Result,
 
 func signCSR(cr *cmapi.CertificateRequest, keystore pki.Keystore) error {
 
-	b64csr := cr.Spec.Request
-
-	var csrBytes = make([]byte, base64.StdEncoding.DecodedLen(len(b64csr)))
-	var _, err = base64.StdEncoding.Decode(csrBytes, b64csr)
-	if err != nil {
-		return fmt.Errorf("could not decode request: %v", err)
-	}
+	csrBytes := cr.Spec.Request
 
 	block, _ := pem.Decode(csrBytes)
 
@@ -90,24 +83,47 @@ func signCSR(cr *cmapi.CertificateRequest, keystore pki.Keystore) error {
 		return fmt.Errorf("could not parse pem block: %v", err)
 	}
 
+	client := false
+	server := false
+	for _, u := range cr.Spec.Usages {
+		if u == cmapi.UsageServerAuth {
+			server = true
+		}
+		if u == cmapi.UsageClientAuth {
+			client = true
+		}
+	}
+
+	certType := ""
+
+	switch true {
+	case client && server:
+		certType = "clientServer"
+	case client:
+		certType = "client"
+	case server:
+		certType = "server"
+	}
+
 	issueReq := &pki.IssueCertRequest{
 		Signer:         fi.CertificateIDCA,
-		Type:           "client",
+		Type:           certType,
 		AlternateNames: csr.DNSNames,
 		PublicKey:      csr.PublicKey,
 		Subject:        csr.Subject,
 	}
 
 	signedCert, _, _, err := pki.IssueCert(issueReq, keystore)
+	if err != nil {
+		return fmt.Errorf("failed to issue cert: %v", err)
+	}
 
 	signedBytes, err := signedCert.AsBytes()
 	if err != nil {
 		return fmt.Errorf("failed to encode signed cert: %v", err)
 	}
 
-	b64 := make([]byte, base64.StdEncoding.EncodedLen(len(signedBytes)))
-
-	cr.Status.Certificate = b64
+	cr.Status.Certificate = signedBytes
 	return nil
 
 }
