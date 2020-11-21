@@ -2,12 +2,10 @@ package controllers
 
 import (
 	"context"
-	"crypto/rand"
 	"crypto/x509"
 	"encoding/base64"
 	"encoding/pem"
 	"fmt"
-	"time"
 
 	"github.com/go-logr/logr"
 	"github.com/jetstack/cert-manager/pkg/api/util"
@@ -18,12 +16,23 @@ import (
 	"k8s.io/kops/upup/pkg/fi"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
+	"sigs.k8s.io/controller-runtime/pkg/manager"
 )
 
 type CertificateRequestReconciler struct {
 	client   client.Client
 	log      logr.Logger
 	keystore pki.Keystore
+}
+
+func NewCertificateRequestReconciler(mgr manager.Manager, keystore pki.Keystore) (*CertificateRequestReconciler, error) {
+	r := &CertificateRequestReconciler{
+		client:   mgr.GetClient(),
+		log:      ctrl.Log.WithName("controllers").WithName("CertificateRequest"),
+		keystore: keystore,
+	}
+
+	return r, nil
 }
 
 func (r *CertificateRequestReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
@@ -57,55 +66,49 @@ func (r *CertificateRequestReconciler) Reconcile(req ctrl.Request) (ctrl.Result,
 		return ctrl.Result{}, nil
 	}
 
-	certRequest := cr.Spec.Request
-
-	var csr = make([]byte, base64.StdEncoding.DecodedLen(len(certRequest)))
-	var _, err = base64.StdEncoding.Decode(certRequest, csr)
+	err := signCSR(cr, r.keystore)
 	if err != nil {
 		return ctrl.Result{}, err
 	}
+	return ctrl.Result{}, r.setStatus(ctx, cr, cmmeta.ConditionTrue, cmapi.CertificateRequestReasonIssued, "Certificate issued")
+}
 
-	block, _ := pem.Decode(csr)
+func signCSR(cr *cmapi.CertificateRequest, keystore pki.Keystore) error {
 
-	crt, err := x509.ParseCertificate(block.Bytes)
+	b64csr := cr.Spec.Request
+
+	var csrBytes = make([]byte, base64.StdEncoding.DecodedLen(len(b64csr)))
+	var _, err = base64.StdEncoding.Decode(csrBytes, b64csr)
 	if err != nil {
-		return ctrl.Result{}, err
+		return fmt.Errorf("could not decode request: %v", err)
 	}
 
-	caCertificate, caPrivateKey, _, err := r.keystore.FindKeypair(fi.CertificateIDCA)
+	block, _ := pem.Decode(csrBytes)
 
-	signer := caCertificate.Certificate
-
-	// create client certificate template
-	template := x509.Certificate{
-		BasicConstraintsValid: true,
-		Signature:             crt.Signature,
-		SignatureAlgorithm:    crt.SignatureAlgorithm,
-
-		PublicKeyAlgorithm: crt.PublicKeyAlgorithm,
-		PublicKey:          crt.PublicKey,
-
-		SerialNumber: crt.SerialNumber,
-		Issuer:       signer.Subject,
-		Subject:      crt.Subject,
-		NotBefore:    time.Now(),
-		NotAfter:     time.Now().Add(7 * 24 * time.Hour),
-		KeyUsage:     x509.KeyUsageDigitalSignature,
-		ExtKeyUsage:  []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth},
-	}
-
-	signedCert, err := x509.CreateCertificate(rand.Reader, &template, signer, crt.PublicKey, caPrivateKey.Key)
+	csr, err := x509.ParseCertificateRequest(block.Bytes)
 	if err != nil {
-		return ctrl.Result{}, err
+		return fmt.Errorf("could not parse pem block: %v", err)
 	}
 
-	signedBytes := pem.EncodeToMemory(&pem.Block{Type: "CERTIFICATE", Bytes: signedCert})
+	issueReq := &pki.IssueCertRequest{
+		Signer:         fi.CertificateIDCA,
+		Type:           "client",
+		AlternateNames: csr.DNSNames,
+		PublicKey:      csr.PublicKey,
+		Subject:        csr.Subject,
+	}
+
+	signedCert, _, _, err := pki.IssueCert(issueReq, keystore)
+
+	signedBytes, err := signedCert.AsBytes()
+	if err != nil {
+		return fmt.Errorf("failed to encode signed cert: %v", err)
+	}
 
 	b64 := make([]byte, base64.StdEncoding.EncodedLen(len(signedBytes)))
 
 	cr.Status.Certificate = b64
-
-	return ctrl.Result{}, r.setStatus(ctx, cr, cmmeta.ConditionTrue, cmapi.CertificateRequestReasonIssued, "Certificate issued")
+	return nil
 
 }
 

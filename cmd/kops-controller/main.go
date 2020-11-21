@@ -22,6 +22,7 @@ import (
 	"io/ioutil"
 	"os"
 
+	certmanagerv1 "github.com/jetstack/cert-manager/pkg/apis/certmanager/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
@@ -29,6 +30,7 @@ import (
 	"k8s.io/klog/v2/klogr"
 	"k8s.io/kops/cmd/kops-controller/controllers"
 	"k8s.io/kops/cmd/kops-controller/pkg/config"
+	"k8s.io/kops/cmd/kops-controller/pkg/pki"
 	"k8s.io/kops/cmd/kops-controller/pkg/server"
 	"k8s.io/kops/pkg/nodeidentity"
 	nodeidentityaws "k8s.io/kops/pkg/nodeidentity/aws"
@@ -49,6 +51,7 @@ var (
 )
 
 func init() {
+	_ = certmanagerv1.AddToScheme(scheme)
 
 	// +kubebuilder:scaffold:scheme
 }
@@ -83,6 +86,11 @@ func main() {
 		}
 	}
 
+	keystore, err := pki.NewKeystore(opt.Server.CABasePath, opt.Server.SigningCAs)
+	if err != nil {
+		klog.Fatalf("failed to create keystore: %v", err)
+	}
+
 	ctrl.SetLogger(klogr.New())
 	if opt.Server != nil {
 		var verifier fi.Verifier
@@ -97,7 +105,7 @@ func main() {
 			klog.Fatalf("server cloud provider config not provided")
 		}
 
-		srv, err := server.NewServer(&opt, verifier)
+		srv, err := server.NewServer(&opt, verifier, keystore)
 		if err != nil {
 			setupLog.Error(err, "unable to create server")
 			os.Exit(1)
@@ -131,6 +139,16 @@ func main() {
 		os.Exit(1)
 	}
 	// +kubebuilder:scaffold:builder
+
+	certificateRequestController, err := controllers.NewCertificateRequestReconciler(mgr, keystore)
+	if err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "CertificateRequestController")
+		os.Exit(1)
+	}
+	if err := certificateRequestController.SetupWithManager(mgr); err != nil {
+		setupLog.Error(err, "unable to create controller", "controller", "CertificateRequestController")
+		os.Exit(1)
+	}
 
 	setupLog.Info("starting manager")
 	if err := mgr.Start(ctrl.SetupSignalHandler()); err != nil {
