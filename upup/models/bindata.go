@@ -28298,7 +28298,21 @@ rules:
   - configmaps
   verbs:
   - create
-
+- apiGroups:
+  - cert-manager.io
+  resources:
+  - certificaterequests
+  verbs:
+  - get
+  - watch
+  - list
+  - patch
+- apiGroups:
+  - cert-manager.io
+  resources:
+  - certificaterequests/status
+  verbs:
+  - update
 ---
 
 apiVersion: rbac.authorization.k8s.io/v1
@@ -28975,7 +28989,6 @@ spec:
     namespace: kube-system
   group: metrics.k8s.io
   version: v1beta1
-  insecureSkipTLSVerify: true
   groupPriorityMinimum: 100
   versionPriority: 100
 ---
@@ -29005,15 +29018,19 @@ spec:
     spec:
       serviceAccountName: metrics-server
       volumes:
-      # mount in tmp so we can safely use from-scratch images and/or read-only containers
-      - name: tmp-dir
-        emptyDir: {}
+      - emptyDir: {}
+        name: tmp-dir
+      - name: serving-certificate
+        secret:
+          defaultMode: 420
+          secretName: metrics-server-serving-cert
       containers:
       - name: metrics-server
         image: {{ or .MetricsServer.Image "k8s.gcr.io/metrics-server/metrics-server:v0.3.7" }}
         imagePullPolicy: IfNotPresent
-        args:
-          - --cert-dir=/tmp
+        args: 
+          - --tls-cert-file=/srv/serving-certificate/tls.crt
+          - --tls-private-key-file=/srv/serving-certificate/tls.key
           - --secure-port=4443
         {{ if not UseKopsControllerForNodeBootstrap }}
           - --kubelet-insecure-tls
@@ -29027,8 +29044,11 @@ spec:
           runAsNonRoot: true
           runAsUser: 1000
         volumeMounts:
-        - name: tmp-dir
-          mountPath: /tmp
+        - emptyDir: {}
+          name: tmp-dir     
+        - name: serving-certificate
+          mountPath: /srv/serving-certificate
+          readOnly: true
 ---
 apiVersion: v1
 kind: Service
@@ -29088,7 +29108,26 @@ spec:
   minAvailable: 1
   selector:
     matchLabels:
-      k8s-app: metrics-server`)
+      k8s-app: metrics-server
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  labels:
+    k8s-app: metrics-server
+  name: metrics-server-serving-cert
+  namespace: kube-system
+spec:
+  dnsNames:
+    - metrics-server.kube-system.svc
+    - metrics-server.kube-system.svc.cluster.local
+  usages:
+    - server auth
+  issuerRef:
+    kind: Issuer
+    name: kops-controller
+    group: kops.k8s.io
+  secretName: metrics-server-serving-cert`)
 
 func cloudupResourcesAddonsMetricsServerAddonsK8sIoK8s111YamlTemplateBytes() ([]byte, error) {
 	return _cloudupResourcesAddonsMetricsServerAddonsK8sIoK8s111YamlTemplate, nil
