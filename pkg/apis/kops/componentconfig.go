@@ -830,6 +830,16 @@ type MetricsServerConfig struct {
 	Image *string `json:"image,omitempty"`
 }
 
+// CertManagerConfig determines the cert manager configuration.
+type CertManagerConfig struct {
+	// Enabled enables the cert manager.
+	// Default: false
+	Enabled *bool `json:"enabled,omitempty"`
+	// Image is the docker container used.
+	// Default: the latest supported image for the specified kubernetes version.
+	Image *string `json:"image,omitempty"`
+}
+
 // HasAdmissionController checks if a specific admission controller is enabled
 func (c *KubeAPIServerConfig) HasAdmissionController(name string) bool {
 	for _, x := range c.AdmissionControl {
