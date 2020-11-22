@@ -113,7 +113,7 @@ func signCSR(cr *cmapi.CertificateRequest, keystore pki.Keystore) error {
 		Subject:        csr.Subject,
 	}
 
-	signedCert, _, _, err := pki.IssueCert(issueReq, keystore)
+	signedCert, _, caCertificate, err := pki.IssueCert(issueReq, keystore)
 	if err != nil {
 		return fmt.Errorf("failed to issue cert: %v", err)
 	}
@@ -123,7 +123,13 @@ func signCSR(cr *cmapi.CertificateRequest, keystore pki.Keystore) error {
 		return fmt.Errorf("failed to encode signed cert: %v", err)
 	}
 
+	caBytes, err := caCertificate.AsBytes()
+	if err != nil {
+		return fmt.Errorf("failed to encode caCert: %v", err)
+	}
+
 	cr.Status.Certificate = signedBytes
+	cr.Status.CA = caBytes
 	return nil
 
 }
