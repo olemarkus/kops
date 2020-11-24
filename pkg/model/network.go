@@ -206,7 +206,9 @@ func (b *NetworkModelBuilder) Build(c *fi.ModelBuilderContext) error {
 			switch subnetSpec.Type {
 			case kops.SubnetTypePublic, kops.SubnetTypeUtility:
 				tags[aws.TagNameSubnetPublicELB] = "1"
-
+				if b.Cluster.Spec.Topology.Nodes == kops.TopologyPublic {
+					tags[aws.TagNameSubnetInternalELB] = "1"
+				}
 			case kops.SubnetTypePrivate:
 				tags[aws.TagNameSubnetInternalELB] = "1"
 
