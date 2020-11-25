@@ -575,13 +575,7 @@ func cloudupResourcesAddonsAuthenticationKopeIoK8s112Yaml() (*asset, error) {
 	return a, nil
 }
 
-var _cloudupResourcesAddonsAwsLoadbalancerControllerAddonsK8sIoK8s19YamlTemplate = []byte(`{{/*
-Generate certificates for webhook
-*/}}
-{{- $ca := genCA "aws-load-balancer-controller-ca" 3650 -}}
-{{- $altNames := list "aws-load-balancer-controller-webhook.kube-system" "aws-load-balancer-controller-webhook.kube-system.svc" -}}
-{{- $cert := genSignedCert "aws-load-balancer-controller" nil $altNames 3650 $ca -}}
----
+var _cloudupResourcesAddonsAwsLoadbalancerControllerAddonsK8sIoK8s19YamlTemplate = []byte(`---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -777,7 +771,6 @@ metadata:
   name: aws-load-balancer-controller-webhook
 webhooks:
   - clientConfig:
-      caBundle: {{ $ca.Cert | b64enc }}
       service:
         name: aws-load-balancer-controller-webhook
         namespace: kube-system
@@ -801,7 +794,6 @@ webhooks:
           - pods
     sideEffects: None
   - clientConfig:
-      caBundle: {{ $ca.Cert | b64enc }}
       service:
         name: aws-load-balancer-controller-webhook
         namespace: kube-system
@@ -1059,7 +1051,7 @@ spec:
             - --enable-waf=false
             - --enable-wafv2=false
             - --enable-shield=false
-          image: amazon/aws-alb-ingress-controller:v2.0.0
+          image: amazon/aws-alb-ingress-controller:v2.0.1
           livenessProbe:
             failureThreshold: 2
             httpGet:
@@ -1130,18 +1122,24 @@ webhooks:
           - targetgroupbindings
     sideEffects: None
 ---
-apiVersion: v1
-kind: Secret
+apiVersion: cert-manager.io/v1
+kind: Certificate
 metadata:
-  name: aws-load-balancer-controller-tls
-  namespace: kube-system
   labels:
     k8s-app: aws-load-balancer-controller
-type: kubernetes.io/tls
-data:
-  ca.crt: {{ $ca.Cert | b64enc }}
-  tls.crt: {{ $cert.Cert | b64enc }}
-  tls.key: {{ $cert.Key | b64enc }}`)
+  name: aws-load-balancer-controller-tls
+  namespace: kube-system
+spec:
+  dnsNames:
+    - aws-load-balancer-controller-webhook.kube-system.svc
+    - aws-load-balancer-controller-webhook.kube-system.svc.cluster.local
+  usages:
+    - server auth
+  issuerRef:
+    kind: Issuer
+    name: kops-controller
+    group: kops.k8s.io
+  secretName: aws-load-balancer-controller-tls`)
 
 func cloudupResourcesAddonsAwsLoadbalancerControllerAddonsK8sIoK8s19YamlTemplateBytes() ([]byte, error) {
 	return _cloudupResourcesAddonsAwsLoadbalancerControllerAddonsK8sIoK8s19YamlTemplate, nil
@@ -29655,7 +29653,7 @@ spec:
       - args:
         - --cert-dir=/tmp
         - --secure-port=4443
-        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+        - --kubelet-preferred-address-types=Hostname
         - --kubelet-use-node-status-port
         {{ if not UseKopsControllerForNodeBootstrap }}
         - --kubelet-insecure-tls

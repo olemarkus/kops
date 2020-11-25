@@ -84,12 +84,6 @@ func (tf *TemplateFunctions) AddTo(dest template.FuncMap, secretStore fi.SecretS
 	dest["indent"] = sprigTxtFuncMap["indent"]
 	dest["contains"] = sprigTxtFuncMap["contains"]
 
-	sprigGenericFuncMap := sprig.GenericFuncMap()
-	dest["list"] = sprigGenericFuncMap["list"]
-	dest["genCA"] = sprigGenericFuncMap["genCA"]
-	dest["genSignedCert"] = sprigGenericFuncMap["genSignedCert"]
-	dest["b64enc"] = sprigGenericFuncMap["b64enc"]
-
 	dest["ClusterName"] = tf.ClusterName
 	dest["WithDefaultBool"] = func(v *bool, defaultValue bool) bool {
 		if v != nil {
