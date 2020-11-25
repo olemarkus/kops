@@ -130,11 +130,11 @@ spec:
     spec:
       containers:
       - args:
-        - --cert-dir=/tmp
         - --secure-port=4443
         - --kubelet-preferred-address-types=Hostname
         - --kubelet-use-node-status-port
-        - --
+        - --tls-cert-file=/srv/serving-cert/tls.crt
+        - --tls-private-key-file=/srv/serving-cert/tls.key
         {{ if not UseKopsControllerForNodeBootstrap }}
         - --kubelet-insecure-tls
         {{ end }} 
@@ -166,7 +166,7 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: tmp-dir
-        - mountPath: /srv/servicing-cert/
+        - mountPath: /srv/serving-cert/
           name: cert
           readOnly: true
       nodeSelector:

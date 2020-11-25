@@ -524,6 +524,8 @@ spec:
 apiVersion: admissionregistration.k8s.io/v1beta1
 kind: ValidatingWebhookConfiguration
 metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: kube-system/aws-load-balancer-controller-tls
   labels:
     app.kubernetes.io/name: aws-load-balancer-controller
   name: aws-load-balancer-controller

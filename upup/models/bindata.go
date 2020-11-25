@@ -1101,6 +1101,8 @@ spec:
 apiVersion: admissionregistration.k8s.io/v1beta1
 kind: ValidatingWebhookConfiguration
 metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: kube-system/aws-load-balancer-controller-tls
   labels:
     app.kubernetes.io/name: aws-load-balancer-controller
   name: aws-load-balancer-controller
@@ -27489,7 +27491,7 @@ spec:
         - --secure-port=10250
         - --dynamic-serving-ca-secret-namespace=$(POD_NAMESPACE)
         - --dynamic-serving-ca-secret-name=cert-manager-webhook-ca
-        - --dynamic-serving-dns-names=cert-manager-webhook,cert-manager-webhook.cert-manager,cert-manager-webhook.cert-manager.svc
+        - --dynamic-serving-dns-names=cert-manager-webhook,cert-manager-webhook.kube-system,cert-manager-webhook.kube-system.svc
         env:
         - name: POD_NAMESPACE
           valueFrom:
@@ -29801,11 +29803,11 @@ spec:
     spec:
       containers:
       - args:
-        - --cert-dir=/tmp
         - --secure-port=4443
         - --kubelet-preferred-address-types=Hostname
         - --kubelet-use-node-status-port
-        - --
+        - --tls-cert-file=/srv/serving-cert/tls.crt
+        - --tls-private-key-file=/srv/serving-cert/tls.key
         {{ if not UseKopsControllerForNodeBootstrap }}
         - --kubelet-insecure-tls
         {{ end }} 
@@ -29837,7 +29839,7 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: tmp-dir
-        - mountPath: /srv/servicing-cert/
+        - mountPath: /srv/serving-cert/
           name: cert
           readOnly: true
       nodeSelector:
