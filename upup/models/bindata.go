@@ -766,6 +766,8 @@ status:
 apiVersion: admissionregistration.k8s.io/v1beta1
 kind: MutatingWebhookConfiguration
 metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: kube-system/aws-load-balancer-controller-webhook-tls
   labels:
     app.kubernetes.io/name: aws-load-balancer-controller
   name: aws-load-balancer-controller-webhook
@@ -1156,7 +1158,19 @@ func cloudupResourcesAddonsAwsLoadbalancerControllerAddonsK8sIoK8s19YamlTemplate
 	return a, nil
 }
 
-var _cloudupResourcesAddonsCertmanagerIoK8s116YamlTemplate = []byte(`# sourced from https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.yaml
+var _cloudupResourcesAddonsCertmanagerIoK8s116YamlTemplate = []byte(`# Copyright  The Jetstack cert-manager contributors.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -2066,6 +2080,10 @@ spec:
                 items:
                   type: string
                 type: array
+              encodeUsagesInRequest:
+                description: EncodeUsagesInRequest controls whether key usages should
+                  be present in the CertificateRequest
+                type: boolean
               ipAddresses:
                 description: IPAddresses is a list of IP address subjectAltNames to
                   be set on the Certificate.
@@ -2474,6 +2492,10 @@ spec:
                 items:
                   type: string
                 type: array
+              encodeUsagesInRequest:
+                description: EncodeUsagesInRequest controls whether key usages should
+                  be present in the CertificateRequest
+                type: boolean
               ipAddresses:
                 description: IPAddresses is a list of IP address subjectAltNames to
                   be set on the Certificate.
@@ -2881,6 +2903,10 @@ spec:
                 items:
                   type: string
                 type: array
+              encodeUsagesInRequest:
+                description: EncodeUsagesInRequest controls whether key usages should
+                  be present in the CertificateRequest
+                type: boolean
               ipAddresses:
                 description: IPAddresses is a list of IP address subjectAltNames to
                   be set on the Certificate.
@@ -3290,6 +3316,10 @@ spec:
                 items:
                   type: string
                 type: array
+              encodeUsagesInRequest:
+                description: EncodeUsagesInRequest controls whether key usages should
+                  be present in the CertificateRequest
+                type: boolean
               ipAddresses:
                 description: IPAddresses is a list of IP address subjectAltNames to
                   be set on the Certificate.
@@ -9748,6 +9778,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -11720,6 +11757,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -13692,6 +13736,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -15666,6 +15717,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -17676,6 +17734,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -19647,6 +19712,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -21618,6 +21690,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -23591,6 +23670,13 @@ spec:
                       notification emails. This field may be updated after the account
                       is initially registered.
                     type: string
+                  enableDurationFeature:
+                    description: Enables requesting a Not After date on certificates
+                      that matches the duration of the certificate. This is not supported
+                      by all ACME servers like Let's Encrypt. If set to true when
+                      the ACME server does not support it it will create an error
+                      on the Order. Defaults to false.
+                    type: boolean
                   externalAccountBinding:
                     description: ExternalAccountBinding is a reference to a CA external
                       account of the ACME server. If set, upon registration cert-manager
@@ -25585,9 +25671,9 @@ spec:
             properties:
               commonName:
                 description: CommonName is the common name as specified on the DER
-                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `.
-                  This field must match the corresponding field on the DER encoded
-                  CSR.
+                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `
+                  or ` + "`" + `ipAddresses` + "`" + `. This field must match the corresponding field
+                  on the DER encoded CSR.
                 type: string
               csr:
                 description: Certificate signing request bytes in DER encoding. This
@@ -25599,6 +25685,18 @@ spec:
                 description: DNSNames is a list of DNS names that should be included
                   as part of the Order validation process. This field must match the
                   corresponding field on the DER encoded CSR.
+                items:
+                  type: string
+                type: array
+              duration:
+                description: Duration is the duration for the not after date for the
+                  requested certificate. this is set on order creation as pe the ACME
+                  spec.
+                type: string
+              ipAddresses:
+                description: IPAddresses is a list of IP addresses that should be
+                  included as part of the Order validation process. This field must
+                  match the corresponding field on the DER encoded CSR.
                 items:
                   type: string
                 type: array
@@ -25623,7 +25721,6 @@ spec:
                 type: object
             required:
             - csr
-            - dnsNames
             - issuerRef
             type: object
           status:
@@ -25793,9 +25890,9 @@ spec:
             properties:
               commonName:
                 description: CommonName is the common name as specified on the DER
-                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `.
-                  This field must match the corresponding field on the DER encoded
-                  CSR.
+                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `
+                  or ` + "`" + `ipAddresses` + "`" + `. This field must match the corresponding field
+                  on the DER encoded CSR.
                 type: string
               csr:
                 description: Certificate signing request bytes in DER encoding. This
@@ -25807,6 +25904,18 @@ spec:
                 description: DNSNames is a list of DNS names that should be included
                   as part of the Order validation process. This field must match the
                   corresponding field on the DER encoded CSR.
+                items:
+                  type: string
+                type: array
+              duration:
+                description: Duration is the duration for the not after date for the
+                  requested certificate. this is set on order creation as pe the ACME
+                  spec.
+                type: string
+              ipAddresses:
+                description: IPAddresses is a list of IP addresses that should be
+                  included as part of the Order validation process. This field must
+                  match the corresponding field on the DER encoded CSR.
                 items:
                   type: string
                 type: array
@@ -25831,7 +25940,6 @@ spec:
                 type: object
             required:
             - csr
-            - dnsNames
             - issuerRef
             type: object
           status:
@@ -26001,14 +26109,26 @@ spec:
             properties:
               commonName:
                 description: CommonName is the common name as specified on the DER
-                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `.
-                  This field must match the corresponding field on the DER encoded
-                  CSR.
+                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `
+                  or ` + "`" + `ipAddresses` + "`" + `. This field must match the corresponding field
+                  on the DER encoded CSR.
                 type: string
               dnsNames:
                 description: DNSNames is a list of DNS names that should be included
                   as part of the Order validation process. This field must match the
                   corresponding field on the DER encoded CSR.
+                items:
+                  type: string
+                type: array
+              duration:
+                description: Duration is the duration for the not after date for the
+                  requested certificate. this is set on order creation as pe the ACME
+                  spec.
+                type: string
+              ipAddresses:
+                description: IPAddresses is a list of IP addresses that should be
+                  included as part of the Order validation process. This field must
+                  match the corresponding field on the DER encoded CSR.
                 items:
                   type: string
                 type: array
@@ -26038,7 +26158,6 @@ spec:
                 format: byte
                 type: string
             required:
-            - dnsNames
             - issuerRef
             - request
             type: object
@@ -26210,14 +26329,26 @@ spec:
             properties:
               commonName:
                 description: CommonName is the common name as specified on the DER
-                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `.
-                  This field must match the corresponding field on the DER encoded
-                  CSR.
+                  encoded CSR. If specified, this value must also be present in ` + "`" + `dnsNames` + "`" + `
+                  or ` + "`" + `ipAddresses` + "`" + `. This field must match the corresponding field
+                  on the DER encoded CSR.
                 type: string
               dnsNames:
                 description: DNSNames is a list of DNS names that should be included
                   as part of the Order validation process. This field must match the
                   corresponding field on the DER encoded CSR.
+                items:
+                  type: string
+                type: array
+              duration:
+                description: Duration is the duration for the not after date for the
+                  requested certificate. this is set on order creation as pe the ACME
+                  spec.
+                type: string
+              ipAddresses:
+                description: IPAddresses is a list of IP addresses that should be
+                  included as part of the Order validation process. This field must
+                  match the corresponding field on the DER encoded CSR.
                 items:
                   type: string
                 type: array
@@ -26247,7 +26378,6 @@ spec:
                 format: byte
                 type: string
             required:
-            - dnsNames
             - issuerRef
             - request
             type: object
@@ -26387,11 +26517,6 @@ status:
   storedVersions: []
 ---
 apiVersion: v1
-kind: Namespace
-metadata:
-  name: cert-manager
----
-apiVersion: v1
 kind: ServiceAccount
 metadata:
   labels:
@@ -26400,7 +26525,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cainjector
   name: cert-manager-cainjector
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -26411,7 +26536,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cert-manager
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -26422,7 +26547,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: webhook
   name: cert-manager-webhook
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -26515,7 +26640,7 @@ rules:
   verbs:
   - update
 - apiGroups:
-  - cert-manager.io
+  - cert-manager.icert-manager-cainjector-6d59c8d4f7-zqjq4o
   resources:
   - issuers
   verbs:
@@ -26882,6 +27007,15 @@ rules:
   - get
   - list
   - watch
+- apiGroups:
+  - acme.cert-manager.io
+  resources:
+  - challenges
+  - orders
+  verbs:
+  - get
+  - list
+  - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -26907,6 +27041,15 @@ rules:
   - deletecollection
   - patch
   - update
+- apiGroups:
+  - acme.cert-manager.io
+  resources:
+  - challenges
+  - orders
+  verbs:
+  - get
+  - list
+  - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -26924,7 +27067,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager-cainjector
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -26942,7 +27085,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -26960,7 +27103,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -26978,7 +27121,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -26996,7 +27139,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -27014,7 +27157,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -27032,7 +27175,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -27100,7 +27243,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: webhook
   name: cert-manager-webhook:dynamic-serving
-  namespace: cert-manager
+  namespace: kube-system
 rules:
 - apiGroups:
   - ""
@@ -27137,7 +27280,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: cert-manager-cainjector
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -27157,7 +27300,7 @@ subjects:
 - apiGroup: ""
   kind: ServiceAccount
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -27168,7 +27311,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: webhook
   name: cert-manager-webhook:dynamic-serving
-  namespace: cert-manager
+  namespace: kube-system
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -27177,7 +27320,7 @@ subjects:
 - apiGroup: ""
   kind: ServiceAccount
   name: cert-manager-webhook
-  namespace: cert-manager
+  namespace: kube-system
 ---
 apiVersion: v1
 kind: Service
@@ -27188,7 +27331,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cert-manager
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 spec:
   ports:
   - port: 9402
@@ -27209,7 +27352,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: webhook
   name: cert-manager-webhook
-  namespace: cert-manager
+  namespace: kube-system
 spec:
   ports:
   - name: https
@@ -27230,7 +27373,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cainjector
   name: cert-manager-cainjector
-  namespace: cert-manager
+  namespace: kube-system
 spec:
   replicas: 1
   selector:
@@ -27255,7 +27398,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: quay.io/jetstack/cert-manager-cainjector:v1.0.4
+        image: quay.io/jetstack/cert-manager-cainjector:v1.1.0
         imagePullPolicy: IfNotPresent
         name: cert-manager
         resources: {}
@@ -27270,7 +27413,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: cert-manager
   name: cert-manager
-  namespace: cert-manager
+  namespace: kube-system
 spec:
   replicas: 1
   selector:
@@ -27300,14 +27443,20 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: quay.io/jetstack/cert-manager-controller:v1.0.4
+        image: quay.io/jetstack/cert-manager-controller:v1.1.0
         imagePullPolicy: IfNotPresent
         name: cert-manager
         ports:
         - containerPort: 9402
           protocol: TCP
         resources: {}
+      nodeSelector:
+        node-role.kubernetes.io/master: ""
       serviceAccountName: cert-manager
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+        
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27318,7 +27467,7 @@ metadata:
     app.kubernetes.io/instance: cert-manager
     app.kubernetes.io/name: webhook
   name: cert-manager-webhook
-  namespace: cert-manager
+  namespace: kube-system
 spec:
   replicas: 1
   selector:
@@ -27346,7 +27495,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
-        image: quay.io/jetstack/cert-manager-webhook:v1.0.4
+        image: quay.io/jetstack/cert-manager-webhook:v1.1.0
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -27393,7 +27542,7 @@ webhooks:
   clientConfig:
     service:
       name: cert-manager-webhook
-      namespace: cert-manager
+      namespace: kube-system
       path: /mutate
   failurePolicy: Fail
   name: webhook.cert-manager.io
@@ -27409,6 +27558,7 @@ webhooks:
     resources:
     - '*/*'
   sideEffects: None
+  timeoutSeconds: 10
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
@@ -27428,7 +27578,7 @@ webhooks:
   clientConfig:
     service:
       name: cert-manager-webhook
-      namespace: cert-manager
+      namespace: kube-system
       path: /validate
   failurePolicy: Fail
   name: webhook.cert-manager.io
@@ -27454,7 +27604,7 @@ webhooks:
     resources:
     - '*/*'
   sideEffects: None
-
+  timeoutSeconds: 10
 `)
 
 func cloudupResourcesAddonsCertmanagerIoK8s116YamlTemplateBytes() ([]byte, error) {
@@ -29655,6 +29805,7 @@ spec:
         - --secure-port=4443
         - --kubelet-preferred-address-types=Hostname
         - --kubelet-use-node-status-port
+        - --
         {{ if not UseKopsControllerForNodeBootstrap }}
         - --kubelet-insecure-tls
         {{ end }} 
@@ -29686,6 +29837,9 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: tmp-dir
+        - mountPath: /srv/servicing-cert/
+          name: cert
+          readOnly: true
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -29693,17 +29847,21 @@ spec:
       volumes:
       - emptyDir: {}
         name: tmp-dir
+      - name: cert
+        secret:
+          secretName: metrics-server-serving-cert
 ---
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: kube-system/metrics-server-serving-cert
   labels:
     k8s-app: metrics-server
   name: v1beta1.metrics.k8s.io
 spec:
   group: metrics.k8s.io
   groupPriorityMinimum: 100
-  insecureSkipTLSVerify: true
   service:
     name: metrics-server
     namespace: kube-system

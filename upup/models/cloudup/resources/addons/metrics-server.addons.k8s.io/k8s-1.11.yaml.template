@@ -134,6 +134,7 @@ spec:
         - --secure-port=4443
         - --kubelet-preferred-address-types=Hostname
         - --kubelet-use-node-status-port
+        - --
         {{ if not UseKopsControllerForNodeBootstrap }}
         - --kubelet-insecure-tls
         {{ end }} 
@@ -165,6 +166,9 @@ spec:
         volumeMounts:
         - mountPath: /tmp
           name: tmp-dir
+        - mountPath: /srv/servicing-cert/
+          name: cert
+          readOnly: true
       nodeSelector:
         kubernetes.io/os: linux
       priorityClassName: system-cluster-critical
@@ -172,17 +176,21 @@ spec:
       volumes:
       - emptyDir: {}
         name: tmp-dir
+      - name: cert
+        secret:
+          secretName: metrics-server-serving-cert
 ---
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
+  annotations:
+    cert-manager.io/inject-ca-from: kube-system/metrics-server-serving-cert
   labels:
     k8s-app: metrics-server
   name: v1beta1.metrics.k8s.io
 spec:
   group: metrics.k8s.io
   groupPriorityMinimum: 100
-  insecureSkipTLSVerify: true
   service:
     name: metrics-server
     namespace: kube-system
