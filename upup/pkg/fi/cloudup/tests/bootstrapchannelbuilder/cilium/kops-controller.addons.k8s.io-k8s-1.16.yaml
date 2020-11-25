@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   config.yaml: |
-    {"cloud":"aws","configBase":"memfs://clusters.example.com/minimal.example.com"}
+    {"cloud":"aws","configBase":"memfs://clusters.example.com/minimal.example.com","secrets":null}
 kind: ConfigMap
 metadata:
   labels:
@@ -156,6 +156,21 @@ rules:
   - configmaps
   verbs:
   - create
+- apiGroups:
+  - cert-manager.io
+  resources:
+  - certificaterequests
+  verbs:
+  - get
+  - watch
+  - list
+  - patch
+- apiGroups:
+  - cert-manager.io
+  resources:
+  - certificaterequests/status
+  verbs:
+  - update
 
 ---
 
