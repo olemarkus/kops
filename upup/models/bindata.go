@@ -1176,7 +1176,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -1189,7 +1189,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -1981,7 +1981,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -1994,7 +1994,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -3670,7 +3670,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -3683,7 +3683,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -9695,7 +9695,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -9708,7 +9708,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -17652,7 +17652,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -17665,7 +17665,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -25605,7 +25605,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: cert-manager
     app.kubernetes.io/instance: cert-manager
@@ -25618,7 +25618,7 @@ spec:
       clientConfig:
         service:
           name: cert-manager-webhook
-          namespace: cert-manager
+          namespace: kube-system
           path: /convert
       conversionReviewVersions:
       - v1
@@ -26640,7 +26640,7 @@ rules:
   verbs:
   - update
 - apiGroups:
-  - cert-manager.icert-manager-cainjector-6d59c8d4f7-zqjq4o
+  - cert-manager.io
   resources:
   - issuers
   verbs:
@@ -27528,7 +27528,7 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: webhook
     app.kubernetes.io/component: webhook
@@ -27564,7 +27564,7 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   annotations:
-    cert-manager.io/inject-ca-from-secret: cert-manager/cert-manager-webhook-ca
+    cert-manager.io/inject-ca-from-secret: kube-system/cert-manager-webhook-ca
   labels:
     app: webhook
     app.kubernetes.io/component: webhook
