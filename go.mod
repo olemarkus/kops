@@ -91,13 +91,13 @@ require (
 	github.com/spotinst/spotinst-sdk-go v1.58.0
 	github.com/stretchr/testify v1.6.1
 	github.com/urfave/cli v1.22.2
-	github.com/weaveworks/mesh v0.0.0-20170419100114-1f158d31de55
+	github.com/weaveworks/mesh v0.0.0-20191105120815-58dbcc3e8e63
 	github.com/zclconf/go-cty v1.3.1
 	go.uber.org/zap v1.10.0
-	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0
+	golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9
 	golang.org/x/net v0.0.0-20201110031124-69a78807bb2b
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
-	golang.org/x/sys v0.0.0-20201112073958-5cba982894dd
+	golang.org/x/sys v0.0.0-20201214210602-f9fddec55a1e
 	golang.org/x/tools v0.0.0-20200626171337-aa94e735be7f // indirect
 	google.golang.org/api v0.22.0
 	gopkg.in/gcfg.v1 v1.2.3
