@@ -478,14 +478,13 @@ func (b *FirewallModelBuilder) getExistingRulesFromCloud() ([]*awstasks.Security
 		return nil, err
 	}
 	for _, sg := range sgs {
-
 		name := fi.StringValue(sg.GroupName)
 
 		klog.V(4).Infof("found group %s, %s", name, fi.StringValue(sg.GroupId))
-		// sec groups we don't know anything about must be ignored as we cannot make tasks of them
-		// and we assume that if the SG ends with the clustername it is owner by kOps.
+		// We assume that if the security group name ends with the cluster name it is owned by kOps.
+		// We must ignore security groups about which we don't know anything, as we cannot make tasks of them.
 		if !strings.HasSuffix(name, "."+b.ClusterName()) {
-			klog.V(4).Infof("skipping group %s", name)
+			klog.V(4).Infof("skipping EC2 security group %q", name)
 			continue
 		}
 		for _, rule := range sg.IpPermissions {
@@ -496,7 +495,6 @@ func (b *FirewallModelBuilder) getExistingRulesFromCloud() ([]*awstasks.Security
 			ts := b.createRulesFromPermissions(sg, rule, true, sgs)
 			tasks = append(tasks, ts...)
 		}
-
 	}
 	return tasks, nil
 }
@@ -512,7 +510,7 @@ func (b *FirewallModelBuilder) getClusterSecurityGroups() (map[string]*ec2.Secur
 
 	response, err := b.Cloud.EC2().DescribeSecurityGroups(request)
 	if err != nil {
-		return nil, fmt.Errorf("error listing SecurityGroup: %v", err)
+		return nil, fmt.Errorf("error listing EC2 security groups: %w", err)
 	}
 
 	for _, sg := range response.SecurityGroups {
@@ -524,7 +522,6 @@ func (b *FirewallModelBuilder) getClusterSecurityGroups() (map[string]*ec2.Secur
 
 func (b *FirewallModelBuilder) createRulesFromPermissions(sg *ec2.SecurityGroup, rule *ec2.IpPermission, egress bool, sgs map[string]*ec2.SecurityGroup) (tasks []*awstasks.SecurityGroupRule) {
 	for _, cidr := range rule.IpRanges {
-
 		// CIDRs with description starting with kubernetes.io are owned by CCM
 		if strings.HasPrefix(fi.StringValue(cidr.Description), "kubernetes.io") {
 			continue
@@ -541,10 +538,10 @@ func (b *FirewallModelBuilder) createRulesFromPermissions(sg *ec2.SecurityGroup,
 		rule.Egress = fi.Bool(egress)
 		pGroup := sgs[fi.StringValue(p.GroupId)]
 		groupName := fi.StringValue(pGroup.GroupName)
-		// sec groups we don't know anything about must be ignored as we cannot make tasks of them
-		// and we assume that if the SG ends with the clustername it is owner by kOps.
+		// We assume that if the security group name ends with the cluster name it is owned by kOps.
+		// We must ignore security groups about which we don't know anything, as we cannot make tasks of them.
 		if !strings.HasSuffix(groupName, b.ClusterName()) {
-			klog.V(4).Infof("Skipping rule %s, target group not owned by kops", groupName)
+			klog.V(4).Infof("Skipping rule; target EC2 security group %q not owned by kOps", groupName)
 			continue
 		}
 		source := &awstasks.SecurityGroup{Name: pGroup.GroupName}
