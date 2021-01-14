@@ -415,11 +415,11 @@ func (e *SecurityGroupRule) FindDeletions(c *fi.Context) ([]fi.Deletion, error) 
 		return nil, nil
 	}
 
-	return []fi.Deletion{&deleteSecurityGroupRule{
-		groupID:    e.SecurityGroup.ID,
-		permission: e.createIpPermission(),
-		egress:     fi.BoolValue(e.Egress),
-	},
+	return []fi.Deletion{
+		&deleteSecurityGroupRule{
+			groupID:    e.SecurityGroup.ID,
+			permission: e.createIpPermission(),
+			egress:     fi.BoolValue(e.Egress),
+		},
 	}, nil
-
 }
