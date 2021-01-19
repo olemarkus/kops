@@ -289,7 +289,7 @@ func (d *deleteSecurityGroupRule) Delete(t fi.Target) error {
 			klog.V(2).Infof("Calling EC2 RevokeSecurityGroupEgress")
 			_, err := awsTarget.Cloud.EC2().RevokeSecurityGroupEgress(request)
 			if err != nil {
-				return fmt.Errorf("error revoking SecurityGroupEgress: %v", err)
+				return fmt.Errorf("error revoking security group egress: %w", err)
 			}
 		} else {
 			request := &ec2.RevokeSecurityGroupIngressInput{
@@ -300,7 +300,7 @@ func (d *deleteSecurityGroupRule) Delete(t fi.Target) error {
 			klog.V(2).Infof("Calling EC2 RevokeSecurityGroupIngress")
 			_, err := awsTarget.Cloud.EC2().RevokeSecurityGroupIngress(request)
 			if err != nil {
-				return fmt.Errorf("error revoking SecurityGroupIngress: %v", err)
+				return fmt.Errorf("error revoking security group ingress: %w", err)
 			}
 		}
 	}

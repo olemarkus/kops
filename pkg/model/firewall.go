@@ -46,7 +46,6 @@ type FirewallModelBuilder struct {
 var _ fi.ModelBuilder = &FirewallModelBuilder{}
 
 func (b *FirewallModelBuilder) Build(c *fi.ModelBuilderContext) error {
-
 	tasks, err := b.getExistingRulesFromCloud()
 	if err != nil {
 		return err
@@ -54,7 +53,7 @@ func (b *FirewallModelBuilder) Build(c *fi.ModelBuilderContext) error {
 
 	finalRules := make(map[string]*awstasks.SecurityGroupRule)
 	for _, task := range tasks {
-		klog.V(4).Infof("found rule %s", fi.StringValue(task.Name))
+		klog.V(4).Infof("found rule %q", fi.StringValue(task.Name))
 		finalRules[fi.StringValue(task.Name)] = task
 	}
 
@@ -436,7 +435,7 @@ func (b *KopsModelContext) AddDirectionalGroupRule(c *fi.ModelBuilderContext, t 
 	t.Name = fi.String(name)
 	t.Delete = fi.Bool(false)
 
-	klog.V(4).Infof("Adding rule %v", name)
+	klog.V(4).Infof("Adding rule %q", name)
 
 }
 
@@ -480,7 +479,7 @@ func (b *FirewallModelBuilder) getExistingRulesFromCloud() ([]*awstasks.Security
 	for _, sg := range sgs {
 		name := fi.StringValue(sg.GroupName)
 
-		klog.V(4).Infof("found group %s, %s", name, fi.StringValue(sg.GroupId))
+		klog.V(4).Infof("found group %q with id %s", name, fi.StringValue(sg.GroupId))
 		// We assume that if the security group name ends with the cluster name it is owned by kOps.
 		// We must ignore security groups about which we don't know anything, as we cannot make tasks of them.
 		if !strings.HasSuffix(name, "."+b.ClusterName()) {
