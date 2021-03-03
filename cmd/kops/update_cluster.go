@@ -334,7 +334,11 @@ func RunUpdateCluster(ctx context.Context, f *util.Factory, clusterName string, 
 		}
 
 		if c.admin == 0 && c.user == "" {
-			klog.Warningf("Exported kubecfg with no user authentication; use --admin, --user or --auth-plugin flags with `kops export kubecfg`")
+			fmt.Fprintln(out, "")
+			fmt.Fprintln(out, "")
+			fmt.Fprintln(out, "Exported kubecfg with no user authentication.")
+			fmt.Fprintln(out, "You may want to run `kops export kubecfg with either --admin, --user or --auth-plugin.")
+			fmt.Fprintln(out, "")
 		}
 	}
 
