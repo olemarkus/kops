@@ -210,6 +210,9 @@ func precreateDNS(ctx context.Context, cluster *kops.Cluster, cloud fi.Cloud) er
 			changeset.Add(rrs.New(dnsHostname, []string{PlaceholderIP}, PlaceholderTTLDigitialOcean, rrstype.A))
 		} else {
 			changeset.Add(rrs.New(dnsHostname, []string{PlaceholderIP}, PlaceholderTTL, rrstype.A))
+			if featureflag.EnableExternalDNS.Enabled() {
+				changeset.Add(rrs.New(dnsHostname, []string{"\"heritage=external-dns,external-dns/owner=kops-test.kops-dev.srsandbox.io\""}, PlaceholderTTL, rrstype.TXT))
+			}
 		}
 
 		created = append(created, dnsHostname)
