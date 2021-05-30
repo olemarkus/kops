@@ -18,6 +18,7 @@ package components
 
 import (
 	"k8s.io/kops/pkg/apis/kops"
+	"k8s.io/kops/upup/pkg/fi"
 	"k8s.io/kops/upup/pkg/fi/loader"
 )
 
@@ -42,6 +43,10 @@ func (b *DefaultsOptionsBuilder) BuildOptions(o interface{}) error {
 		} else {
 			options.ContainerRuntime = "containerd"
 		}
+	}
+
+	if options.Nvidia != nil && fi.BoolValue(options.Nvidia.Enabled) && options.Nvidia.DriverPackage == "" {
+		options.Nvidia.DriverPackage = "nvidia-headless-460-server"
 	}
 
 	return nil
