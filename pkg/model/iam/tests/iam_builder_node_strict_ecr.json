@@ -30,6 +30,7 @@
     {
       "Action": [
         "autoscaling:DescribeAutoScalingInstances",
+        "ec2:DescribeInstanceTypes",
         "ec2:DescribeInstances",
         "ecr:BatchCheckLayerAvailability",
         "ecr:BatchGetImage",
