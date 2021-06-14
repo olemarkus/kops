@@ -751,6 +751,7 @@ func AddAWSLoadbalancerControllerPermissions(p *Policy, resource stringorslice.S
 		&Statement{
 			Effect: StatementEffectAllow,
 			Action: stringorslice.Of(
+				"ec2:DescribeNetworkInterfaces",
 				"elasticloadbalancing:DescribeTags",
 				"elasticloadbalancing:DescribeTargetGroupAttributes",
 				"elasticloadbalancing:DescribeRules",

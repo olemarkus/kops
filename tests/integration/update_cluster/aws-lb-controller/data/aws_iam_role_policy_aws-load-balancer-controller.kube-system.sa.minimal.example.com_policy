@@ -149,6 +149,7 @@
     },
     {
       "Action": [
+        "ec2:DescribeNetworkInterfaces",
         "elasticloadbalancing:DescribeTags",
         "elasticloadbalancing:DescribeTargetGroupAttributes",
         "elasticloadbalancing:DescribeRules",
