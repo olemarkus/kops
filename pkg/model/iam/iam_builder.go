@@ -316,12 +316,18 @@ func (r *NodeRoleMaster) BuildAWSPolicy(b *PolicyBuilder) (*Policy, error) {
 
 	p := NewPolicy(clusterName)
 
-	AddMasterEC2Policies(p)
-	addASLifecyclePolicies(p, true)
-	addMasterASPolicies(p)
-	AddMasterELBPolicies(p)
-	addCertIAMPolicies(p)
+	if b.Cluster.Spec.ExternalCloudControllerManager == nil {
+		AddMasterEC2Policies(p)
+		addMasterASPolicies(p)
+		AddMasterELBPolicies(p)
+		addCertIAMPolicies(p)
+	} else {
+		AddCCMPermissions(p, clusterName)
+		addEtcdManagerPermissions(p)
+	}
+
 	addKMSGenerateRandomPolicies(p)
+	addASLifecyclePolicies(p, true)
 
 	var err error
 	if p, err = b.AddS3Permissions(p); err != nil {
@@ -760,6 +766,124 @@ func addCalicoSrcDstCheckPermissions(p *Policy) {
 	)
 }
 
+func addEtcdManagerPermissions(p *Policy) {
+	resource := stringorslice.Slice([]string{"*"})
+
+	p.Statement = append(p.Statement,
+		&Statement{
+			Effect: StatementEffectAllow,
+			Action: stringorslice.Of(
+				"ec2:AttachVolume",
+			),
+			Resource: resource,
+			Condition: Condition{
+				"StringEquals": map[string]string{
+					"aws:ResourceTag/k8s.io/role/master": "1",
+				},
+			},
+		},
+	)
+
+}
+
+func AddCCMPermissions(p *Policy, clusterName string) {
+	resource := stringorslice.Slice([]string{"*"})
+
+	p.unconditionalAction.Insert(
+		"autoscaling:DescribeAutoScalingGroups",
+		"autoscaling:DescribeLaunchConfigurations",
+		"autoscaling:DescribeTags",
+		"ec2:DescribeInstances",
+		"ec2:DescribeRegions",
+		"ec2:DescribeRouteTables",
+		"ec2:DescribeSecurityGroups",
+		"ec2:DescribeSubnets",
+		"ec2:DescribeVolumes",
+		"ec2:DescribeVpcs",
+		"elasticloadbalancing:DescribeLoadBalancers",
+		"elasticloadbalancing:DescribeLoadBalancerAttributes",
+		"elasticloadbalancing:DescribeListeners",
+		"elasticloadbalancing:DescribeLoadBalancerPolicies",
+		"elasticloadbalancing:DescribeTargetGroups",
+		"elasticloadbalancing:DescribeTargetHealth",
+		"kms:DescribeKey",
+	)
+
+	p.clusterTaggedAction.Insert(
+		"ec2:ModifyInstanceAttribute",
+		"ec2:ModifyVolume",
+		"ec2:AttachVolume",
+		"ec2:AuthorizeSecurityGroupIngress",
+		"ec2:DeleteRoute",
+		"ec2:DeleteSecurityGroup",
+		"ec2:DeleteVolume",
+		"ec2:DetachVolume",
+		"ec2:RevokeSecurityGroupIngress",
+		"elasticloadbalancing:AddTags",
+		"elasticloadbalancing:AttachLoadBalancerToSubnets",
+		"elasticloadbalancing:ApplySecurityGroupsToLoadBalancer",
+		"elasticloadbalancing:ConfigureHealthCheck",
+		"elasticloadbalancing:DeleteLoadBalancer",
+		"elasticloadbalancing:DeleteLoadBalancerListeners",
+		"elasticloadbalancing:DetachLoadBalancerFromSubnets",
+		"elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+		"elasticloadbalancing:ModifyLoadBalancerAttributes",
+		"elasticloadbalancing:RegisterInstancesWithLoadBalancer",
+		"elasticloadbalancing:SetLoadBalancerPoliciesForBackendServer",
+		"elasticloadbalancing:AddTags",
+		"elasticloadbalancing:DeleteListener",
+		"elasticloadbalancing:DeleteTargetGroup",
+		"elasticloadbalancing:ModifyListener",
+		"elasticloadbalancing:ModifyTargetGroup",
+		"elasticloadbalancing:RegisterTargets",
+		"elasticloadbalancing:DeregisterTargets",
+		"elasticloadbalancing:SetLoadBalancerPoliciesOfListener",
+	)
+
+	p.Statement = append(p.Statement,
+		&Statement{
+			Effect: StatementEffectAllow,
+			Action: stringorslice.Of(
+				"ec2:CreateTags",
+			),
+			Resource: stringorslice.Slice(
+				[]string{
+					"arn:aws:ec2:*:*:volume/*",
+					"arn:aws:ec2:*:*:snapshot/*",
+				},
+			),
+			Condition: Condition{
+				"StringEquals": map[string]interface{}{
+					"ec2:CreateAction": []string{
+						"CreateVolume",
+						"CreateSnapshot",
+					},
+				},
+			},
+		},
+		&Statement{
+			Effect: StatementEffectAllow,
+			Action: stringorslice.Of(
+				"elasticloadbalancing:CreateLoadBalancer",
+				"elasticloadbalancing:CreateLoadBalancerPolicy",
+				"elasticloadbalancing:CreateLoadBalancerListeners",
+				"ec2:CreateSecurityGroup",
+				"ec2:CreateVolume",
+				"ec2:CreateRoute",
+				"elasticloadbalancing:CreateListener",
+				"elasticloadbalancing:CreateTargetGroup",
+			),
+			Resource: resource,
+
+			Condition: Condition{
+				"StringEquals": map[string]string{
+					"aws:RequestTag/KubernetesCluster": clusterName,
+				},
+			},
+		},
+	)
+}
+
 // AddAWSLoadbalancerControllerPermissions adds the permissions needed for the aws load balancer controller to the givnen policy
 func AddAWSLoadbalancerControllerPermissions(p *Policy) {
 	p.unconditionalAction.Insert(
@@ -851,7 +975,6 @@ func AddAWSEBSCSIDriverPermissions(p *Policy, appendSnapshotPermissions bool) {
 			Action: stringorslice.String(
 				"ec2:CreateTags", // aws.go, tag.go
 			),
-
 			Resource: stringorslice.Slice(
 				[]string{
 					"arn:aws:ec2:*:*:volume/*",
