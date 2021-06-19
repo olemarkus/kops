@@ -322,8 +322,11 @@ func (r *NodeRoleMaster) BuildAWSPolicy(b *PolicyBuilder) (*Policy, error) {
 		AddMasterELBPolicies(p)
 		addCertIAMPolicies(p)
 	} else {
-		AddCCMPermissions(p, clusterName)
+		if !b.UseServiceAccountIAM {
+			AddCCMPermissions(p, clusterName)
+		}
 		addEtcdManagerPermissions(p)
+		addNodeupPermissions(p)
 	}
 
 	addKMSGenerateRandomPolicies(p)
@@ -766,10 +769,24 @@ func addCalicoSrcDstCheckPermissions(p *Policy) {
 	)
 }
 
+func addNodeupPermissions(p *Policy) {
+	addKMSGenerateRandomPolicies(p)
+	p.unconditionalAction.Insert(
+		"ec2:DescribeInstances", // aws.go
+	)
+}
+
 func addEtcdManagerPermissions(p *Policy) {
 	resource := stringorslice.Slice([]string{"*"})
 
 	p.Statement = append(p.Statement,
+		&Statement{
+			Effect: StatementEffectAllow,
+			Action: stringorslice.Slice([]string{
+				"ec2:DescribeVolumes", // aws.go
+			}),
+			Resource: resource,
+		},
 		&Statement{
 			Effect: StatementEffectAllow,
 			Action: stringorslice.Of(

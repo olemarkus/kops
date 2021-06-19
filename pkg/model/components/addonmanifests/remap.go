@@ -28,6 +28,7 @@ import (
 	"k8s.io/kops/pkg/featureflag"
 	"k8s.io/kops/pkg/kubemanifest"
 	"k8s.io/kops/pkg/model"
+	awscloudcontrollermanager "k8s.io/kops/pkg/model/components/addonmanifests/awscloudcontroller"
 	"k8s.io/kops/pkg/model/components/addonmanifests/awsebscsidriver"
 	"k8s.io/kops/pkg/model/components/addonmanifests/awsloadbalancercontroller"
 	"k8s.io/kops/pkg/model/components/addonmanifests/clusterautoscaler"
@@ -120,6 +121,8 @@ func getWellknownServiceAccount(name string) iam.Subject {
 		return &clusterautoscaler.ServiceAccount{}
 	case "ebs-csi-controller-sa":
 		return &awsebscsidriver.ServiceAccount{}
+	case "aws-cloud-controller-manager":
+		return &awscloudcontrollermanager.ServiceAccount{}
 	default:
 		return nil
 	}
