@@ -34,20 +34,11 @@ spec:
     selector:
       k8s-addon: limit-range.addons.k8s.io
   - id: k8s-1.12
-<<<<<<< HEAD
     manifest: dns-controller.addons.k8s.io/k8s-1.12.yaml
     manifestHash: b529c5f5f16100230770ed391330cbdaefc71e00
     name: dns-controller.addons.k8s.io
     selector:
       k8s-addon: dns-controller.addons.k8s.io
-=======
-    manifest: external-dns.addons.k8s.io/k8s-1.12.yaml
-    manifestHash: 5c25e530f2cf2290d3c0c00421e4999fea6a074d
-    name: external-dns.addons.k8s.io
-    selector:
-      k8s-addon: external-dns.addons.k8s.io
-    version: 0.7.6-kops.1
->>>>>>> 826bee4a96 (Make external dns provider configurable)
   - id: v1.15.0
     manifest: storage-aws.addons.k8s.io/v1.15.0.yaml
     manifestHash: d474dbcc9b9c5cd2e87b41a7755851811f5f48aa

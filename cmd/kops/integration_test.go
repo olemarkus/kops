@@ -444,6 +444,22 @@ func TestManyAddons(t *testing.T) {
 		runTestTerraformAWS(t)
 }
 
+func TestExternalDNS(t *testing.T) {
+	newIntegrationTest("minimal.example.com", "external_dns").
+		runTestTerraformAWS(t)
+}
+
+func TestExternalDNSIRSA(t *testing.T) {
+	featureflag.ParseFlags("+UseServiceAccountIAM")
+	unsetFeatureFlags := func() {
+		featureflag.ParseFlags("-UseServiceAccountIAM")
+	}
+	defer unsetFeatureFlags()
+
+	newIntegrationTest("minimal.example.com", "external_dns_irsa").
+		runTestTerraformAWS(t)
+}
+
 // TestSharedSubnet runs the test on a configuration with a shared subnet (and VPC)
 func TestSharedSubnet(t *testing.T) {
 	newIntegrationTest("sharedsubnet.example.com", "shared_subnet").

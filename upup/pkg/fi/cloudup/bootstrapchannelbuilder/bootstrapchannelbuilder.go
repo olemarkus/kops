@@ -33,6 +33,7 @@ import (
 	"k8s.io/kops/pkg/model/components/addonmanifests/awsloadbalancercontroller"
 	"k8s.io/kops/pkg/model/components/addonmanifests/clusterautoscaler"
 	"k8s.io/kops/pkg/model/components/addonmanifests/dnscontroller"
+	"k8s.io/kops/pkg/model/components/addonmanifests/externaldns"
 	"k8s.io/kops/pkg/model/iam"
 	"k8s.io/kops/pkg/templates"
 	"k8s.io/kops/pkg/wellknownoperators"
@@ -420,32 +421,12 @@ func (b *BootstrapChannelBuilder) buildAddons(c *fi.ModelBuilderContext) (*chann
 		})
 	}
 
-<<<<<<< HEAD
-	if !featureflag.EnableExternalDNS.Enabled() {
-	// @check the dns-controller has not been disabled
-	externalDNS := b.Cluster.Spec.ExternalDNS
-	if externalDNS == nil || !externalDNS.Disable {
-		{
-			key := "dns-controller.addons.k8s.io"
-
-			{
-				location := key + "/k8s-1.12.yaml"
-				id := "k8s-1.12"
-
-				addons.Spec.Addons = append(addons.Spec.Addons, &channelsapi.AddonSpec{
-					Name:     fi.String(key),
-					Selector: map[string]string{"k8s-addon": key},
-					Manifest: fi.String(location),
-					Id:       id,
-				})
-=======
 	if b.Cluster.Spec.ExternalDNS == nil || b.Cluster.Spec.ExternalDNS.Provider == kops.ExternalDNSProviderDNSController {
 		// @check the dns-controller has not been disabled
 		externalDNS := b.Cluster.Spec.ExternalDNS
 		if externalDNS == nil || !externalDNS.Disable {
 			{
 				key := "dns-controller.addons.k8s.io"
-				version := "1.22.0-alpha.1"
 
 				{
 					location := key + "/k8s-1.12.yaml"
@@ -453,13 +434,11 @@ func (b *BootstrapChannelBuilder) buildAddons(c *fi.ModelBuilderContext) (*chann
 
 					addons.Spec.Addons = append(addons.Spec.Addons, &channelsapi.AddonSpec{
 						Name:     fi.String(key),
-						Version:  fi.String(version),
 						Selector: map[string]string{"k8s-addon": key},
 						Manifest: fi.String(location),
 						Id:       id,
 					})
 				}
->>>>>>> 826bee4a96 (Make external dns provider configurable)
 			}
 
 			// Generate dns-controller ServiceAccount IAM permissions
@@ -481,6 +460,10 @@ func (b *BootstrapChannelBuilder) buildAddons(c *fi.ModelBuilderContext) (*chann
 					Manifest: fi.String(location),
 					Id:       id,
 				})
+			}
+
+			if b.UseServiceAccountIAM() {
+				serviceAccountRoles = append(serviceAccountRoles, &externaldns.ServiceAccount{})
 			}
 		}
 	}

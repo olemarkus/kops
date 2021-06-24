@@ -2,6 +2,8 @@ locals {
   cluster_name                                       = "minimal.example.com"
   kube-system-aws-load-balancer-controller_role_arn  = aws_iam_role.aws-load-balancer-controller-kube-system-sa-minimal-example-com.arn
   kube-system-aws-load-balancer-controller_role_name = aws_iam_role.aws-load-balancer-controller-kube-system-sa-minimal-example-com.name
+  kube-system-dns-controller_role_arn                = aws_iam_role.dns-controller-kube-system-sa-minimal-example-com.arn
+  kube-system-dns-controller_role_name               = aws_iam_role.dns-controller-kube-system-sa-minimal-example-com.name
   master_autoscaling_group_ids                       = [aws_autoscaling_group.master-us-test-1a-masters-minimal-example-com.id]
   master_security_group_ids                          = [aws_security_group.masters-minimal-example-com.id]
   masters_role_arn                                   = aws_iam_role.masters-minimal-example-com.arn
@@ -28,6 +30,14 @@ output "kube-system-aws-load-balancer-controller_role_arn" {
 
 output "kube-system-aws-load-balancer-controller_role_name" {
   value = aws_iam_role.aws-load-balancer-controller-kube-system-sa-minimal-example-com.name
+}
+
+output "kube-system-dns-controller_role_arn" {
+  value = aws_iam_role.dns-controller-kube-system-sa-minimal-example-com.arn
+}
+
+output "kube-system-dns-controller_role_name" {
+  value = aws_iam_role.dns-controller-kube-system-sa-minimal-example-com.name
 }
 
 output "master_autoscaling_group_ids" {
@@ -276,6 +286,16 @@ resource "aws_iam_role" "aws-load-balancer-controller-kube-system-sa-minimal-exa
   }
 }
 
+resource "aws_iam_role" "dns-controller-kube-system-sa-minimal-example-com" {
+  assume_role_policy = file("${path.module}/data/aws_iam_role_dns-controller.kube-system.sa.minimal.example.com_policy")
+  name               = "dns-controller.kube-system.sa.minimal.example.com"
+  tags = {
+    "KubernetesCluster"                         = "minimal.example.com"
+    "Name"                                      = "dns-controller.kube-system.sa.minimal.example.com"
+    "kubernetes.io/cluster/minimal.example.com" = "owned"
+  }
+}
+
 resource "aws_iam_role" "masters-minimal-example-com" {
   assume_role_policy = file("${path.module}/data/aws_iam_role_masters.minimal.example.com_policy")
   name               = "masters.minimal.example.com"
@@ -300,6 +320,12 @@ resource "aws_iam_role_policy" "aws-load-balancer-controller-kube-system-sa-mini
   name   = "aws-load-balancer-controller.kube-system.sa.minimal.example.com"
   policy = file("${path.module}/data/aws_iam_role_policy_aws-load-balancer-controller.kube-system.sa.minimal.example.com_policy")
   role   = aws_iam_role.aws-load-balancer-controller-kube-system-sa-minimal-example-com.name
+}
+
+resource "aws_iam_role_policy" "dns-controller-kube-system-sa-minimal-example-com" {
+  name   = "dns-controller.kube-system.sa.minimal.example.com"
+  policy = file("${path.module}/data/aws_iam_role_policy_dns-controller.kube-system.sa.minimal.example.com_policy")
+  role   = aws_iam_role.dns-controller-kube-system-sa-minimal-example-com.name
 }
 
 resource "aws_iam_role_policy" "masters-minimal-example-com" {
