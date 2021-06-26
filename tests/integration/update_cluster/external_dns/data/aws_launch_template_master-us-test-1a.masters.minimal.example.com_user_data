@@ -244,7 +244,11 @@ CloudProvider: aws
 ConfigBase: memfs://clusters.example.com/minimal.example.com
 InstanceGroupName: master-us-test-1a
 InstanceGroupRole: Master
+<<<<<<< HEAD
 NodeupConfigHash: OVHhBXXqwSidrUnaLkEpqE3WfZ8ek/sTrq/JKiEDY+4=
+=======
+NodeupConfigHash: qqkorWeVyTOu3dNGAUmxef9HeHo0fxXNQzRRivqz9ps=
+>>>>>>> f0aef0e080 (Validate external-dns spec)
 
 __EOF_KUBE_ENV
 

@@ -457,6 +457,7 @@ func TestExternalDNSIRSA(t *testing.T) {
 	defer unsetFeatureFlags()
 
 	newIntegrationTest("minimal.example.com", "external_dns_irsa").
+		withServiceAccountRole("external-dns.kube-system", true).
 		runTestTerraformAWS(t)
 }
 

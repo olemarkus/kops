@@ -162,7 +162,11 @@ CloudProvider: aws
 ConfigBase: memfs://clusters.example.com/minimal.example.com
 InstanceGroupName: nodes
 InstanceGroupRole: Node
+<<<<<<< HEAD
 NodeupConfigHash: jg9QswYww5epgveYcpLBhE83hOlkb/Z2qPTUdroGBpI=
+=======
+NodeupConfigHash: Exh/JxdKlfAU6pw0iJJklgc7kZM7tKyVYIBYXUaPaz4=
+>>>>>>> f0aef0e080 (Validate external-dns spec)
 
 __EOF_KUBE_ENV
 
