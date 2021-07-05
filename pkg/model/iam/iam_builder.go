@@ -323,7 +323,7 @@ func (r *NodeRoleMaster) BuildAWSPolicy(b *PolicyBuilder) (*Policy, error) {
 		addCertIAMPolicies(p)
 	} else {
 		if !b.UseServiceAccountIAM {
-			AddCCMPermissions(p, clusterName)
+			AddCCMPermissions(p, clusterName, b.Cluster.Spec.Networking.Kubenet != nil)
 		}
 		addEtcdManagerPermissions(p)
 		addNodeupPermissions(p)
@@ -803,7 +803,7 @@ func addEtcdManagerPermissions(p *Policy) {
 
 }
 
-func AddCCMPermissions(p *Policy, clusterName string) {
+func AddCCMPermissions(p *Policy, clusterName string, cloudRoutes bool) {
 	resource := stringorslice.Slice([]string{"*"})
 
 	p.unconditionalAction.Insert(
@@ -886,7 +886,6 @@ func AddCCMPermissions(p *Policy, clusterName string) {
 				"elasticloadbalancing:CreateLoadBalancerListeners",
 				"ec2:CreateSecurityGroup",
 				"ec2:CreateVolume",
-				"ec2:CreateRoute",
 				"elasticloadbalancing:CreateListener",
 				"elasticloadbalancing:CreateTargetGroup",
 			),
@@ -899,6 +898,12 @@ func AddCCMPermissions(p *Policy, clusterName string) {
 			},
 		},
 	)
+	if cloudRoutes {
+		p.clusterTaggedAction.Insert(
+			"ec2:CreateRoute",
+			"ec2:DeleteRoute",
+		)
+	}
 }
 
 // AddAWSLoadbalancerControllerPermissions adds the permissions needed for the aws load balancer controller to the givnen policy
