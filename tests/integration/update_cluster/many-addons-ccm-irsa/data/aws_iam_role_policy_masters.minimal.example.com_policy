@@ -113,7 +113,6 @@
     {
       "Action": [
         "autoscaling:DescribeAutoScalingInstances",
-        "autoscaling:DescribeLifecycleHooks",
         "ec2:AssignPrivateIpAddresses",
         "ec2:AttachNetworkInterface",
         "ec2:CreateNetworkInterface",
@@ -128,16 +127,15 @@
         "ec2:DetachNetworkInterface",
         "ec2:ModifyNetworkInterfaceAttribute",
         "ec2:UnassignPrivateIpAddresses",
+        "iam:GetServerCertificate",
+        "iam:ListServerCertificates",
         "kms:GenerateRandom"
       ],
       "Effect": "Allow",
       "Resource": "*"
     },
     {
-      "Action": [
-        "autoscaling:CompleteLifecycleAction",
-        "ec2:DeleteSnapshot"
-      ],
+      "Action": "ec2:DeleteSnapshot",
       "Condition": {
         "StringEquals": {
           "aws:ResourceTag/KubernetesCluster": "minimal.example.com"
