@@ -86,10 +86,7 @@ func addServiceAccountRole(context *model.KopsModelContext, objects kubemanifest
 	}
 
 	for _, object := range objects {
-		if object.Kind() != "Deployment" {
-			continue
-		}
-		if object.APIVersion() != "apps/v1" {
+		if !hasPodSpecTemplate(object) {
 			continue
 		}
 		podSpec := &corev1.PodSpec{}
@@ -156,4 +153,13 @@ func addLabels(addon *addonsapi.AddonSpec, objects kubemanifest.ObjectList) erro
 		object.Set(meta, "metadata")
 	}
 	return nil
+}
+
+func hasPodSpecTemplate(object *kubemanifest.Object) bool {
+	if object.Kind() == "Deployment" || object.Kind() == "DaemonSet" {
+		if object.APIVersion() == "apps/v1" {
+			return true
+		}
+	}
+	return false
 }
